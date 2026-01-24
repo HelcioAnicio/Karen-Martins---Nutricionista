@@ -1,0 +1,46 @@
+import { Button } from './button';
+
+export const FirstPage = () => {
+  return (
+    <section className='h-full w-full max-w-5xl m-auto'>
+      <article className='flex flex-col w-full justify-evenly h-full max-h-dvh gap-3 p-1 px-4 md:p-10 lg:flex-row lg:items-center'>
+        <div className='flex flex-col w-full justify-evenly h-full max-h-dvh gap-3 lg:justify-center lg:gap-10 2xl:16'>
+          <h1 className='font-bold text-2xl max-w-sm  sm:max-w-lg sm:text-4xl 2xl:text-5xl 2xl:max-w-2xl'>
+            O futuro do seu bebê começa nas escolhas que você faz hoje.
+          </h1>
+          <p className='max-w-sm sm:max-w-lg lg:text-lg'>
+            Atendimento nutricional especializado para mulheres que desejam
+            fazer escolhas mais conscientes na gestação para prevenção ou
+            acompanhamento de{' '}
+            <span className='font-semibold'>
+              condições como diabetes gestacional, pressão alta ou alterações de
+              peso.
+            </span>
+          </p>
+          <p className='hidden sm:inline max-w-md lg:text-lg'>
+            Cada consulta é um espaço de escuta e cuidado,{' '}
+            <span className='hidden sm:inline'>
+              para que você viva essa fase com mais segurança e a tranquilidade
+              de saber que fez o melhor possível para você e seu bebê.{' '}
+            </span>
+          </p>
+          <img
+            className='rounded-lg w-52 sm:w-sm lg:hidden'
+            src=' /apresentation.jpg'
+            alt='Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável'
+          />
+          <a>
+            <Button className='md:text-lg lg:text-2xl min-h-max lg:px-10 lg:py-4'>
+              Agende sua avaliação gratuita!
+            </Button>
+          </a>
+        </div>
+        <img
+          className='hidden rounded-lg w-52 sm:w-sm lg:block'
+          src=' /apresentation.jpg'
+          alt='Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável'
+        />
+      </article>
+    </section>
+  );
+};
