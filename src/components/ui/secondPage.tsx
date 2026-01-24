@@ -5,7 +5,7 @@ import { Card } from './card';
 
 export const SecondPage = () => {
   return (
-    <section className='h-full m-auto w-full max-w-5xl flex py-5 sm:items-center justify-center'>
+    <section className='m-auto w-full max-w-5xl flex py-5 sm:items-center justify-center'>
       <article className='flex flex-col w-full justify-center gap-5 sm:gap-16 p-1 px-4'>
         <div className='flex flex-col w-full  gap-5'>
           <h2 className='font-bold text-2xl'>
