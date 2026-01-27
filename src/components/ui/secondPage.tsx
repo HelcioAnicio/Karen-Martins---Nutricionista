@@ -7,7 +7,7 @@ import { FaHandHoldingHeart } from 'react-icons/fa6';
 export const SecondPage = () => {
   return (
     <section className='m-auto w-full max-w-5xl flex py-5 sm:items-center justify-center'>
-      <article className='flex flex-col w-full gap-5 sm:gap-16 p-1 px-4'>
+      <article className='flex flex-col w-full gap-5 sm:gap-16 p-1 px-4 sm:px-10'>
         <div className='flex flex-col w-full max-w-max gap-5'>
           <h2 className='font-bold text-2xl'>
             Por que cuidar da alimentação na gestação?
@@ -19,7 +19,7 @@ export const SecondPage = () => {
             é ideal para gestantes que querem garantir:{' '}
           </p>
         </div>
-        <Card className='max-w-max m-auto border-none shadow-2xl'>
+        <Card className='max-w-max m-auto border-none shadow-lg'>
           <ul className='flex flex-col gap-10 px-3'>
             <li className='flex items-center gap-5'>
               <GiWeightScale className='w-16 h-16 p-2' />

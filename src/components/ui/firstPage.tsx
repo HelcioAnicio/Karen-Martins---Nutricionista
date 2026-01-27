@@ -1,4 +1,4 @@
-import { Button } from './button';
+import { ButtonCTA } from './buttonCTA';
 
 export const FirstPage = () => {
   return (
@@ -33,9 +33,7 @@ export const FirstPage = () => {
             alt='Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável'
           />
           <a>
-            <Button className='md:text-lg lg:text-2xl min-h-max lg:px-10 lg:py-4'>
-              Agende sua avaliação gratuita!
-            </Button>
+            <ButtonCTA text={'AGENDAR AVALIAÇÃO GRATUITA'} />
           </a>
         </div>
         <img

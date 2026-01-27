@@ -59,8 +59,8 @@ body {
   --popover-foreground: hsl(36 36 95);
   --primary: hsl(220 29 39);
   --primary-foreground: hsl(36 36 95);
-  --secondary: hsl(220 29 39);
-  --secondary-foreground: hsl(36 36 95);
+  --secondary: hsl(30 30 80);
+  --secondary-foreground: hsl(36 19 40);
   --muted: hsl(0.97 0 0);
   --muted-foreground: hsl(0.556 0 0);
   --accent: hsl(0.97 0 0);
