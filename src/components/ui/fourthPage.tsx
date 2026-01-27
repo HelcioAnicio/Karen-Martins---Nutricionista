@@ -1,3 +1,4 @@
+import { ButtonCTA } from './buttonCTA';
 import { Card, CardContent, CardHeader, CardTitle } from './card';
 
 export const FourthPage = () => {
@@ -41,6 +42,7 @@ export const FourthPage = () => {
             </li>
           ))}
         </ul>
+        <ButtonCTA text={'QUERO AGENDAR MINHA AVALIAÇAO GRATUITA'} />
       </article>
     </section>
   );

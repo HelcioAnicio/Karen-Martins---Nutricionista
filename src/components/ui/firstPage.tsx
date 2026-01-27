@@ -18,9 +18,9 @@ export const FirstPage = () => {
                 de peso.
               </span>
             </p>
-            <p className='hidden shadow-lg sm:inline max-w-md lg:text-lg'>
+            <p className='hidden sm:inline max-w-md lg:text-lg'>
               Cada consulta é um espaço de escuta e cuidado,{' '}
-              <span className='hidden shadow-lg sm:inline'>
+              <span className='hidden  sm:inline'>
                 para que você viva essa fase com mais segurança e a
                 tranquilidade de saber que fez o melhor possível para você e seu
                 bebê.{' '}
