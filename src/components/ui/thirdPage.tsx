@@ -5,7 +5,7 @@ export const ThirdPage = () => {
     <>
       <section className='bg-secondary w-full pb-10 '>
         <div className='max-w-5xl lg:m-auto '>
-          <h2 className='text-secondary-foreground p-1 py-5 max-w-sm font-bold sm:px-10 sm:max-w-lg sm:text-xl lg:text-2xl lg:max-w-2xl'>
+          <h2 className='text-secondary-foreground p-1 py-5 max-w-sm font-bold sm:px-10 sm:max-w-lg sm:text-xl lg:text-2xl lg:max-w-3xl font-merriweather'>
             Quem vai cuidar de você e do seu bebê com ciência, sensibilidade e
             presença?
           </h2>
@@ -13,15 +13,17 @@ export const ThirdPage = () => {
         <article className='bg-background w-full'>
           <div className='bg-background flex flex-col m-auto gap-5 p-2 py-10 sm:px-10 sm:flex-row lg:items-center max-w-5xl lg:justify-between'>
             <img
-              className='hidden rounded-lg sm:w-80 lg:flex'
+              className='hidden shadow-lg rounded-lg sm:w-80 lg:flex'
               src=' /aboutMe.jpg'
               alt='Imagem da Karen Martins - Está sentada encostada em um sofá, olhando para a câmera, com um olhar amigavel e acolhedor.'
             />
             <div className='flex flex-col gap-5 sm:flex-row sm:items-start lg:flex-col'>
               <div className=''>
-                <p className='font-semibold text-lg'>Karen Martins</p>
+                <p className='font-semibold text-2xl font-merriweather'>
+                  Karen Martins
+                </p>
                 <img
-                  className='rounded-lg w-52 sm:w-64 lg:hidden'
+                  className='rounded-lg w-52 sm:w-64 lg:hidden shadow-lg'
                   src=' /aboutMe.jpg'
                   alt='Imagem da Karen Martins - Está sentada encostada em um sofá, olhando para a câmera, com um olhar amigavel e acolhedor.'
                 />
