@@ -5,7 +5,6 @@ import { ThirdPage } from './components/ui/thirdPage';
 import { FourthPage } from './components/ui/fourthPage';
 import { FifthPage } from './components/ui/fifthPage';
 import { SixthPage } from './components/ui/SixthPage';
-import { CarouselAuto } from './components/ui/carouselAuto';
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
         <FourthPage />
         <FifthPage />
         <SixthPage />
-        <CarouselAuto />
       </main>
       {/* <footer>Rodapé</footer> */}
     </>

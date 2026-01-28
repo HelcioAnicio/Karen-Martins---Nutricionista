@@ -18,6 +18,7 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import { Button } from './button';
+import { CarouselAuto } from './carouselAuto';
 
 interface ItemCarousel {
   icon?: React.ReactNode;
@@ -28,7 +29,7 @@ interface ItemCarousel {
 const arrayCarousel: ItemCarousel[] = [
   {
     icon: (
-      <MdBloodtype className='!w-8 !h-8 md:!w-13 md:!h-13 text-background bg-foreground rounded-full p-2' />
+      <MdBloodtype className='w-8! h-8! md:w-13! md:h-13! text-background bg-foreground rounded-full p-2' />
     ),
     text: 'Diabetes gestacional',
     title:
@@ -36,7 +37,7 @@ const arrayCarousel: ItemCarousel[] = [
   },
   {
     icon: (
-      <GiWeightScale className='!w-8 !h-8 md:!w-13 md:!h-13 text-background bg-foreground rounded-full p-2' />
+      <GiWeightScale className='w-8! h-8! md:w-13! md:h-13! text-background bg-foreground rounded-full p-2' />
     ),
     text: 'Excesso de peso',
     title:
@@ -44,7 +45,7 @@ const arrayCarousel: ItemCarousel[] = [
   },
   {
     icon: (
-      <GiKnifeFork className='!w-8 !h-8 md:!w-13 md:!h-13 text-background bg-foreground rounded-full p-2' />
+      <GiKnifeFork className='w-8! h-8! md:w-13! md:h-13! text-background bg-foreground rounded-full p-2' />
     ),
     text: 'Alimentação vegetariana',
     title:
@@ -52,7 +53,7 @@ const arrayCarousel: ItemCarousel[] = [
   },
   {
     icon: (
-      <MdPregnantWoman className='!w-8 !h-8 md:!w-13 md:!h-13 text-background bg-foreground rounded-full p-2' />
+      <MdPregnantWoman className='w-8! h-8! md:w-13! md:h-13! text-background bg-foreground rounded-full p-2' />
     ),
     text: 'Gestação múltipla',
     title:
@@ -60,18 +61,26 @@ const arrayCarousel: ItemCarousel[] = [
   },
   {
     icon: (
-      <FaHandsHoldingChild className='!w-8 !h-8 md:!w-13 md:!h-13 text-background bg-foreground rounded-full p-2' />
+      <FaHandsHoldingChild className='w-8! h-8! md:w-13! md:h-13! text-background bg-foreground rounded-full p-2' />
     ),
     text: 'Restrição de crescimento intrauterino (RCIU).',
     title:
       'Estratégias alimentares para otimizar a oferta de nutrientes ao bebê e apoiar um desenvolvimento intrauterino mais favorável.',
   },
+  {
+    icon: (
+      <FaHandsHoldingChild className='w-8! h-8! md:w-13! md:h-13! text-background bg-foreground rounded-full p-2' />
+    ),
+    text: 'Hipertensão.',
+    title:
+      'Orientações nutricionais para redução e controle da pressão arterial, com menor consumo de sódio e apoio à prevenção da pré eclâmpsia.',
+  },
 ];
 
 export const SixthPage = () => {
   return (
-    <section className=' bg-[url(/background.jpg)] bg-cover bg-bottom-right bg-no-repeat bg-fixed'>
-      <article className='w-full backdrop-blur-sm backdrop-grayscale-25 h-full py-20'>
+    <section className=' bg-[url(/background.jpg)] bg-cover bg-top-right bg-no-repeat bg-fixed'>
+      <article className='w-full backdrop-blur-sm backdrop-grayscale-25 h-full py-52'>
         <div className='flex gap-10 items-center justify-center flex-col m-auto mt-0 bg-background/80 py-10 p-2 md:p-10 '>
           <h2 className='font-bold text-xl font-merriweather my-0 '>
             Condições que acompanho com atenção especializada
@@ -93,7 +102,7 @@ export const SixthPage = () => {
                         <PopoverTrigger asChild>
                           <Button
                             variant='outline'
-                            className='flex aspect-square flex-col items-center w-52 justify-center hover:bg-secondary cursor-pointer p-3 h-32 border-none bg-inherit shadow-none'>
+                            className='flex  aspect-square flex-col items-center w-52 justify-center hover:bg-inherit cursor-pointer p-3 h-32 border-none bg-inherit shadow-none'>
                             {' '}
                             <p>{item.icon}</p>
                             <p className='w-full whitespace-pre-wrap font-semibold '>
@@ -114,12 +123,13 @@ export const SixthPage = () => {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className='hover:bg-secondary border-none bg-inherit w-5 h-full' />
-                <CarouselNext className='hover:bg-secondary border-none bg-inherit w-5 h-full' />
+                <CarouselPrevious className='hover:bg-inherit border-none shadow-none bg-inherit w-5 h-full' />
+                <CarouselNext className='hover:bg-inherit border-none bg-inherit w-5 shadow-none h-full' />
               </Carousel>
             </div>
           </div>
         </div>
+        <CarouselAuto />
       </article>
     </section>
   );
