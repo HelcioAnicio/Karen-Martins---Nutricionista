@@ -26,10 +26,10 @@ export const FourthPage = () => {
         <h2 className='font-bold text-xl'>
           Como é o atendimento personalizado?
         </h2>
-        <ul className='flex flex-wrap gap-10 justify-center'>
+        <ul className='flex flex-wrap gap-10 m-auto justify-center'>
           {contents.map((content) => (
             <li>
-              <Card className='border-none text-center transition-all duration-300 shadow-lg hover:bg-foreground hover:text-background rounded-br-[75px] rounded-tl-[75px]'>
+              <Card className='border-none text-center transition-all duration-300 shadow-lg hover:bg-foreground hover:text-background rounded-br-[75px] rounded-tl-[75px] h-56 min-h-max'>
                 <CardHeader>
                   <CardTitle className='font-semibold text-xl font-merriweather'>
                     {content.title}
@@ -42,7 +42,7 @@ export const FourthPage = () => {
             </li>
           ))}
         </ul>
-        <ButtonCTA text={'QUERO AGENDAR MINHA AVALIAÇAO GRATUITA'} />
+        <ButtonCTA text={'AGENDAR MINHA AVALIAÇAO GRATUITA'} />
       </article>
     </section>
   );
