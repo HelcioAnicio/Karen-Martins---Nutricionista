@@ -5,6 +5,7 @@ import { ThirdPage } from './components/ui/thirdPage';
 import { FourthPage } from './components/ui/fourthPage';
 import { FifthPage } from './components/ui/fifthPage';
 import { SixthPage } from './components/ui/SixthPage';
+import { FAQ } from './components/ui/faq';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <FourthPage />
         <FifthPage />
         <SixthPage />
+        <FAQ />
       </main>
       {/* <footer>Rodapé</footer> */}
     </>
