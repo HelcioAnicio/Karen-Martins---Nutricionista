@@ -61,7 +61,7 @@ export const FeedBack = () => {
   return (
     <section className="bg-secondary py-20">
       <article className="m-auto flex w-full max-w-5xl flex-col gap-10 p-2">
-        <h2 className="text-xl font-bold md:text-2xl lg:text-3xl">
+        <h2 className="font-merriweather text-xl font-bold md:text-2xl lg:text-3xl">
           O que dizem as mulheres que confiam no meu trabalho?
         </h2>
         <div className="flex justify-between">

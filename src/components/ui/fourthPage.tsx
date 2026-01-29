@@ -23,7 +23,7 @@ export const FourthPage = () => {
   return (
     <section>
       <article className="m-auto flex max-w-5xl flex-col gap-10 p-2 md:p-10 md:pb-20">
-        <h2 className="text-xl font-bold">
+        <h2 className="text-xl font-bold md:text-2xl lg:text-3xl">
           Como é o atendimento personalizado?
         </h2>
         <ul className="m-auto flex flex-wrap justify-center gap-10">

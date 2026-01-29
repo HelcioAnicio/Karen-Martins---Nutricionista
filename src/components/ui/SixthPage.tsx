@@ -82,7 +82,7 @@ export const SixthPage = () => {
     <section className="bg-[url(/background.jpg)] bg-cover bg-fixed bg-top-right bg-no-repeat">
       <article className="h-full w-full py-52 backdrop-blur-sm backdrop-grayscale-25">
         <div className="bg-background/80 m-auto mt-0 flex flex-col items-center justify-center gap-10 p-2 py-10 md:p-10">
-          <h2 className="font-merriweather my-0 text-xl font-bold">
+          <h2 className="font-merriweather my-0 text-xl font-bold sm:text-2xl lg:text-3xl">
             Condições que acompanho com atenção especializada
           </h2>
           <div className="m-auto my-0 max-w-5xl">

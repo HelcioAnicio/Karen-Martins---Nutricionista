@@ -9,7 +9,7 @@ export const SecondPage = () => {
     <section className="m-auto flex w-full max-w-5xl justify-center py-5 sm:items-center">
       <article className="flex w-full flex-col gap-5 p-1 px-4 sm:gap-16 sm:px-10">
         <div className="flex w-full max-w-max flex-col gap-5">
-          <h2 className="font-merriweather text-2xl font-bold">
+          <h2 className="font-merriweather text-2xl font-bold md:text-3xl">
             Por que cuidar da alimentação na gestação?
           </h2>
           <p className="border-foreground max-w-lg border-l py-2 pl-2 lg:max-w-3xl">

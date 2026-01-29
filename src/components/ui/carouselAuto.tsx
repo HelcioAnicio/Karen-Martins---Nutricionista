@@ -78,7 +78,7 @@ export function CarouselAuto() {
 
   return (
     <div className="bg-background/80 relative mt-40 flex w-full flex-col items-center overflow-hidden py-10">
-      <h2 className="mb-16 px-4 text-center font-serif text-3xl text-[#6d5d4b]">
+      <h2 className="mb-16 px-4 text-center font-serif text-2xl font-semibold text-[#6d5d4b] md:text-3xl">
         Diferenciais do acompanhamento individual
       </h2>
 
@@ -98,7 +98,7 @@ export function CarouselAuto() {
               <h3 className="font-merriweather mb-4 text-2xl leading-tight font-semibold">
                 {item.title}
               </h3>
-              <p className="text-sm leading-relaxed font-light opacity-90">
+              <p className="text-sm leading-relaxed font-light opacity-90 md:text-lg">
                 {item.desc}
               </p>
             </div>
