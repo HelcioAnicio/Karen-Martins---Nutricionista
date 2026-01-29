@@ -6,6 +6,7 @@ import { FourthPage } from "./components/ui/fourthPage";
 import { FifthPage } from "./components/ui/fifthPage";
 import { SixthPage } from "./components/ui/SixthPage";
 import { FAQ } from "./components/ui/faq";
+import { FeedBack } from "./components/ui/feedback";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <FifthPage />
         <SixthPage />
         <FAQ />
+        <FeedBack />
       </main>
       {/* <footer>Rodapé</footer> */}
     </>

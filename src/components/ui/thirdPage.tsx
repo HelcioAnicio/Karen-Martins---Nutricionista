@@ -3,9 +3,9 @@ import { ButtonCTA } from "./buttonCTA";
 export const ThirdPage = () => {
   return (
     <>
-      <section className="bg-secondary w-full pb-10">
+      <section className="bg-secondary w-full pb-20">
         <div className="max-w-5xl lg:m-auto">
-          <h2 className="text-secondary-foreground font-merriweather max-w-sm p-1 py-5 font-bold sm:max-w-lg sm:px-10 sm:text-xl lg:max-w-3xl lg:text-2xl">
+          <h2 className="text-secondary-foreground font-merriweather max-w-sm p-1 py-5 text-xl font-bold sm:max-w-lg sm:px-10 sm:text-xl lg:max-w-3xl lg:text-4xl">
             Quem vai cuidar de você e do seu bebê com ciência, sensibilidade e
             presença?
           </h2>

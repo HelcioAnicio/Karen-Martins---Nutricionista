@@ -8,7 +8,7 @@ import {
 export const FAQ = () => {
   return (
     <section className="m-auto flex w-full max-w-5xl">
-      <article className="flex w-max flex-col gap-10 p-2 px-4 md:p-10">
+      <article className="flex w-max flex-col gap-10 px-4 py-20 md:p-10">
         <h2 className="font-merriweather text-lg font-bold lg:text-3xl">
           Perguntas frequentes
         </h2>
