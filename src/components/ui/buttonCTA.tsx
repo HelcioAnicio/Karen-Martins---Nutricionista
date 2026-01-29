@@ -1,4 +1,4 @@
-import { Button } from './button';
+import { Button } from "./button";
 
 interface ButtonProps {
   text: string;
@@ -6,7 +6,7 @@ interface ButtonProps {
 
 export const ButtonCTA = ({ text }: ButtonProps) => {
   return (
-    <Button className='md:text-lg w-max min-h-max lg:px-5 lg:py-2 shadow-lg cursor-pointer'>
+    <Button className="min-h-max w-max cursor-pointer shadow-lg md:text-lg lg:px-5 lg:py-2">
       {text}
     </Button>
   );

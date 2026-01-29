@@ -1,9 +1,9 @@
-import { IoMenu } from 'react-icons/io5';
+import { IoMenu } from "react-icons/io5";
 export const Header = () => {
   return (
-    <header className='py-4 px-2 w-full'>
-      <nav className='w-full flex justify-end'>
-        <IoMenu className='w-6 h-6' />
+    <header className="w-full px-2 py-4">
+      <nav className="flex w-full justify-end">
+        <IoMenu className="h-6 w-6" />
       </nav>
     </header>
   );

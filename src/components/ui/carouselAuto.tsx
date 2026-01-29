@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from "react";
 import {
   Stethoscope,
   Smartphone,
@@ -6,38 +6,38 @@ import {
   Heart,
   GraduationCap,
   Eye,
-} from 'lucide-react';
+} from "lucide-react";
 
 const data = [
   {
-    title: 'Avaliação completa',
+    title: "Avaliação completa",
     icon: <Stethoscope />,
-    desc: 'Análise detalhada de exames, histórico clínico, rotina alimentar e objetivos individuais para criar um plano verdadeiramente personalizado.',
+    desc: "Análise detalhada de exames, histórico clínico, rotina alimentar e objetivos individuais para criar um plano verdadeiramente personalizado.",
   },
   {
-    title: 'Tecnologia integrada',
+    title: "Tecnologia integrada",
     icon: <Smartphone />,
-    desc: 'Acesso fácil ao seu plano pelo App Numax, com atualizações em tempo real, materiais de apoio e histórico completo de evolução.',
+    desc: "Acesso fácil ao seu plano pelo App Numax, com atualizações em tempo real, materiais de apoio e histórico completo de evolução.",
   },
   {
-    title: 'Suporte contínuo',
+    title: "Suporte contínuo",
     icon: <MessageCircle />,
-    desc: 'Contato direto via WhatsApp para dúvidas, ajustes e acolhimento sempre que precisar, sem esperar pela próxima consulta.',
+    desc: "Contato direto via WhatsApp para dúvidas, ajustes e acolhimento sempre que precisar, sem esperar pela próxima consulta.",
   },
   {
-    title: 'Acolhimento humano',
+    title: "Acolhimento humano",
     icon: <Heart />,
-    desc: 'Escuta ativa, empatia genuína e presença real em cada etapa da sua jornada. Você nunca estará sozinha neste processo.',
+    desc: "Escuta ativa, empatia genuína e presença real em cada etapa da sua jornada. Você nunca estará sozinha neste processo.",
   },
   {
-    title: 'Educação nutricional',
+    title: "Educação nutricional",
     icon: <GraduationCap />,
-    desc: 'Aprenda sobre alimentação saudável para aplicar durante a gestação, no pós-parto e na vida toda, construindo hábitos sustentáveis.',
+    desc: "Aprenda sobre alimentação saudável para aplicar durante a gestação, no pós-parto e na vida toda, construindo hábitos sustentáveis.",
   },
   {
-    title: 'Visão integral',
+    title: "Visão integral",
     icon: <Eye />,
-    desc: 'Cuidado que considera não só a nutrição, mas também seu bem-estar emocional, qualidade do sono, rotina e contexto familiar.',
+    desc: "Cuidado que considera não só a nutrição, mas também seu bem-estar emocional, qualidade do sono, rotina e contexto familiar.",
   },
 ];
 
@@ -64,44 +64,41 @@ export function CarouselAuto() {
     // Cálculo de distância circular
     const diff = (i - index + total) % total;
 
-    if (diff === 0) return 'z-30 scale-100 opacity-100 translate-x-0 '; // Central
+    if (diff === 0) return "z-30 scale-100 opacity-100 translate-x-0 "; // Central
     if (diff === 1)
-      return 'z-20 scale-75 opacity-60 translate-x-[40%] md:translate-x-[60%]'; // Próximo
+      return "z-20 scale-75 opacity-60 translate-x-[40%] md:translate-x-[60%]"; // Próximo
     if (diff === total - 1)
-      return 'z-20 scale-75 opacity-60 -translate-x-[40%] md:-translate-x-[60%]'; // Anterior
+      return "z-20 scale-75 opacity-60 -translate-x-[40%] md:-translate-x-[60%]"; // Anterior
 
     // Escondidos (Hide)
     if (diff === 2 || diff === total - 2)
-      return 'z-10 scale-50 opacity-0 translate-x-[80%] opacity-0';
-    return 'z-0 scale-50 opacity-0 pointer-events-none';
+      return "z-10 scale-50 opacity-0 translate-x-[80%] opacity-0";
+    return "z-0 scale-50 opacity-0 pointer-events-none";
   };
 
   return (
-    <div className='relative w-full overflow-hidden flex flex-col items-center mt-40 bg-background/80 py-10'>
-      <h2 className='text-[#6d5d4b] text-3xl font-serif mb-16 text-center px-4'>
+    <div className="bg-background/80 relative mt-40 flex w-full flex-col items-center overflow-hidden py-10">
+      <h2 className="mb-16 px-4 text-center font-serif text-3xl text-[#6d5d4b]">
         Diferenciais do acompanhamento individual
       </h2>
 
-      <div className='relative w-full max-w-7xl h-112.5 flex items-center justify-center'>
+      <div className="relative flex h-112.5 w-full max-w-7xl items-center justify-center">
         {data.map((item, i) => (
           <div
             key={i}
             onClick={() => setIndex(i)}
-            className={`
-              absolute transition-all duration-700 ease-in-out cursor-pointer
-              w-72 md:w-xs
-              ${getCardClass(i)}
-            `}>
-            <div className='bg-[#9a8a78] rounded-lg p-8 text-white h-80 flex flex-col items-center text-center shadow-2xl'>
-              <div className='rounded-2xl mb-6'>
+            className={`absolute w-72 cursor-pointer transition-all duration-700 ease-in-out md:w-xs ${getCardClass(i)} `}
+          >
+            <div className="flex h-80 flex-col items-center rounded-lg bg-[#9a8a78] p-8 text-center text-white shadow-2xl">
+              <div className="mb-6 rounded-2xl">
                 {React.cloneElement(item.icon as React.ReactElement, {
                   // size: 32,
                 })}
               </div>
-              <h3 className='text-2xl font-semibold mb-4 leading-tight font-merriweather'>
+              <h3 className="font-merriweather mb-4 text-2xl leading-tight font-semibold">
                 {item.title}
               </h3>
-              <p className='text-sm opacity-90 leading-relaxed font-light'>
+              <p className="text-sm leading-relaxed font-light opacity-90">
                 {item.desc}
               </p>
             </div>

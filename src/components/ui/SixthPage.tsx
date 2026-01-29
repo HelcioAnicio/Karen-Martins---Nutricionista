@@ -4,21 +4,21 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/components/ui/carousel';
-import { MdBloodtype } from 'react-icons/md';
-import { GiWeightScale } from 'react-icons/gi';
-import { GiKnifeFork } from 'react-icons/gi';
-import { MdPregnantWoman } from 'react-icons/md';
-import { FaHandsHoldingChild } from 'react-icons/fa6';
+} from "@/components/ui/carousel";
+import { MdBloodtype } from "react-icons/md";
+import { GiWeightScale } from "react-icons/gi";
+import { GiKnifeFork } from "react-icons/gi";
+import { MdPregnantWoman } from "react-icons/md";
+import { FaHandsHoldingChild } from "react-icons/fa6";
 import {
   Popover,
   PopoverContent,
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from '@/components/ui/popover';
-import { Button } from './button';
-import { CarouselAuto } from './carouselAuto';
+} from "@/components/ui/popover";
+import { Button } from "./button";
+import { CarouselAuto } from "./carouselAuto";
 
 interface ItemCarousel {
   icon?: React.ReactNode;
@@ -29,91 +29,94 @@ interface ItemCarousel {
 const arrayCarousel: ItemCarousel[] = [
   {
     icon: (
-      <MdBloodtype className='w-8! h-8! md:w-13! md:h-13! text-background bg-foreground rounded-full p-2' />
+      <MdBloodtype className="text-background bg-foreground h-8! w-8! rounded-full p-2 md:h-13! md:w-13!" />
     ),
-    text: 'Diabetes gestacional',
+    text: "Diabetes gestacional",
     title:
-      'Plano alimentar para controle glicêmico, prevenindo complicações e evitando o uso de insulina sempre que possível',
+      "Plano alimentar para controle glicêmico, prevenindo complicações e evitando o uso de insulina sempre que possível",
   },
   {
     icon: (
-      <GiWeightScale className='w-8! h-8! md:w-13! md:h-13! text-background bg-foreground rounded-full p-2' />
+      <GiWeightScale className="text-background bg-foreground h-8! w-8! rounded-full p-2 md:h-13! md:w-13!" />
     ),
-    text: 'Excesso de peso',
+    text: "Excesso de peso",
     title:
-      'Acompanhamento para ganho de peso adequado, sem restrições extremas, respeitando suas necessidades energéticas e do bebê',
+      "Acompanhamento para ganho de peso adequado, sem restrições extremas, respeitando suas necessidades energéticas e do bebê",
   },
   {
     icon: (
-      <GiKnifeFork className='w-8! h-8! md:w-13! md:h-13! text-background bg-foreground rounded-full p-2' />
+      <GiKnifeFork className="text-background bg-foreground h-8! w-8! rounded-full p-2 md:h-13! md:w-13!" />
     ),
-    text: 'Alimentação vegetariana',
+    text: "Alimentação vegetariana",
     title:
-      'Planejamento nutricional para gestantes vegetarianas e veganas, garantindo todos os nutrientes essenciais para mãe e bebê',
+      "Planejamento nutricional para gestantes vegetarianas e veganas, garantindo todos os nutrientes essenciais para mãe e bebê",
   },
   {
     icon: (
-      <MdPregnantWoman className='w-8! h-8! md:w-13! md:h-13! text-background bg-foreground rounded-full p-2' />
+      <MdPregnantWoman className="text-background bg-foreground h-8! w-8! rounded-full p-2 md:h-13! md:w-13!" />
     ),
-    text: 'Gestação múltipla',
+    text: "Gestação múltipla",
     title:
-      'Acompanhamento nutricional para suprir maiores demandas e favorecer o crescimento saudável de cada bebê, mantendo o bem-estar materno.',
+      "Acompanhamento nutricional para suprir maiores demandas e favorecer o crescimento saudável de cada bebê, mantendo o bem-estar materno.",
   },
   {
     icon: (
-      <FaHandsHoldingChild className='w-8! h-8! md:w-13! md:h-13! text-background bg-foreground rounded-full p-2' />
+      <FaHandsHoldingChild className="text-background bg-foreground h-8! w-8! rounded-full p-2 md:h-13! md:w-13!" />
     ),
-    text: 'Restrição de crescimento intrauterino (RCIU).',
+    text: "Restrição de crescimento intrauterino (RCIU).",
     title:
-      'Estratégias alimentares para otimizar a oferta de nutrientes ao bebê e apoiar um desenvolvimento intrauterino mais favorável.',
+      "Estratégias alimentares para otimizar a oferta de nutrientes ao bebê e apoiar um desenvolvimento intrauterino mais favorável.",
   },
   {
     icon: (
-      <FaHandsHoldingChild className='w-8! h-8! md:w-13! md:h-13! text-background bg-foreground rounded-full p-2' />
+      <FaHandsHoldingChild className="text-background bg-foreground h-8! w-8! rounded-full p-2 md:h-13! md:w-13!" />
     ),
-    text: 'Hipertensão.',
+    text: "Hipertensão.",
     title:
-      'Orientações nutricionais para redução e controle da pressão arterial, com menor consumo de sódio e apoio à prevenção da pré eclâmpsia.',
+      "Orientações nutricionais para redução e controle da pressão arterial, com menor consumo de sódio e apoio à prevenção da pré eclâmpsia.",
   },
 ];
 
 export const SixthPage = () => {
   return (
-    <section className=' bg-[url(/background.jpg)] bg-cover bg-top-right bg-no-repeat bg-fixed'>
-      <article className='w-full backdrop-blur-sm backdrop-grayscale-25 h-full py-52'>
-        <div className='flex gap-10 items-center justify-center flex-col m-auto mt-0 bg-background/80 py-10 p-2 md:p-10 '>
-          <h2 className='font-bold text-xl font-merriweather my-0 '>
+    <section className="bg-[url(/background.jpg)] bg-cover bg-fixed bg-top-right bg-no-repeat">
+      <article className="h-full w-full py-52 backdrop-blur-sm backdrop-grayscale-25">
+        <div className="bg-background/80 m-auto mt-0 flex flex-col items-center justify-center gap-10 p-2 py-10 md:p-10">
+          <h2 className="font-merriweather my-0 text-xl font-bold">
             Condições que acompanho com atenção especializada
           </h2>
-          <div className='m-auto my-0 max-w-5xl'>
+          <div className="m-auto my-0 max-w-5xl">
             <div>
               <Carousel
                 opts={{
-                  align: 'start',
+                  align: "start",
                   loop: true,
                 }}
-                className='w-full max-w-54 sm:max-w-lg md:max-w-xl '>
+                className="w-full max-w-54 sm:max-w-lg md:max-w-xl"
+              >
                 <CarouselContent>
                   {arrayCarousel.map((item, index) => (
                     <CarouselItem
                       key={index}
-                      className='basis-full md:basis-1/2 lg:basis-1/3 flex justify-center'>
+                      className="flex basis-full justify-center md:basis-1/2 lg:basis-1/3"
+                    >
                       <Popover>
                         <PopoverTrigger asChild>
                           <Button
-                            variant='outline'
-                            className='flex  aspect-square flex-col items-center w-52 justify-center hover:bg-inherit cursor-pointer p-3 h-32 border-none bg-inherit shadow-none'>
-                            {' '}
+                            variant="outline"
+                            className="flex aspect-square h-32 w-52 cursor-pointer flex-col items-center justify-center border-none bg-inherit p-3 shadow-none hover:bg-inherit"
+                          >
+                            {" "}
                             <p>{item.icon}</p>
-                            <p className='w-full whitespace-pre-wrap font-semibold '>
+                            <p className="w-full font-semibold whitespace-pre-wrap">
                               {item.text}
                             </p>
                           </Button>
                         </PopoverTrigger>
-                        <PopoverContent className='bg-popover'>
+                        <PopoverContent className="bg-popover">
                           <PopoverHeader>
-                            <PopoverTitle className='text-center'>
-                              <p className='md:text-lg font-light'>
+                            <PopoverTitle className="text-center">
+                              <p className="font-light md:text-lg">
                                 {item.title}
                               </p>
                             </PopoverTitle>
@@ -123,8 +126,8 @@ export const SixthPage = () => {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className='hover:bg-inherit border-none shadow-none bg-inherit w-5 h-full' />
-                <CarouselNext className='hover:bg-inherit border-none bg-inherit w-5 shadow-none h-full' />
+                <CarouselPrevious className="h-full w-5 border-none bg-inherit shadow-none hover:bg-inherit" />
+                <CarouselNext className="h-full w-5 border-none bg-inherit shadow-none hover:bg-inherit" />
               </Carousel>
             </div>
           </div>
