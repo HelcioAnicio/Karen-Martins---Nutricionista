@@ -48,29 +48,21 @@ export function CarouselAuto() {
     setIndex((prev) => (prev + 1) % data.length);
   }, []);
 
-  // const prev = useCallback(() => {
-  //   setIndex((prev) => (prev - 1 + data.length) % data.length);
-  // }, []);
-
-  // Autoplay com pausa para leitura
   useEffect(() => {
     const timer = setInterval(next, 4500);
     return () => clearInterval(timer);
   }, [next]);
 
-  // Lógica para definir a classe de cada card baseado no índice ativo
   const getCardClass = (i: number) => {
     const total = data.length;
-    // Cálculo de distância circular
     const diff = (i - index + total) % total;
 
-    if (diff === 0) return "z-30 scale-100 opacity-100 translate-x-0 "; // Central
+    if (diff === 0) return "z-30 scale-100 opacity-100 translate-x-0 ";
     if (diff === 1)
-      return "z-20 scale-75 opacity-60 translate-x-[40%] md:translate-x-[60%]"; // Próximo
+      return "z-20 scale-75 opacity-50 translate-x-[40%] md:translate-x-[60%]"; // Próximo
     if (diff === total - 1)
-      return "z-20 scale-75 opacity-60 -translate-x-[40%] md:-translate-x-[60%]"; // Anterior
+      return "z-20 scale-75 opacity-50 -translate-x-[40%] md:-translate-x-[60%]"; // Anterior
 
-    // Escondidos (Hide)
     if (diff === 2 || diff === total - 2)
       return "z-10 scale-50 opacity-0 translate-x-[80%] opacity-0";
     return "z-0 scale-50 opacity-0 pointer-events-none";
@@ -81,7 +73,7 @@ export function CarouselAuto() {
       id="diferenciais"
       className="bg-background/80 relative mt-40 flex w-full flex-col items-center overflow-hidden pt-14 pb-10 lg:pt-20"
     >
-      <h2 className="mb-16 px-4 text-center font-serif text-2xl font-semibold text-[#6d5d4b] md:text-3xl">
+      <h2 className="text-foreground mb-16 px-4 text-center font-serif text-2xl font-bold md:text-3xl">
         Diferenciais do acompanhamento individual
       </h2>
 
@@ -92,11 +84,9 @@ export function CarouselAuto() {
             onClick={() => setIndex(i)}
             className={`absolute w-72 cursor-pointer transition-all duration-700 ease-in-out md:w-xs ${getCardClass(i)} `}
           >
-            <div className="flex h-80 flex-col items-center rounded-lg bg-[#9a8a78] p-8 text-center text-white shadow-2xl">
+            <div className="bg-popover text-background flex h-80 flex-col items-center rounded-lg p-8 text-center shadow-2xl">
               <div className="mb-6 rounded-2xl">
-                {React.cloneElement(item.icon as React.ReactElement, {
-                  // size: 32,
-                })}
+                {React.cloneElement(item.icon as React.ReactElement, {})}
               </div>
               <h3 className="font-merriweather mb-4 text-2xl leading-tight font-semibold">
                 {item.title}
