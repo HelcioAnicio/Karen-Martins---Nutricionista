@@ -10,7 +10,7 @@ import { FaInstagram, FaWhatsapp } from "react-icons/fa6";
 
 export const Header = () => {
   return (
-    <header className="bg-background sticky top-0 z-50 w-full px-2 py-4">
+    <header className="bg-background sticky top-0 z-50 m-auto w-full max-w-5xl px-2 py-4">
       <nav className="flex w-full justify-end">
         <Sheet>
           <SheetTrigger>
