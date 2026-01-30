@@ -14,21 +14,29 @@ body {
   --font-openSans: "Open Sans", sans-serif;
 }
 
-/* /* @font-face {
-  font-family: 'Merriweather', serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
+@font-face {
+  font-family: Oswald;
   font-style: normal;
-  font-variation-settings: 'wdth' 100;
-} */
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/fonts/Oswald.woff2") format("woff2");
+}
 
-/* @font-face {
-  font-family: 'Open Sans', sans-serif;
+@font-face {
+  font-family: "Merriweather", serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings: 'wdth' 100;
-}  */
+  font-weight: 100 200 300 400 500 600 700 800 900;
+  font-style: normal italic bold;
+  font-variation-settings: "wdth" 100;
+}
+
+@font-face {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100 200 300 400 500 600 700 800 900;
+  font-style: normal italic bold;
+  font-variation-settings: "wdth" 100;
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

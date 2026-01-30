@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import { FaStar } from "react-icons/fa";
 
 interface FeedbackData {
   name: string;
@@ -65,7 +66,7 @@ export const FeedBack = () => {
           O que dizem as mulheres que confiam no meu trabalho?
         </h2>
         <div className="flex justify-between">
-          <ul className="flex w-full flex-col gap-10">
+          <ul className="flex w-full flex-col gap-10 pr-0.5">
             {arrayFeedback.map((item, index) => (
               <li
                 key={index}
@@ -89,16 +90,22 @@ export const FeedBack = () => {
                   >
                     <p className="text-lg font-bold">{item.name}</p>
                     <p className="font-extralight">{item.from}</p>
-                    {/* <p>{item.}</p> */}
+                    <p className="flex gap-2">
+                      <FaStar className="text-yellow-400" />
+                      <FaStar className="text-yellow-400" />
+                      <FaStar className="text-yellow-400" />
+                      <FaStar className="text-yellow-400" />
+                      <FaStar className="text-yellow-400" />
+                    </p>
                   </div>
                 </label>
               </li>
             ))}
           </ul>
-          <div className="w-full border-l p-3 pl-10">
+          <div className="w-full border-l p-2 sm:pl-10">
             <p
               key={isSelected}
-              className="font-merriweather animate-in fade-in max-w-sm text-xl font-bold italic duration-700"
+              className="font-merriweather animate-in fade-in w-full max-w-sm text-xl font-bold wrap-anywhere italic duration-700"
             >
               {`"${currentFeedback}"`}
             </p>{" "}

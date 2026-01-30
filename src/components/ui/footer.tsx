@@ -24,8 +24,8 @@ export const Footer = () => {
           </p>
           <ButtonCTA text={"AGENDE AVALIAÇAO GRATUITA"} />
         </div>
-        <div className="-mb-12 flex flex-col gap-7 font-light sm:gap-1">
-          <div className="flex items-center gap-5">
+        <div className="-mb-12 flex flex-col gap-7 font-light italic sm:gap-1">
+          <div className="flex flex-wrap items-center gap-5 text-xl">
             <div className="flex flex-wrap items-center">
               <p>Karen Martins 4 Nutricionista CRN3 44547</p>
               <p>Especialista em Nutrição Materno Infantil</p>
@@ -39,7 +39,7 @@ export const Footer = () => {
               </a>
             </div>
           </div>
-          <p>
+          <p className="text-xs font-extralight md:text-base">
             As informações desta página não substituem acompanhamento médico.
             Consulte sempre seu obstetra.
           </p>

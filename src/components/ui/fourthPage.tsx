@@ -27,8 +27,8 @@ export const FourthPage = () => {
           Como é o atendimento personalizado?
         </h2>
         <ul className="m-auto flex flex-wrap justify-center gap-10">
-          {contents.map((content) => (
-            <li>
+          {contents.map((content, index) => (
+            <li key={index}>
               <Card className="hover:bg-foreground hover:text-background h-56 min-h-max rounded-tl-[75px] rounded-br-[75px] border-none text-center shadow-lg transition-all duration-300">
                 <CardHeader>
                   <CardTitle className="font-merriweather text-xl font-semibold">
