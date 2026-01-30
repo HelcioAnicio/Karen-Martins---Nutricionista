@@ -14,7 +14,10 @@ export const ThirdPage = () => {
           <div className="bg-background m-auto flex max-w-5xl flex-col gap-5 p-2 py-10 sm:flex-row sm:px-10 lg:items-center lg:justify-between">
             <img
               className="hidden rounded-lg shadow-lg sm:w-80 lg:flex"
+              width={208}
+              height={312}
               src=" /aboutMe.jpg"
+              loading="lazy"
               alt="Imagem da Karen Martins - Está sentada encostada em um sofá, olhando para a câmera, com um olhar amigavel e acolhedor."
             />
             <div className="flex flex-col gap-5 sm:flex-row sm:items-start lg:flex-col">
@@ -25,6 +28,9 @@ export const ThirdPage = () => {
                 <img
                   className="w-52 rounded-lg shadow-lg sm:w-64 lg:hidden"
                   src=" /aboutMe.jpg"
+                  width={208}
+                  height={312}
+                  loading="lazy"
                   alt="Imagem da Karen Martins - Está sentada encostada em um sofá, olhando para a câmera, com um olhar amigavel e acolhedor."
                 />
               </div>

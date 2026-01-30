@@ -32,6 +32,8 @@ export const FirstPage = () => {
           </div>
           <img
             className="w-52 rounded-lg shadow-lg sm:w-64 lg:hidden"
+            width={208}
+            height={312}
             src=" /apresentation.jpg"
             alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável"
           />
@@ -41,6 +43,8 @@ export const FirstPage = () => {
         </div>
         <img
           className="hidden w-52 rounded-lg shadow-lg sm:w-sm lg:block"
+          width={208}
+          height={312}
           src=" /apresentation.jpg"
           alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável"
         />
