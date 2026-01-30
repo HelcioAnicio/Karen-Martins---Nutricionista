@@ -17,15 +17,16 @@ export const FirstPage = () => {
             </div>
           </div>
           <div class="flex flex-col gap-10">
-            <img class="w-52 rounded-lg shadow-lg sm:w-64 lg:hidden" width="208" height="312" alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável" src=" /apresentation.jpg">
+            <img class="w-52 rounded-lg shadow-lg sm:w-64 lg:hidden" width="208" height="312" alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável" src=" /apresentation.jpg" />
             <a>
               <button data-slot="button" data-variant="default" data-size="default" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-4 py-2 has-[&gt;svg]:px-3 min-h-max w-max cursor-pointer shadow-lg md:text-lg lg:px-5 lg:py-2">AGENDAR AVALIAÇÃO GRATUITA</button>
             </a>
           </div>
         </div> 
-        <img class="hidden w-52 rounded-lg shadow-lg sm:w-sm lg:block" width="208" height="312" alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável" src=" /apresentation.jpg">
+        <img class="hidden w-52 rounded-lg shadow-lg sm:w-sm lg:block" width="208" height="312" alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável" src=" /apresentation.jpg" />
       </article>
     </section>
   );
 };
+
 
