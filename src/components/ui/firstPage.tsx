@@ -27,7 +27,7 @@ export const FirstPage = () => {
                 por você e pelo seu bebê
               </p>
             </div>
-            <a className="hidden lg:flex">
+            <a className="hidden lg:flex" href="https://wa.me/5511921341072">
               <ButtonCTA text={"AGENDAR AVALIAÇÃO GRATUITA"} />
             </a>
           </div>
@@ -39,7 +39,7 @@ export const FirstPage = () => {
               alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável"
               src=" /apresentation.jpg"
             />
-            <a className="flex lg:hidden">
+            <a className="flex lg:hidden" href="https://wa.me/5511921341072">
               <ButtonCTA text={"AGENDAR AVALIAÇÃO GRATUITA"} />
             </a>
           </div>

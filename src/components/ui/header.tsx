@@ -43,10 +43,10 @@ export const Header = () => {
               </li>
               <li className="flex gap-4 p-1 text-4xl">
                 {" "}
-                <a href="">
+                <a href="https://www.instagram.com/karenmartins.nutri?igsh=MXdkNGF5ODY3OGl0Zw==">
                   <FaInstagram />
                 </a>
-                <a href="">
+                <a href="https://wa.me/5511921341072">
                   <FaWhatsapp />
                 </a>
               </li>
@@ -76,10 +76,10 @@ export const Header = () => {
           </li>
           <li className="flex gap-8 text-2xl">
             {" "}
-            <a href="">
+            <a href="https://www.instagram.com/karenmartins.nutri?igsh=MXdkNGF5ODY3OGl0Zw==">
               <FaInstagram />
             </a>
-            <a href="">
+            <a href="https://wa.me/5511921341072">
               <FaWhatsapp />
             </a>
           </li>
