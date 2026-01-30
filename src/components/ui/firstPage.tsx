@@ -2,7 +2,10 @@ import { ButtonCTA } from "./buttonCTA";
 
 export const FirstPage = () => {
   return (
-    <section className="m-auto flex h-max min-h-[calc(100dvh-56px)] w-full max-w-5xl items-center justify-center">
+    <section
+      id="home"
+      className="m-auto flex h-max min-h-[calc(100dvh-56px)] w-full max-w-5xl items-center justify-center lg:min-h-[calc(100dvh-64px)]"
+    >
       <article className="flex h-max min-h-full w-full p-1 px-4 md:p-10 lg:items-center">
         <div className="2xl:16 flex h-max min-h-full w-full flex-col justify-evenly gap-10 lg:justify-center lg:gap-10">
           <h1 className="font-merriweather max-w-sm text-2xl font-bold sm:max-w-lg sm:text-4xl 2xl:max-w-2xl 2xl:text-5xl">

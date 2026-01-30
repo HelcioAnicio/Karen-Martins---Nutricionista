@@ -7,7 +7,7 @@ import {
 
 export const FAQ = () => {
   return (
-    <section className="m-auto flex w-full max-w-5xl">
+    <section id="faq" className="m-auto flex w-full max-w-5xl pt-14 lg:pt-16">
       <article className="flex w-max flex-col gap-10 px-4 py-20 md:p-10">
         <h2 className="font-merriweather text-lg font-bold md:text-xl lg:text-3xl">
           Perguntas frequentes
