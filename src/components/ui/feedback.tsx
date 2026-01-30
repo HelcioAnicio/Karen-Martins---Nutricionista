@@ -65,7 +65,16 @@ export const FeedBack = () => {
         <h2 className="font-merriweather text-xl font-bold md:text-2xl lg:text-3xl">
           O que dizem as mulheres que confiam no meu trabalho?
         </h2>
-        <div className="flex justify-between">
+        <div className="flex flex-col justify-between gap-10 md:flex-row md:gap-10">
+          <div className="flex h-44 w-full max-w-sm border-b p-2 sm:pb-10 md:hidden">
+            <p
+              key={isSelected}
+              className="font-merriweather animate-in fade-in w-full max-w-sm text-xl font-bold wrap-anywhere italic duration-700"
+            >
+              {`"${currentFeedback}"`}
+            </p>{" "}
+          </div>
+
           <ul className="flex w-full flex-col gap-10 pr-0.5">
             {arrayFeedback.map((item, index) => (
               <li
@@ -102,7 +111,7 @@ export const FeedBack = () => {
               </li>
             ))}
           </ul>
-          <div className="w-full border-l p-2 sm:pl-10">
+          <div className="hidden w-full border-l p-2 sm:pl-10 md:flex">
             <p
               key={isSelected}
               className="font-merriweather animate-in fade-in w-full max-w-sm text-xl font-bold wrap-anywhere italic duration-700"

@@ -12,17 +12,17 @@ export const Footer = () => {
             Cuidar da sua nutriçaõ, é cuidar do futuro do seu bebê
           </h2>
           <p className="text-lg">
-            Este é o momento de se colocar em primeiro lugar, de nutrir seu
-            corpo e sua alma com o mesmo carinho que você já dedica ao bebê que
-            está crescendo dentro de você. Você merece um acompanhamento que une
-            ciência, sensibilidade e presença real.
+            Seu corpo está gerando uma vida e merece ser cuidado com a mais alta
+            excelência. Um acompanhamento que integra ciência, sensibilidade e
+            presença transforma a gestação em uma experiência mais leve e
+            segura.
           </p>
           <p className="text-lg">
-            Dê o primeiro passo para uma gestação mais leve, saudável e cheia de
+            Dê o primeiro passo para uma gestação mais saudável e cheia de
             confiança. Estou aqui para caminhar ao seu lado, com todo o
             acolhimento e expertise que você e seu bebê merecem.
           </p>
-          <ButtonCTA text={"AGENDE AVALIAÇAO GRATUITA"} />
+          <ButtonCTA text={"QUERO COMEÇAR AGORA"} />
         </div>
         <div className="-mb-12 flex flex-col gap-7 font-light italic sm:gap-1">
           <div className="flex flex-wrap items-center gap-5 text-xl">

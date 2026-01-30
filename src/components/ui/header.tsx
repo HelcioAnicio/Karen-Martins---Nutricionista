@@ -54,7 +54,7 @@ export const Header = () => {
           </SheetContent>
         </Sheet>
       </nav>
-      <nav className="flex justify-end">
+      <nav className="hidden justify-end lg:flex">
         <ul className="text-foreground flex items-center gap-5 pr-5">
           <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
             <a href="#home">Home</a>

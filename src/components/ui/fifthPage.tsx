@@ -1,7 +1,7 @@
 export const FifthPage = () => {
   return (
     <section className="m-auto w-full max-w-5xl">
-      <article className="flex flex-wrap items-center gap-10 p-2 md:pb-10">
+      <article className="flex flex-wrap items-center gap-10 p-2 md:px-10 md:pb-20">
         <div className="flex max-w-lg flex-col gap-5 md:max-w-sm">
           <p>
             Meu trabalho vai além de entregar um cardápio. É sobre construir
