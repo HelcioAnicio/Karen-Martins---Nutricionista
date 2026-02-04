@@ -6,7 +6,7 @@ interface ButtonProps {
 
 export const ButtonCTA = ({ text }: ButtonProps) => {
   return (
-    <Button className="min-h-max w-max cursor-pointer shadow-lg md:text-lg lg:px-5 lg:py-2">
+    <Button className="min-h-max w-max cursor-pointer shadow-lg md:text-lg lg:px-5 lg:py-2 xl:text-xl">
       {text}
     </Button>
   );

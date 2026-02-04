@@ -8,11 +8,11 @@ export const SecondPage = () => {
   return (
     <section className="m-auto flex w-full max-w-5xl justify-center py-5 sm:items-center">
       <article className="flex w-full flex-col gap-5 p-1 px-4 sm:gap-16 sm:px-10">
-        <div className="flex w-full max-w-max flex-col gap-5">
+        <div className="flex w-full max-w-max flex-col gap-5 py-10">
           <h2 className="font-merriweather text-2xl font-bold md:text-3xl">
             Por que cuidar da alimentação na gestação?
           </h2>
-          <p className="border-foreground max-w-lg border-l py-2 pl-2 lg:max-w-3xl">
+          <p className="border-foreground l border-l py-2 pl-2">
             Mais do que dietas e restrições, o cuidado nutricional na gestação
             tem como foco a prevenção e a promoção da saúde da mãe e do bebê,
             respeitando as necessidades de cada fase. <br /> Este acompanhamento
@@ -24,7 +24,7 @@ export const SecondPage = () => {
             <li className="flex items-center gap-5">
               <GiWeightScale className="h-16 w-16 p-2" />
               <div>
-                <p className="text-lg font-bold">Peso Saúdavel</p>
+                <p className="text-lg font-bold">Peso Saudável</p>
                 <p>Ganho de peso adequado para cada fase da gestação</p>
               </div>
             </li>
