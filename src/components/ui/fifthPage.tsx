@@ -23,7 +23,7 @@ export const FifthPage = () => {
           className="m-auto w-sm rounded-lg shadow-lg md:w-64"
           width={208}
           height={312}
-          src=" /complement.jpg"
+          src=" /complement.webp"
           loading="lazy"
           alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável"
         />
