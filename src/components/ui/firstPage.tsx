@@ -34,7 +34,7 @@ export const FirstPage = () => {
               <ButtonCTA text={"AGENDAR AVALIAÇÃO"} />
             </a>
           </div>
-          <div className="m-auto flex flex-col gap-5 sm:gap-10">
+          <div className="m-auto flex flex-col gap-5 max-[600px]:items-center sm:gap-10">
             <img
               className="w-52 rounded-lg shadow-lg min-[390px]:w-60 min-[800px]:hidden sm:w-64 md:w-xs"
               width="208"

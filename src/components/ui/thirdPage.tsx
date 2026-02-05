@@ -60,7 +60,9 @@ export const ThirdPage = () => {
                   Nutrição que começa na gestação e promove um bebê bem nutrido
                   desde a barriga da mamãe.
                 </p>
-                <ButtonCTA text={"AGENDAR AVALIAÇÃO COM A NUTRI"} />
+                <div>
+                  <ButtonCTA text={"AGENDAR AVALIAÇÃO COM A NUTRI"} />
+                </div>
               </div>
             </div>
           </div>

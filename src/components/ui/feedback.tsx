@@ -65,7 +65,7 @@ export const FeedBack = () => {
         <h2 className="font-merriweather text-xl font-bold md:text-2xl lg:text-3xl">
           O que dizem as mulheres que confiam no meu trabalho?
         </h2>
-        <div className="flex flex-col justify-between gap-10 md:flex-row md:gap-10">
+        <div className="flex flex-col justify-between gap-10 max-[600px]:m-auto md:flex-row md:gap-10">
           <div className="flex h-44 w-full max-w-sm border-b p-2 sm:pb-10 md:hidden">
             <p
               key={isSelected}
@@ -75,7 +75,7 @@ export const FeedBack = () => {
             </p>{" "}
           </div>
 
-          <ul className="flex w-full flex-col gap-10 pr-0.5">
+          <ul className="flex flex-col gap-10 pr-0.5">
             {arrayFeedback.map((item, index) => (
               <li
                 key={index}

@@ -5,10 +5,10 @@ import { FaInstagram } from "react-icons/fa";
 
 export const Footer = () => {
   return (
-    <footer className="m-auto w-full max-w-5xl p-2 py-20 md:px-5">
+    <footer className="m-auto w-full max-w-5xl p-2 py-20 max-[600px]:text-center md:px-5">
       <div className="flex flex-col gap-20">
         <div className="flex max-w-2xl flex-col gap-5">
-          <h2 className="font-merriweather max-w-xs text-xl font-bold md:max-w-lg md:text-2xl lg:text-3xl">
+          <h2 className="font-merriweather max-w-xs text-xl font-bold max-[600px]:m-auto md:max-w-lg md:text-2xl lg:text-3xl">
             Cuidar da sua nutriçaõ, é cuidar do futuro do seu bebê
           </h2>
           <p className="text-lg">
@@ -28,9 +28,9 @@ export const Footer = () => {
         </div>
         <div className="-mb-12 flex flex-col gap-7 font-light italic sm:gap-1">
           <div className="flex flex-wrap items-center gap-5 text-xl">
-            <div className="flex flex-wrap items-center">
-              <p>Karen Martins 4 Nutricionista CRN3 44547</p>
-              <p>Especialista em Nutrição Materno Infantil</p>
+            <div className="flex flex-wrap items-center gap-1">
+              <p>Karen Martins - Nutricionista CRN3 44547</p>
+              <p>Especializada em Nutrição Materno Infantil</p>
             </div>
             <div className="flex gap-2">
               <a href="https://www.instagram.com/karenmartins.nutri?igsh=MXdkNGF5ODY3OGl0Zw==">
@@ -41,7 +41,7 @@ export const Footer = () => {
               </a>
             </div>
           </div>
-          <p className="text-xs font-extralight md:text-base">
+          <p className="w-4/5 text-xs font-extralight md:text-base">
             As informações desta página não substituem acompanhamento médico.
             Consulte sempre seu obstetra.
           </p>

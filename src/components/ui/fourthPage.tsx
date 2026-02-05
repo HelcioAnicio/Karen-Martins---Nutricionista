@@ -43,7 +43,7 @@ export const FourthPage = () => {
           ))}
         </ul>
         <a href="https://wa.me/5511921341072">
-          <ButtonCTA text={"AGENDAR MINHA AVALIAÇAO GRATUITA"} />
+          <ButtonCTA text={"QUERO SABER MAIS"} />
         </a>
       </article>
     </section>

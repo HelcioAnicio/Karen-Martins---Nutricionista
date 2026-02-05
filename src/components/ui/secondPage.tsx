@@ -25,7 +25,7 @@ export const SecondPage = () => {
               <GiWeightScale className="h-16 w-16 p-2" />
               <div>
                 <p className="text-lg font-bold">Peso Saudável</p>
-                <p>Ganho de peso adequado para cada fase da gestação</p>
+                <p>Ganho de peso adequado para cada fase da gestação.</p>
               </div>
             </li>
 
@@ -44,7 +44,7 @@ export const SecondPage = () => {
               <div>
                 <p className="text-lg font-bold">Controle Glicêmico</p>
                 <p>
-                  Manuntenção da glicemia em níveis seguros, previnindo
+                  Manutenção da glicemia em níveis seguros, previnindo
                   complicações
                 </p>
               </div>
@@ -61,7 +61,7 @@ export const SecondPage = () => {
               <MdOutlinePregnantWoman className="h-16 w-16 p-2" />
               <div>
                 <p className="text-lg font-bold">Vínculo Fortalecido</p>
-                <p>Conexão profunda com seu bebê através do autocuidado</p>
+                <p>Conexão profunda com seu bebê por meio do autocuidado</p>
               </div>
             </li>
           </ul>
