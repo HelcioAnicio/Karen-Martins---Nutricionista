@@ -1,4 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"); */
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -14,32 +13,46 @@ body {
   --font-openSans: "Open Sans", sans-serif;
 }
 
-/* @font-face {
-  font-family: Oswald;
+@font-face {
+  font-family: "Merriweather";
+  font-weight: 100 900;
   font-style: normal;
-  font-weight: 200 700;
-  font-display: swap;
-  src: url("/fonts/Oswald.woff2") format("woff2");
-} */
+  font-variation-settings: "wdth" 100;
+  src:
+    url("public/fonts/Merriweather-Light.woff2") format("woff2"),
+    url("public/fonts/Merriweather-Light.woff") format("woff");
+}
 
 @font-face {
-  font-family: "Merriweather", serif;
-  font-optical-sizing: auto;
+  font-family: "Merriweather";
   font-weight: 100 900;
-  font-style: normal italic bold;
+  font-style: italic;
   font-variation-settings: "wdth" 100;
-  src: url("../fonts/Merriweather,Open_Sans (1)/Merriweather/Merriweather-VariableFont_opsz,wdth,wght.ttf")
-    format("truetype");
+  src:
+    url("public/fonts/Merriweather-LightItalic.woff2") format("woff2"),
+    url("public/fonts/Merriweather-LightItalic.woff") format("woff");
 }
 
 @font-face {
   font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
+  /* font-optical-sizing: auto; */
   font-weight: 100 900;
-  font-style: normal italic bold;
-  src: url("../fonts/Merriweather,Open_Sans (1)/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf")
-    format("truetype");
-  font-variation-settings: "wdth" 100;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("public/fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("public/fonts/OpenSans-Regular.woff") format("woff");
+  /* font-variation-settings: "wdth" 100; */
+}
+@font-face {
+  font-family: "Open Sans", sans-serif;
+  /* font-optical-sizing: auto; */
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("public/fonts/OpenSans-Italic.woff2") format("woff2"),
+    url("public/fonts/OpenSans-Italic.woff") format("woff"); /* font-variation-settings: "wdth" 100; */
 }
 
 @theme inline {

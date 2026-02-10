@@ -43,6 +43,7 @@ export const FirstPage = () => {
               width="208"
               height="312"
               rel="preload"
+              fetchPriority="high"
               alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável"
               src=" /apresentation.webp"
             />
