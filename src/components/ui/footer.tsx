@@ -9,7 +9,7 @@ export const Footer = () => {
       <div className="flex flex-col gap-20">
         <div className="flex max-w-2xl flex-col gap-5">
           <h2 className="font-merriweather max-w-xs text-xl font-bold max-[600px]:m-auto md:max-w-lg md:text-2xl lg:text-3xl">
-            Cuidar da sua nutriçaõ, é cuidar do futuro do seu bebê
+            Cuidar da sua nutrição, é cuidar do futuro do seu bebê
           </h2>
           <p className="text-lg">
             Seu corpo está gerando uma vida e merece ser cuidado com a mais alta

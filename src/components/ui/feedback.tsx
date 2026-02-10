@@ -61,7 +61,7 @@ export const FeedBack = () => {
 
   return (
     <section id="feedback" className="bg-secondary py-20">
-      <article className="m-auto flex w-full max-w-5xl flex-col gap-10 p-2">
+      <article className="m-auto flex w-full max-w-5xl flex-col items-center gap-10 p-2">
         <h2 className="font-merriweather text-xl font-bold md:text-2xl lg:text-3xl">
           O que dizem as mulheres que confiam no meu trabalho?
         </h2>
@@ -75,11 +75,11 @@ export const FeedBack = () => {
             </p>{" "}
           </div>
 
-          <ul className="flex flex-col gap-10 pr-0.5">
+          <ul className="flex flex-col items-center gap-10 pr-0.5">
             {arrayFeedback.map((item, index) => (
               <li
                 key={index}
-                className={`group hover:bg-foreground hover:text-background max-w-96 rounded-lg p-4 py-3 transition-all duration-300 ${isSelected === index && "group bg-foreground text-background"}`}
+                className={`group hover:bg-foreground hover:text-background w-max rounded-lg p-4 py-3 transition-all duration-300 ${isSelected === index && "group bg-foreground text-background"}`}
               >
                 <input
                   type="radio"
@@ -92,10 +92,10 @@ export const FeedBack = () => {
                 />
                 <label
                   htmlFor={`feedback-${index}`}
-                  className="flex cursor-pointer flex-col gap-3"
+                  className="w-full cursor-pointer gap-3"
                 >
                   <div
-                    className={`group-hover:border-t-background w-full border-t py-2 transition-all duration-300 ${isSelected === index ? "border-t-background" : "border-t-foreground"}`}
+                    className={`group-hover:border-t-background flex w-full max-w-80 min-w-60 flex-col items-center border-t py-2 transition-all duration-300 ${isSelected === index ? "border-t-background" : "border-t-foreground"}`}
                   >
                     <p className="text-lg font-bold">{item.name}</p>
                     <p className="font-extralight">{item.from}</p>
