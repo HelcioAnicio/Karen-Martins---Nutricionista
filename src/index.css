@@ -15,44 +15,52 @@ body {
 
 @font-face {
   font-family: "Merriweather";
-  font-weight: 100 900;
+  font-weight: 100 200 300 400 500 600 700 800 900;
   font-style: normal;
-  font-variation-settings: "wdth" 100;
+  /* font-variation-settings: "wdth" 100; */
   src:
-    url("public/fonts/Merriweather-Light.woff2") format("woff2"),
-    url("public/fonts/Merriweather-Light.woff") format("woff");
+    url("public/fonts/Merriweather,Open_Sans (1)/Merriweather/Merriweather-Light.woff2")
+      format("woff2"),
+    url("public/fonts/Merriweather,Open_Sans (1)/Merriweather/Merriweather-Light.woff")
+      format("woff");
 }
 
 @font-face {
   font-family: "Merriweather";
-  font-weight: 100 900;
+  font-weight: 100 200 300 400 500 600 700 800 900;
   font-style: italic;
-  font-variation-settings: "wdth" 100;
+  /* font-variation-settings: "wdth" 100; */
   src:
-    url("public/fonts/Merriweather-LightItalic.woff2") format("woff2"),
-    url("public/fonts/Merriweather-LightItalic.woff") format("woff");
+    url("public/fonts/Merriweather,Open_Sans (1)/Merriweather/Merriweather-LightItalic.woff2")
+      format("woff2"),
+    url("public/fonts/Merriweather,Open_Sans (1)/Merriweather/Merriweather-LightItalic.woff")
+      format("woff");
 }
 
 @font-face {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   /* font-optical-sizing: auto; */
-  font-weight: 100 900;
+  font-weight: 100 200 300 400 500 600 700 800 900;
   font-style: normal;
   font-display: swap;
   src:
-    url("public/fonts/OpenSans-Regular.woff2") format("woff2"),
-    url("public/fonts/OpenSans-Regular.woff") format("woff");
+    url("public/fonts/Merriweather,Open_Sans (1)/Open_Sans/OpenSans-Regular.woff2")
+      format("woff2"),
+    url("public/fonts/Merriweather,Open_Sans (1)/Open_Sans/OpenSans-Regular.woff")
+      format("woff");
   /* font-variation-settings: "wdth" 100; */
 }
 @font-face {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   /* font-optical-sizing: auto; */
-  font-weight: 100 900;
-  font-style: normal;
+  font-weight: 100 200 300 400 500 600 700 800 900;
+  font-style: italic;
   font-display: swap;
   src:
-    url("public/fonts/OpenSans-Italic.woff2") format("woff2"),
-    url("public/fonts/OpenSans-Italic.woff") format("woff"); /* font-variation-settings: "wdth" 100; */
+    url("public/fonts/Merriweather,Open_Sans (1)/Open_Sans/OpenSans-Italic.woff2")
+      format("woff2"),
+    url("public/fonts/Merriweather,Open_Sans (1)/Open_Sans/OpenSans-Italic.woff")
+      format("woff"); /* font-variation-settings: "wdth" 100; */
 }
 
 @theme inline {
