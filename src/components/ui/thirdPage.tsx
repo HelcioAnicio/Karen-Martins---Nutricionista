@@ -61,7 +61,10 @@ export const ThirdPage = () => {
                   desde a barriga da mamãe.
                 </p>
                 <div>
-                  <ButtonCTA text={"AGENDAR AVALIAÇÃO COM A NUTRI"} />
+                  <ButtonCTA
+                    ariaLabel="Link para conversar com o profissional"
+                    text={"AGENDAR AVALIAÇÃO COM A NUTRI"}
+                  />
                 </div>
               </div>
             </div>

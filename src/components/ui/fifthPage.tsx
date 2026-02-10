@@ -25,7 +25,7 @@ export const FifthPage = () => {
           height={312}
           src=" /complement.webp"
           loading="lazy"
-          alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável"
+          alt="Imagem da Karen Martins - Está em pé, encostada na paredde e sorrindo de forma amigável, com as mãos no bolso"
         />
       </article>
     </section>

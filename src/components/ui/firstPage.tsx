@@ -31,7 +31,10 @@ export const FirstPage = () => {
               className="hidden min-[800px]:flex"
               href="https://wa.me/5511921341072"
             >
-              <ButtonCTA text={"AGENDAR AVALIAÇÃO"} />
+              <ButtonCTA
+                ariaLabel="Link para conversar com o profissional"
+                text={"AGENDAR AVALIAÇÃO"}
+              />
             </a>
           </div>
           <div className="m-auto flex flex-col gap-5 max-[600px]:items-center sm:gap-10">
@@ -47,7 +50,10 @@ export const FirstPage = () => {
               className="flex min-[800px]:hidden"
               href="https://wa.me/5511921341072"
             >
-              <ButtonCTA text={"AGENDAR AVALIAÇÃO"} />
+              <ButtonCTA
+                ariaLabel="Link para conversar com o profissional"
+                text={"AGENDAR AVALIAÇÃO"}
+              />
             </a>
           </div>
         </div>

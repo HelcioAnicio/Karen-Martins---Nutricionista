@@ -113,6 +113,7 @@ export const SixthPage = () => {
                         <PopoverTrigger asChild>
                           <Button
                             variant="outline"
+                            aria-label={`Abrir o contéudo sobre ${item.text}`}
                             className="flex aspect-square h-32 w-52 cursor-pointer flex-col items-center justify-center border-none bg-inherit p-3 shadow-none hover:bg-inherit"
                           >
                             {" "}

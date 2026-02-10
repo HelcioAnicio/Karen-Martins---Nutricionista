@@ -23,7 +23,10 @@ export const Footer = () => {
             acolhimento e expertise que você e seu bebê merecem.
           </p>
           <a href="https://wa.me/5511921341072">
-            <ButtonCTA text={"QUERO COMEÇAR AGORA"} />
+            <ButtonCTA
+              ariaLabel="Link para conversar com o profissional"
+              text={"QUERO COMEÇAR AGORA"}
+            />
           </a>
         </div>
         <div className="-mb-12 flex flex-col gap-7 font-light italic sm:gap-1">
