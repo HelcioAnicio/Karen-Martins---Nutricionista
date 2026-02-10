@@ -9,8 +9,16 @@ import { FAQ } from "./components/ui/faq";
 import { FeedBack } from "./components/ui/feedback";
 import { Footer } from "./components/ui/footer";
 import { FaWhatsapp } from "react-icons/fa6";
+import { onLCP } from "web-vitals";
 
 function App() {
+  new PerformanceObserver((entryList) => {
+    for (const entry of entryList.getEntries()) {
+      console.log("LCP candidate:", entry.startTime, entry);
+    }
+  }).observe({ type: "largest-contentful-paint", buffered: true });
+
+  onLCP(console.log);
   return (
     <>
       <Header />

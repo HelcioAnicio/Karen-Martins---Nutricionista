@@ -39,6 +39,7 @@ export const FirstPage = () => {
               className="w-52 rounded-lg shadow-lg min-[390px]:w-60 min-[800px]:hidden sm:w-64 md:w-xs"
               width="208"
               height="312"
+              rel="preload"
               alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável"
               src=" /apresentation.webp"
             />
@@ -54,6 +55,7 @@ export const FirstPage = () => {
           className="hidden w-52 rounded-lg shadow-lg min-[800px]:block sm:w-xs lg:w-sm xl:w-md"
           width="208"
           height="312"
+          rel="preload"
           alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável"
           src=" /apresentation.webp"
         />
