@@ -16,7 +16,7 @@ export const ThirdPage = () => {
               className="hidden rounded-lg shadow-lg sm:w-80 lg:flex"
               width={208}
               height={312}
-              src=" /aboutMe.jpg"
+              src=" /aboutMe.webp"
               loading="lazy"
               alt="Imagem da Karen Martins - Está sentada encostada em um sofá, olhando para a câmera, com um olhar amigavel e acolhedor."
             />
@@ -27,7 +27,7 @@ export const ThirdPage = () => {
                 </p>
                 <img
                   className="w-52 rounded-lg shadow-lg min-[550px]:w-60 sm:w-72 md:w-4xl lg:hidden"
-                  src=" /aboutMe.jpg"
+                  src=" /aboutMe.webp"
                   width={208}
                   height={312}
                   loading="lazy"

@@ -40,7 +40,7 @@ export const FirstPage = () => {
               width="208"
               height="312"
               alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável"
-              src=" /apresentation.jpg"
+              src=" /apresentation.webp"
             />
             <a
               className="flex min-[800px]:hidden"
@@ -55,7 +55,7 @@ export const FirstPage = () => {
           width="208"
           height="312"
           alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável"
-          src=" /apresentation.jpg"
+          src=" /apresentation.webp"
         />
       </article>
     </section>
