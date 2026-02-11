@@ -19,13 +19,13 @@ export const SecondPage = () => {
             é ideal para gestantes que querem garantir:{" "}
           </p>
         </div>
-        <Card className="m-auto max-w-max border-none shadow-lg">
+        <Card className="m-auto max-w-max border-none text-left shadow-lg">
           <ul className="flex flex-col gap-10 px-3">
             <li className="flex items-center gap-5">
               <GiWeightScale className="h-16 w-16 p-2" />
               <div>
                 <p className="text-lg font-bold">Peso Saudável</p>
-                <p>Ganho de peso adequado para cada fase da gestação.</p>
+                <p>Ganho de peso adequado para cada fase da gestação</p>
               </div>
             </li>
 
@@ -53,7 +53,7 @@ export const SecondPage = () => {
             <li className="flex items-center gap-5">
               <FaHeartPulse className="h-16 w-16 p-2" />
               <div>
-                <p className="text-lg font-bold">Pressão Equilbrada</p>
+                <p className="text-lg font-bold">Pressão Equilibrada</p>
                 <p>Redução de riscos relacionados à hipertensão gestacional</p>
               </div>
             </li>

@@ -4,8 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "./card";
 export const FourthPage = () => {
   const contents = [
     {
-      title: "Avaliação gratuita",
-      text: "Primeiro contato para entender suas necessidades, histórico clínico, rotina e objetivos. É um momento de escuta ativa, sem compromisso, onde apresento o programa ideal para você.",
+      title: "Consulta diagnóstica",
+      text: "Um momento de escuta para compreender sua história, necessidades e expectativas. Com base nessa conversa, você recebe direcionamento profissional claro e decide, com segurança, sobre o formato de acompanhamento ideal para você.",
     },
     {
       title: "Escolha do plano",

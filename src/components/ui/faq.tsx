@@ -18,7 +18,7 @@ export const FAQ = () => {
           defaultValue="item-1"
           className="flex w-full flex-col gap-8 border-none"
         >
-          <AccordionItem
+          {/* <AccordionItem
             value="item-1"
             className="w-full max-w-3xl border-none"
           >
@@ -34,14 +34,14 @@ export const FAQ = () => {
               algum, apenas a oportunidade de nos conhecermos e entendermos se
               meu trabalho faz sentido para você neste momento.{" "}
             </AccordionContent>
-          </AccordionItem>
+          </AccordionItem> */}
           <AccordionItem
-            value="item-2"
+            value="item-1"
             className="w-full max-w-3xl border-none"
           >
             <AccordionTrigger className="bg-foreground text-background relative rounded-b-none pl-10 md:text-lg lg:text-xl">
               <div className="font-merriweather bg-foreground absolute -top-3 -left-2 w-9 scale-125 rounded-full p-1 text-center text-xl font-bold md:-top-4 md:-left-4">
-                2
+                1
               </div>
               As consultas são 100% online?
             </AccordionTrigger>
@@ -53,12 +53,12 @@ export const FAQ = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem
-            value="item-3"
+            value="item-2"
             className="w-full max-w-3xl border-none"
           >
             <AccordionTrigger className="bg-foreground text-background relative rounded-b-none pl-10 md:text-lg lg:text-xl">
               <div className="font-merriweather bg-foreground absolute -top-3 -left-2 w-9 scale-125 rounded-full p-1 text-center text-xl font-bold md:-top-4 md:-left-4">
-                3
+                2
               </div>
               E se eu tiver uma condição clínica específica, como diabetes
               gestacional ou hipertensão?{" "}
@@ -72,12 +72,12 @@ export const FAQ = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem
-            value="item-4"
+            value="item-3"
             className="w-full max-w-3xl border-none"
           >
             <AccordionTrigger className="bg-foreground text-background relative rounded-b-none pl-10 md:text-lg lg:text-xl">
               <div className="font-merriweather bg-foreground absolute -top-3 -left-2 w-9 scale-125 rounded-full p-1 text-center text-xl font-bold md:-top-4 md:-left-4">
-                4
+                3
               </div>
               O atendimento é coberto por convênios médicos?
             </AccordionTrigger>
@@ -89,12 +89,12 @@ export const FAQ = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem
-            value="item-5"
+            value="item-4"
             className="w-full max-w-3xl border-none"
           >
             <AccordionTrigger className="bg-foreground text-background relative rounded-b-none pl-10 md:text-lg lg:text-xl">
               <div className="font-merriweather bg-foreground absolute -top-3 -left-2 w-9 scale-125 rounded-full p-1 text-center text-xl font-bold md:-top-4 md:-left-4">
-                5
+                4
               </div>
               Quanto tempo dura o acompanhamento?
             </AccordionTrigger>
@@ -106,12 +106,12 @@ export const FAQ = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem
-            value="item-6"
+            value="item-5"
             className="w-full max-w-3xl border-none"
           >
             <AccordionTrigger className="bg-foreground text-background relative rounded-b-none pl-10 md:text-lg lg:text-xl">
               <div className="font-merriweather bg-foreground absolute -top-3 -left-2 w-9 scale-125 rounded-full p-1 text-center text-xl font-bold md:-top-4 md:-left-4">
-                6
+                5
               </div>
               Como funciona o suporte e o acesso ao plano alimentar?
             </AccordionTrigger>

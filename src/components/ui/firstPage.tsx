@@ -33,7 +33,7 @@ export const FirstPage = () => {
             >
               <ButtonCTA
                 ariaLabel="Link para conversar com o profissional"
-                text={"AGENDAR AVALIAÇÃO"}
+                text={"AGENDAR CONSULTA"}
               />
             </a>
           </div>
@@ -53,7 +53,7 @@ export const FirstPage = () => {
             >
               <ButtonCTA
                 ariaLabel="Link para conversar com o profissional"
-                text={"AGENDAR AVALIAÇÃO"}
+                text={"AGENDAR CONSULTA"}
               />
             </a>
           </div>

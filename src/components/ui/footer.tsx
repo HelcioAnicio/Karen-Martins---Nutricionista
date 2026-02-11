@@ -44,10 +44,6 @@ export const Footer = () => {
               </a>
             </div>
           </div>
-          <p className="w-4/5 text-xs font-extralight md:text-base">
-            As informações desta página não substituem acompanhamento médico.
-            Consulte sempre seu obstetra.
-          </p>
         </div>
       </div>
     </footer>
