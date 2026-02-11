@@ -49,8 +49,12 @@ export function CarouselAuto() {
   }, []);
 
   useEffect(() => {
-    const timer = setInterval(next, 4500);
-    return () => clearInterval(timer);
+    const timeout = setTimeout(() => {
+      const timer = setInterval(next, 4500);
+      return () => clearInterval(timer);
+    }, 2000);
+
+    return () => clearTimeout(timeout);
   }, [next]);
 
   const getCardClass = (i: number) => {

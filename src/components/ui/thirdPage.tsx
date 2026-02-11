@@ -5,7 +5,7 @@ export const ThirdPage = () => {
     <>
       <section className="bg-secondary w-full pb-10">
         <div id="aboutMe" className="max-w-5xl lg:m-auto">
-          <h2 className="text-secondary-foreground font-merriweather max-w-sm p-1 py-5 text-xl font-bold sm:max-w-lg sm:px-10 sm:text-xl md:max-w-2xl md:text-2xl lg:max-w-3xl lg:text-3xl">
+          <h2 className="text-secondary-foreground font-merriweather max-w-sm p-1 py-10 text-xl font-bold sm:max-w-lg sm:px-10 sm:text-xl md:max-w-2xl md:text-2xl lg:max-w-3xl lg:text-3xl">
             Quem vai cuidar de você e do seu bebê?
           </h2>
         </div>
