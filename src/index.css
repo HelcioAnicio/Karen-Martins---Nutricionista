@@ -19,9 +19,9 @@ body {
   font-style: normal;
   /* font-variation-settings: "wdth" 100; */
   src:
-    url("public/fonts/Merriweather,Open_Sans (1)/Merriweather/Merriweather-Light.woff2")
+    url("/fonts/Merriweather,Open_Sans (1)/Merriweather/Merriweather-Light.woff2")
       format("woff2"),
-    url("public/fonts/Merriweather,Open_Sans (1)/Merriweather/Merriweather-Light.woff")
+    url("/fonts/Merriweather,Open_Sans (1)/Merriweather/Merriweather-Light.woff")
       format("woff");
 }
 
@@ -31,9 +31,9 @@ body {
   font-style: italic;
   /* font-variation-settings: "wdth" 100; */
   src:
-    url("public/fonts/Merriweather,Open_Sans (1)/Merriweather/Merriweather-LightItalic.woff2")
+    url("/fonts/Merriweather,Open_Sans (1)/Merriweather/Merriweather-LightItalic.woff2")
       format("woff2"),
-    url("public/fonts/Merriweather,Open_Sans (1)/Merriweather/Merriweather-LightItalic.woff")
+    url("/fonts/Merriweather,Open_Sans (1)/Merriweather/Merriweather-LightItalic.woff")
       format("woff");
 }
 
@@ -44,9 +44,9 @@ body {
   font-style: normal;
   font-display: swap;
   src:
-    url("public/fonts/Merriweather,Open_Sans (1)/Open_Sans/OpenSans-Regular.woff2")
+    url("/fonts/Merriweather,Open_Sans (1)/Open_Sans/OpenSans-Regular.woff2")
       format("woff2"),
-    url("public/fonts/Merriweather,Open_Sans (1)/Open_Sans/OpenSans-Regular.woff")
+    url("/fonts/Merriweather,Open_Sans (1)/Open_Sans/OpenSans-Regular.woff")
       format("woff");
   /* font-variation-settings: "wdth" 100; */
 }
@@ -57,9 +57,9 @@ body {
   font-style: italic;
   font-display: swap;
   src:
-    url("public/fonts/Merriweather,Open_Sans (1)/Open_Sans/OpenSans-Italic.woff2")
+    url("/fonts/Merriweather,Open_Sans (1)/Open_Sans/OpenSans-Italic.woff2")
       format("woff2"),
-    url("public/fonts/Merriweather,Open_Sans (1)/Open_Sans/OpenSans-Italic.woff")
+    url("/fonts/Merriweather,Open_Sans (1)/Open_Sans/OpenSans-Italic.woff")
       format("woff"); /* font-variation-settings: "wdth" 100; */
 }
 
