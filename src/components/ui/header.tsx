@@ -25,29 +25,59 @@ export const Header = () => {
               </SheetHeader>
               <ul className="text-foreground flex flex-col items-end gap-3 p-3 pr-10">
                 <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
-                  <a href="#home">Home</a>
+                  <a aria-label="Direcionar para a seção Inicial" href="#home">
+                    Home
+                  </a>
                 </li>
                 <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
-                  <a href="#aboutMe">Sobre mim</a>
+                  <a
+                    aria-label="Direcionar para a seção Sobre mim"
+                    href="#aboutMe"
+                  >
+                    Sobre mim
+                  </a>
                 </li>
                 <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
-                  <a href="#howWorks">Como funciona?</a>
+                  <a
+                    aria-label="Direcionar para a seção Como funciona?"
+                    href="#howWorks"
+                  >
+                    Como funciona?
+                  </a>
                 </li>
                 <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
-                  <a href="#diferenciais">Diferenciais</a>
+                  <a
+                    aria-label="Direcionar para a seção diferenciais"
+                    href="#diferenciais"
+                  >
+                    Diferenciais
+                  </a>
                 </li>
                 <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
-                  <a href="#faq">Dúvidas</a>
+                  <a aria-label="Direcionar para a seção Dúvidas" href="#faq">
+                    Dúvidas
+                  </a>
                 </li>
                 <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
-                  <a href="#feedback">Feedback</a>
+                  <a
+                    aria-label="Direcionar para a seção feedback"
+                    href="#feedback"
+                  >
+                    Feedback
+                  </a>
                 </li>
                 <li className="flex gap-4 p-1 text-4xl">
                   {" "}
-                  <a href="https://www.instagram.com/karenmartins.nutri?igsh=MXdkNGF5ODY3OGl0Zw==">
+                  <a
+                    aria-label="Link para o instagram"
+                    href="https://www.instagram.com/karenmartins.nutri?igsh=MXdkNGF5ODY3OGl0Zw=="
+                  >
                     <FaInstagram />
                   </a>
-                  <a href="https://wa.me/5511921341072">
+                  <a
+                    aria-label="Link para whatsapp"
+                    href="https://wa.me/5511921341072"
+                  >
                     <FaWhatsapp />
                   </a>
                 </li>
@@ -58,29 +88,53 @@ export const Header = () => {
         <nav className="hidden justify-end lg:flex">
           <ul className="text-foreground flex items-center gap-5 pr-5">
             <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
-              <a href="#home">Home</a>
+              <a aria-label="Direcionar para a seção Inicial" href="#home">
+                Home
+              </a>
             </li>
             <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
-              <a href="#aboutMe">Sobre mim</a>
+              <a aria-label="Direcionar para a seção Sobre mim" href="#aboutMe">
+                Sobre mim
+              </a>
             </li>
             <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
-              <a href="#howWorks">Como funciona?</a>
+              <a
+                aria-label="Direcionar para a seção Como funciona?"
+                href="#howWorks"
+              >
+                Como funciona?
+              </a>
             </li>
             <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
-              <a href="#diferenciais">Diferenciais</a>
+              <a
+                aria-label="Direcionar para a seção diferenciais"
+                href="#diferenciais"
+              >
+                Diferenciais
+              </a>
             </li>
             <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
-              <a href="#faq">Dúvidas</a>
+              <a aria-label="Direcionar para a seção Dúvidas" href="#faq">
+                Dúvidas
+              </a>
             </li>
             <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
-              <a href="#feedback">Feedback</a>
+              <a aria-label="Direcionar para a seção feedback" href="#feedback">
+                Feedback
+              </a>
             </li>
             <li className="flex gap-8 text-2xl">
               {" "}
-              <a href="https://www.instagram.com/karenmartins.nutri?igsh=MXdkNGF5ODY3OGl0Zw==">
+              <a
+                aria-label="Link para o instagram"
+                href="https://www.instagram.com/karenmartins.nutri?igsh=MXdkNGF5ODY3OGl0Zw=="
+              >
                 <FaInstagram />
               </a>
-              <a href="https://wa.me/5511921341072">
+              <a
+                aria-label="Link para whatsapp"
+                href="https://wa.me/5511921341072"
+              >
                 <FaWhatsapp />
               </a>
             </li>

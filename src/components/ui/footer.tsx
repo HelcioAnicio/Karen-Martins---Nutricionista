@@ -22,7 +22,7 @@ export const Footer = () => {
             confiança. Estou aqui para caminhar ao seu lado, com todo o
             acolhimento e expertise que você e seu bebê merecem.
           </p>
-          <a href="https://wa.me/5511921341072">
+          <a aria-label="Link para whatsapp" href="https://wa.me/5511921341072">
             <ButtonCTA
               ariaLabel="Link para conversar com o profissional"
               text={"QUERO COMEÇAR AGORA"}
@@ -36,10 +36,16 @@ export const Footer = () => {
               <p className="">Especializada em Nutrição Materno Infantil</p>
             </div>
             <div className="flex gap-2 max-[600px]:justify-center">
-              <a href="https://www.instagram.com/karenmartins.nutri?igsh=MXdkNGF5ODY3OGl0Zw==">
+              <a
+                aria-label="Link para o instagram"
+                href="https://www.instagram.com/karenmartins.nutri?igsh=MXdkNGF5ODY3OGl0Zw=="
+              >
                 <FaInstagram />
               </a>
-              <a href="https://wa.me/5511921341072">
+              <a
+                aria-label="Link para whatsapp"
+                href="https://wa.me/5511921341072"
+              >
                 <FaWhatsapp />
               </a>
             </div>

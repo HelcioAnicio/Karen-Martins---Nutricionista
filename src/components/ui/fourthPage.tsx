@@ -42,7 +42,7 @@ export const FourthPage = () => {
             </li>
           ))}
         </ul>
-        <a href="https://wa.me/5511921341072">
+        <a aria-label="Link para whatsapp" href="https://wa.me/5511921341072">
           <ButtonCTA
             ariaLabel="Link para conversar com o profissional"
             text={"QUERO SABER MAIS"}

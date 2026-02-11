@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       <Header />
-      <a href="https://wa.me/5511921341072">
+      <a aria-label="Link para whatsapp" href="https://wa.me/5511921341072">
         <FaWhatsapp className="bg-background fixed right-0 bottom-0 z-50 size-20 animate-bounce rounded-4xl p-2" />
       </a>
 

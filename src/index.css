@@ -18,6 +18,8 @@ body {
   font-weight: 100 200 300 400 500 600 700 800 900;
   font-style: normal;
   /* font-variation-settings: "wdth" 100; */
+  font-display: swap;
+
   src:
     url("/fonts/Merriweather,Open_Sans (1)/Merriweather/Merriweather-Light.woff2")
       format("woff2"),
@@ -30,6 +32,8 @@ body {
   font-weight: 100 200 300 400 500 600 700 800 900;
   font-style: italic;
   /* font-variation-settings: "wdth" 100; */
+  font-display: swap;
+
   src:
     url("/fonts/Merriweather,Open_Sans (1)/Merriweather/Merriweather-LightItalic.woff2")
       format("woff2"),
