@@ -30,12 +30,12 @@ export const Footer = () => {
           </a>
         </div>
         <div className="-mb-12 flex flex-col gap-7 font-light italic sm:gap-1">
-          <div className="flex flex-wrap items-center gap-5 text-xl">
-            <div className="flex flex-wrap items-center gap-1">
-              <p>Karen Martins - Nutricionista CRN3 44547</p>
-              <p>Especializada em Nutrição Materno Infantil</p>
+          <div className="flex flex-col gap-5 text-xl lg:flex-row lg:items-center">
+            <div className="flex flex-col gap-1 lg:flex-row">
+              <p className="">Karen Martins - Nutricionista CRN3 44547</p>
+              <p className="">Especializada em Nutrição Materno Infantil</p>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-2 max-[600px]:justify-center">
               <a href="https://www.instagram.com/karenmartins.nutri?igsh=MXdkNGF5ODY3OGl0Zw==">
                 <FaInstagram />
               </a>
