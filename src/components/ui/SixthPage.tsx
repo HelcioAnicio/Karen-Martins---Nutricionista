@@ -85,7 +85,14 @@ export const SixthPage = () => {
     Autoplay({ delay: 3000, stopOnInteraction: true }),
   );
   return (
-    <section className="transform-gpu bg-[url('/background.webp')] bg-cover bg-fixed bg-top-right bg-no-repeat">
+    <section className="relative">
+      <img
+        src="background.webp"
+        alt="Descritivo"
+        loading="lazy"
+        className="absolute top-0 right-0 -z-10 h-full w-full object-cover"
+      />
+
       <article className="bg-background/75 h-full w-full py-16">
         <div className="bg-background/80 m-auto mt-0 flex flex-col items-center justify-center gap-10 p-2 py-10 md:p-10">
           <h2 className="font-merriweather my-0 text-xl font-bold sm:text-2xl lg:text-3xl">
