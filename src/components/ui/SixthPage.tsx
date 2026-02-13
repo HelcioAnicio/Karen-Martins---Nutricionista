@@ -90,6 +90,7 @@ export const SixthPage = () => {
         src="background.webp"
         alt="Descritivo"
         loading="lazy"
+        decoding="async"
         className="absolute top-0 right-0 -z-10 h-full w-full object-cover"
       />
 

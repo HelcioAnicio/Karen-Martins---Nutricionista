@@ -39,8 +39,9 @@ export const FirstPage = () => {
               className="w-full max-w-60 rounded-lg shadow-lg min-[390px]:max-w-xl lg:hidden"
               width="400"
               height="200"
-              rel="preload"
               fetchPriority="high"
+              loading="eager"
+              decoding="sync"
               alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável"
               src=" /newApresentation.webp"
             />
@@ -56,7 +57,9 @@ export const FirstPage = () => {
           className="hidden w-full max-w-52 rounded-lg shadow-lg sm:max-w-xs lg:block lg:max-w-sm xl:max-w-lg"
           width="208"
           height="312"
-          rel="preload"
+          fetchPriority="high"
+          loading="eager"
+          decoding="sync"
           alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável"
           src=" /newApresentation.webp"
         />
