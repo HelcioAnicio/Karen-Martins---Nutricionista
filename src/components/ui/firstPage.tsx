@@ -34,11 +34,11 @@ export const FirstPage = () => {
               />
             </a>
           </div>
-          <div className="flex flex-col items-center gap-5 max-[640px]:m-auto sm:gap-10 md:items-start">
+          <div className="flex w-full flex-col items-center gap-5 max-[640px]:m-auto sm:gap-10 md:items-start lg:flex-row lg:items-center">
             <img
-              className="w-full max-w-60 rounded-lg shadow-lg min-[390px]:max-w-xl lg:hidden"
-              width="400"
-              height="200"
+              className="w-full max-w-60 flex-4 rounded-lg shadow-lg min-[390px]:max-w-xl lg:max-w-2xl xl:max-w-5xl"
+              width="600"
+              height="400"
               fetchPriority="high"
               loading="eager"
               decoding="sync"
@@ -53,16 +53,6 @@ export const FirstPage = () => {
             </a>
           </div>
         </div>
-        <img
-          className="hidden w-full max-w-52 rounded-lg shadow-lg sm:max-w-xs lg:block lg:max-w-sm xl:max-w-lg"
-          width="208"
-          height="312"
-          fetchPriority="high"
-          loading="eager"
-          decoding="sync"
-          alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável"
-          src=" /newApresentation.webp"
-        />
       </article>
     </section>
   );
