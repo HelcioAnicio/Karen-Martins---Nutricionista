@@ -37,13 +37,11 @@ export const FirstPage = () => {
           <div className="flex w-full flex-col items-center gap-5 max-[640px]:m-auto sm:gap-10 md:items-start lg:flex-row lg:items-center">
             <img
               className="w-full max-w-60 flex-4 rounded-lg shadow-lg min-[390px]:max-w-xl lg:max-w-2xl xl:max-w-5xl"
-              width="600"
-              height="400"
               fetchPriority="high"
               loading="eager"
               decoding="sync"
               alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável"
-              src=" /newApresentation.webp"
+              src="/newApresentation.webp"
             />
             <a className="flex lg:hidden" href="https://wa.me/5511921341072">
               <ButtonCTA
