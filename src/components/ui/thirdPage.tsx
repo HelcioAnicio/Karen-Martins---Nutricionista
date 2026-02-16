@@ -62,7 +62,7 @@ export const ThirdPage = () => {
                 <div>
                   <ButtonCTA
                     ariaLabel="Link para conversar com o profissional"
-                    text={"AGENDAR AVALIAÇÃO COM A NUTRI"}
+                    text={"AGENDAR CONSULTA"}
                   />
                 </div>
               </div>
