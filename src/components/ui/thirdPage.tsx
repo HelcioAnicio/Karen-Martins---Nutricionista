@@ -11,19 +11,11 @@ export const ThirdPage = () => {
         </div>
         <article className="bg-background w-full">
           <div className="bg-background m-auto flex max-w-5xl flex-col gap-5 p-2 py-10 min-[550px]:flex-row min-[550px]:items-center sm:px-10 lg:justify-between">
-            <img
-              className="hidden rounded-lg shadow-lg sm:w-80 lg:flex"
-              width={208}
-              height={312}
-              src=" /aboutMe.webp"
-              loading="lazy"
-              alt="Imagem da Karen Martins - Está sentada encostada em um sofá, olhando para a câmera, com um olhar amigavel e acolhedor."
-            />
             <div className="flex flex-col gap-5 sm:flex-row sm:items-center lg:flex-col lg:items-start">
               <div className="m-auto lg:m-0">
-                <p className="font-merriweather text-2xl font-semibold xl:text-3xl">
+                {/* <p className="font-merriweather text-2xl font-semibold md:hidden xl:text-3xl">
                   Karen Martins
-                </p>
+                </p> */}
                 <img
                   className="w-52 rounded-lg shadow-lg min-[550px]:w-60 sm:w-72 md:w-4xl lg:hidden"
                   src=" /aboutMe.webp"
@@ -35,6 +27,9 @@ export const ThirdPage = () => {
               </div>
 
               <div className="flex flex-col gap-5">
+                <p className="font-merriweather text-2xl font-semibold md:block xl:text-3xl">
+                  Karen Martins
+                </p>
                 <p className="">
                   Nutricionista formada pela Faculdade de Medicina do ABC, com{" "}
                   <span className="font-bold">
@@ -59,12 +54,12 @@ export const ThirdPage = () => {
                   Nutrição que começa na gestação e promove um bebê bem nutrido
                   desde a barriga da mamãe.
                 </p>
-                <div>
+                <a className="m-auto md:m-0" href="https://wa.me/5511921341072">
                   <ButtonCTA
                     ariaLabel="Link para conversar com o profissional"
                     text={"AGENDAR CONSULTA"}
                   />
-                </div>
+                </a>
               </div>
             </div>
           </div>
