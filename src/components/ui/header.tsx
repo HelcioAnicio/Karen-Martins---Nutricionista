@@ -76,7 +76,7 @@ export const Header = () => {
                   </a>
                   <a
                     aria-label="Link para whatsapp"
-                    href="https://wa.me/5511921341072"
+                    href="https://wa.link/6mo3a2"
                   >
                     <FaWhatsapp />
                   </a>
@@ -131,10 +131,7 @@ export const Header = () => {
               >
                 <FaInstagram />
               </a>
-              <a
-                aria-label="Link para whatsapp"
-                href="https://wa.me/5511921341072"
-              >
+              <a aria-label="Link para whatsapp" href="https://wa.link/6mo3a2">
                 <FaWhatsapp />
               </a>
             </li>

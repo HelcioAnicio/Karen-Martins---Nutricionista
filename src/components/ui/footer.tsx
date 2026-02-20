@@ -22,7 +22,7 @@ export const Footer = () => {
             confiança. Estou aqui para caminhar ao seu lado, com todo o
             acolhimento e expertise que você e seu bebê merecem.
           </p>
-          <a aria-label="Link para whatsapp" href="https://wa.me/5511921341072">
+          <a aria-label="Link para whatsapp" href="https://wa.link/6mo3a2">
             <ButtonCTA
               ariaLabel="Link para conversar com o profissional"
               text={"QUERO COMEÇAR AGORA"}
@@ -42,10 +42,7 @@ export const Footer = () => {
               >
                 <FaInstagram />
               </a>
-              <a
-                aria-label="Link para whatsapp"
-                href="https://wa.me/5511921341072"
-              >
+              <a aria-label="Link para whatsapp" href="https://wa.link/6mo3a2">
                 <FaWhatsapp />
               </a>
             </div>

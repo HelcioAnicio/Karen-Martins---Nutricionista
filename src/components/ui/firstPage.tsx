@@ -27,7 +27,7 @@ export const FirstPage = () => {
                 por você e pelo seu bebê
               </p>
             </div>
-            <a className="hidden lg:flex" href="https://wa.me/5511921341072">
+            <a className="hidden lg:flex" href="https://wa.link/6mo3a2">
               <ButtonCTA
                 ariaLabel="Link para conversar com o profissional"
                 text={"AGENDAR CONSULTA"}
@@ -45,7 +45,7 @@ export const FirstPage = () => {
               alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável"
               src="/newApresentation.webp"
             />
-            <a className="flex lg:hidden" href="https://wa.me/5511921341072">
+            <a className="flex lg:hidden" href="https://wa.link/6mo3a2">
               <ButtonCTA
                 ariaLabel="Link para conversar com o profissional"
                 text={"AGENDAR CONSULTA"}
