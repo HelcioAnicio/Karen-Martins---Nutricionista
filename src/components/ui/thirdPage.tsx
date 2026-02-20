@@ -13,7 +13,7 @@ export const ThirdPage = () => {
           <div className="bg-background m-auto flex max-w-5xl flex-col gap-5 p-2 py-10 min-[550px]:flex-row min-[550px]:items-center sm:px-10 lg:justify-between">
             <div className="flex flex-col gap-5 sm:flex-row sm:items-center lg:flex-row">
               <img
-                className="w-52 rounded-lg shadow-lg min-[550px]:w-60 sm:w-72"
+                className="m-auto w-52 rounded-lg shadow-lg min-[550px]:w-60 sm:w-72"
                 src=" /aboutMe.webp"
                 width={208}
                 height={312}
