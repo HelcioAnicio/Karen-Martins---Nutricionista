@@ -15,7 +15,7 @@ export const Header = () => {
         <nav className="flex w-full justify-end">
           <Sheet>
             <SheetTrigger>
-              <IoMenu className="h-6 w-6 lg:hidden" />
+              <IoMenu className="h-6 w-6 cursor-pointer lg:hidden" />
             </SheetTrigger>
             <SheetContent className="h-max rounded-b-lg pb-10">
               <SheetHeader>
@@ -86,8 +86,8 @@ export const Header = () => {
           </Sheet>
         </nav>
         <nav className="hidden justify-end lg:flex">
-          <ul className="text-foreground flex items-center gap-5 pr-5">
-            <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
+          <ul className="text-foreground flex items-center gap-5 pr-5 text-lg">
+            <li className="hover:border-b-foreground drop-shadow-red border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
               <a aria-label="Direcionar para a seção Inicial" href="#home">
                 Home
               </a>

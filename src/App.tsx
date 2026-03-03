@@ -22,11 +22,13 @@ function App() {
   return (
     <>
       <Header />
-      <a aria-label="Link para whatsapp" href="https://wa.link/6mo3a2">
-        <FaWhatsapp className="bg-background fixed right-0 bottom-0 z-50 size-20 animate-bounce rounded-4xl p-2" />
-      </a>
 
       <main className="font-openSans relative flex w-full flex-col gap-10 max-[600px]:text-center">
+        {/* <img
+          src="/backgroundInitial.jpg"
+          className="absolute top-0 left-0 z-10 w-full object-fill"
+          alt="ex"
+        /> */}
         <FirstPage />
         <SecondPage />
         <ThirdPage />
@@ -35,6 +37,9 @@ function App() {
         <SixthPage />
         <FAQ />
         <FeedBack />
+        <a aria-label="Link para whatsapp" href="https://wa.link/6mo3a2">
+          <FaWhatsapp className="bg-background/50 fixed right-1 bottom-2 z-50 size-16 animate-bounce rounded-3xl p-1 text-green-500 sm:size-24" />
+        </a>
       </main>
       <Footer />
     </>
