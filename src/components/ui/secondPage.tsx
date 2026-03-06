@@ -6,28 +6,30 @@ import { FaHandHoldingHeart } from "react-icons/fa6";
 
 export const SecondPage = () => {
   return (
-    <section className="m-auto flex w-full justify-center bg-[url(public/designBackgroundSecond.png)] bg-cover bg-center bg-no-repeat py-5 sm:items-center">
+    <section className="m-auto flex w-full justify-center bg-[url(public/designBackgroundSecond.png)] bg-cover bg-center bg-no-repeat py-5 sm:items-center lg:bg-top-right">
       <article className="flex w-full max-w-5xl flex-col gap-5 p-1 px-4 sm:gap-16 sm:px-10">
-        <div className="flex flex-wrap items-stretch justify-between gap-5">
-          <Card className="text-background flex min-h-full w-max flex-1 border-none bg-linear-to-r from-gray-700 from-50% to-gray-700/70 px-2 py-3 text-center text-xl font-semibold">
+        <div className="flex flex-wrap justify-between gap-5">
+          <Card className="text-background flex w-max flex-1 flex-col justify-center border-none bg-linear-to-r from-[#796A52] from-50% to-[#796A52]/60 px-2 py-3 text-center font-semibold lg:text-xl">
             <p className="animate-pulse">
               {" "}
-              <span className="text-4xl">+ 150</span> famílias acompanhadas
+              <span className="text-2xl lg:text-4xl">+ 150</span> famílias
+              acompanhadas
             </p>
           </Card>
-          <Card className="text-background flex min-h-full w-max flex-1 border-none bg-linear-to-r from-gray-700 from-50% to-gray-700/70 px-2 py-3 text-center text-xl font-semibold">
+          <Card className="text-background flex w-max flex-1 flex-col justify-center border-none bg-linear-to-r from-[#796A52] from-50% to-[#796A52]/60 px-2 py-3 text-center font-semibold lg:text-xl">
             <p className="animate-pulse">
               Nutrição pela faculdade de medicina do ABC
             </p>
           </Card>
-          <Card className="text-background flex min-h-full w-max flex-1 border-none bg-linear-to-r from-gray-700 from-50% to-gray-700/70 px-2 py-3 text-center text-xl font-semibold">
+          <Card className="text-background flex w-max flex-1 flex-col justify-center border-none bg-linear-to-r from-[#796A52] from-50% to-[#796A52]/60 px-2 py-3 text-center font-semibold lg:text-xl">
             <p className="animate-pulse">
               Especialista em nutrição materno infantil
             </p>
           </Card>
-          <Card className="text-background flex min-h-full w-max flex-1 border-none bg-linear-to-r from-gray-700 from-50% to-gray-700/70 px-2 py-3 text-center text-xl font-semibold">
+          <Card className="text-background flex w-max flex-1 flex-col justify-center border-none bg-linear-to-r from-[#796A52] from-50% to-[#796A52]/60 px-2 py-3 text-center font-semibold lg:text-xl">
             <p className="animate-pulse">
-              <span className="text-4xl">+ 10 anos</span> de experiência clínica
+              <span className="text-2xl lg:text-4xl">+ 10 anos</span> de
+              experiência clínica
             </p>
           </Card>
         </div>
