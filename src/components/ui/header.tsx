@@ -86,7 +86,7 @@ export const Header = () => {
           </Sheet>
         </nav>
         <nav className="hidden justify-end lg:flex">
-          <ul className="text-foreground flex items-center gap-5 pr-5 text-lg">
+          <ul className="text-foreground flex items-center gap-5 pr-5 text-xl">
             <li className="hover:border-b-foreground drop-shadow-red border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
               <a aria-label="Direcionar para a seção Inicial" href="#home">
                 Home
