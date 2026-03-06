@@ -10,26 +10,26 @@ import { FaInstagram, FaWhatsapp } from "react-icons/fa6";
 
 export const Header = () => {
   return (
-    <header className="bg-background sticky top-0 z-50 m-auto w-full px-2 py-4">
+    <header className="bg-primary text-background sticky top-0 z-50 m-auto w-full px-2 py-4">
       <div className="m-auto w-full max-w-5xl">
-        <nav className="flex w-full justify-end">
+        <nav className="text-background flex w-full justify-end">
           <Sheet>
             <SheetTrigger>
               <IoMenu className="h-6 w-6 cursor-pointer lg:hidden" />
             </SheetTrigger>
-            <SheetContent className="h-max rounded-b-lg pb-10">
+            <SheetContent className="bg-primary h-max rounded-b-lg pb-10">
               <SheetHeader>
-                <SheetTitle className="font-merriweather text-xl font-bold">
+                <SheetTitle className="font-merriweather text-background text-xl font-bold">
                   Karen Martins
                 </SheetTitle>
               </SheetHeader>
               <ul className="text-foreground flex flex-col items-end gap-3 p-3 pr-10">
-                <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
+                <li className="hover:border-b-background drop-shadow-red text-background border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
                   <a aria-label="Direcionar para a seção Inicial" href="#home">
                     Home
                   </a>
                 </li>
-                <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
+                <li className="hover:border-b-background drop-shadow-red text-background border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
                   <a
                     aria-label="Direcionar para a seção Sobre mim"
                     href="#aboutMe"
@@ -37,7 +37,7 @@ export const Header = () => {
                     Sobre mim
                   </a>
                 </li>
-                <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
+                <li className="hover:border-b-background drop-shadow-red text-background border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
                   <a
                     aria-label="Direcionar para a seção Como funciona?"
                     href="#howWorks"
@@ -45,7 +45,7 @@ export const Header = () => {
                     Como funciona?
                   </a>
                 </li>
-                <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
+                <li className="hover:border-b-background drop-shadow-red text-background border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
                   <a
                     aria-label="Direcionar para a seção diferenciais"
                     href="#diferenciais"
@@ -53,12 +53,12 @@ export const Header = () => {
                     Diferenciais
                   </a>
                 </li>
-                <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
+                <li className="hover:border-b-background drop-shadow-red text-background border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
                   <a aria-label="Direcionar para a seção Dúvidas" href="#faq">
                     Dúvidas
                   </a>
                 </li>
-                <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
+                <li className="hover:border-b-background drop-shadow-red text-background border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
                   <a
                     aria-label="Direcionar para a seção feedback"
                     href="#feedback"
@@ -66,7 +66,7 @@ export const Header = () => {
                     Feedback
                   </a>
                 </li>
-                <li className="flex gap-4 p-1 text-4xl">
+                <li className="text-background flex gap-4 p-1 text-4xl">
                   {" "}
                   <a
                     aria-label="Link para o instagram"
@@ -85,19 +85,19 @@ export const Header = () => {
             </SheetContent>
           </Sheet>
         </nav>
-        <nav className="hidden justify-end lg:flex">
+        <nav className="text-background hidden justify-end lg:flex">
           <ul className="text-foreground flex items-center gap-5 pr-5 text-xl">
-            <li className="hover:border-b-foreground drop-shadow-red border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
+            <li className="hover:border-b-background drop-shadow-red text-background border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
               <a aria-label="Direcionar para a seção Inicial" href="#home">
                 Home
               </a>
             </li>
-            <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
+            <li className="hover:border-b-background drop-shadow-red text-background border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
               <a aria-label="Direcionar para a seção Sobre mim" href="#aboutMe">
                 Sobre mim
               </a>
             </li>
-            <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
+            <li className="hover:border-b-background drop-shadow-red text-background border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
               <a
                 aria-label="Direcionar para a seção Como funciona?"
                 href="#howWorks"
@@ -105,7 +105,7 @@ export const Header = () => {
                 Como funciona?
               </a>
             </li>
-            <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
+            <li className="hover:border-b-background drop-shadow-red text-background border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
               <a
                 aria-label="Direcionar para a seção diferenciais"
                 href="#diferenciais"
@@ -113,18 +113,17 @@ export const Header = () => {
                 Diferenciais
               </a>
             </li>
-            <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
+            <li className="hover:border-b-background drop-shadow-red text-background border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
               <a aria-label="Direcionar para a seção Dúvidas" href="#faq">
                 Dúvidas
               </a>
             </li>
-            <li className="hover:border-b-foreground border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
+            <li className="hover:border-b-background drop-shadow-red text-background border-b border-b-transparent p-0.5 transition-all duration-500 ease-in-out">
               <a aria-label="Direcionar para a seção feedback" href="#feedback">
                 Feedback
               </a>
             </li>
-            <li className="flex gap-8 text-2xl">
-              {" "}
+            <li className="text-background flex gap-8 text-2xl">
               <a
                 aria-label="Link para o instagram"
                 href="https://www.instagram.com/karenmartins.nutri?igsh=MXdkNGF5ODY3OGl0Zw=="

@@ -4,7 +4,7 @@ export const FirstPage = () => {
   return (
     <section
       id="home"
-      className="m-auto flex h-max min-h-[calc(100vh-56px)] w-full max-w-5xl items-center justify-center bg-transparent bg-cover bg-center bg-no-repeat lg:min-h-[calc(100dvh-64px)] lg:items-center"
+      className="m-auto flex min-h-[calc(100vh-56px)] w-full items-center justify-center bg-[url(public/designBackgroundFirst.png)] bg-cover bg-bottom bg-center bg-no-repeat lg:min-h-[calc(100dvh-64px)] lg:items-center"
     >
       <article className="flex h-max min-h-full w-full p-1 px-4 md:p-10 lg:items-center xl:p-0">
         <div className="flex h-max flex-col gap-2 min-[600px]:gap-4 lg:gap-10">
