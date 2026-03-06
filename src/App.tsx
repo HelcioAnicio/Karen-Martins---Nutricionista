@@ -34,7 +34,7 @@ function App() {
         <FAQ />
         <FeedBack />
         <a aria-label="Link para whatsapp" href="https://wa.link/6mo3a2">
-          <FaWhatsapp className="bg-background/50 fixed right-1 bottom-2 z-50 size-16 animate-bounce rounded-3xl p-1 text-green-500 sm:size-24" />
+          <FaWhatsapp className="bg-background/50 fixed right-2 bottom-2 z-50 size-16 animate-bounce rounded-3xl p-1 text-green-500 sm:size-24 lg:right-1/12" />
         </a>
       </main>
       <Footer />

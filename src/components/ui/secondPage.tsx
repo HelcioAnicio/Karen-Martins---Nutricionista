@@ -6,13 +6,36 @@ import { FaHandHoldingHeart } from "react-icons/fa6";
 
 export const SecondPage = () => {
   return (
-    <section className="m-auto flex w-full max-w-5xl justify-center py-5 sm:items-center">
-      <article className="flex w-full flex-col gap-5 p-1 px-4 sm:gap-16 sm:px-10">
+    <section className="m-auto flex w-full justify-center bg-[url(public/designBackgroundSecond.png)] bg-cover bg-center bg-no-repeat py-5 sm:items-center">
+      <article className="flex w-full max-w-5xl flex-col gap-5 p-1 px-4 sm:gap-16 sm:px-10">
+        <div className="flex flex-wrap items-stretch justify-between gap-5">
+          <Card className="text-background flex min-h-full w-max flex-1 border-none bg-linear-to-r from-gray-700 from-50% to-gray-700/70 px-2 py-3 text-center text-xl font-semibold">
+            <p className="animate-pulse">
+              {" "}
+              <span className="text-4xl">+ 150</span> famílias acompanhadas
+            </p>
+          </Card>
+          <Card className="text-background flex min-h-full w-max flex-1 border-none bg-linear-to-r from-gray-700 from-50% to-gray-700/70 px-2 py-3 text-center text-xl font-semibold">
+            <p className="animate-pulse">
+              Nutrição pela faculdade de medicina do ABC
+            </p>
+          </Card>
+          <Card className="text-background flex min-h-full w-max flex-1 border-none bg-linear-to-r from-gray-700 from-50% to-gray-700/70 px-2 py-3 text-center text-xl font-semibold">
+            <p className="animate-pulse">
+              Especialista em nutrição materno infantil
+            </p>
+          </Card>
+          <Card className="text-background flex min-h-full w-max flex-1 border-none bg-linear-to-r from-gray-700 from-50% to-gray-700/70 px-2 py-3 text-center text-xl font-semibold">
+            <p className="animate-pulse">
+              <span className="text-4xl">+ 10 anos</span> de experiência clínica
+            </p>
+          </Card>
+        </div>
         <div className="flex w-full max-w-max flex-col gap-5 py-10">
-          <h2 className="font-merriweather text-2xl font-bold md:text-3xl">
+          <h2 className="font-merriweather bg-background rounded-md p-2 text-2xl font-bold md:text-3xl">
             Por que cuidar da alimentação na gestação?
           </h2>
-          <p className="border-foreground l border-l py-2 pl-2">
+          <p className="border-primary bg-background rounded-r-md border-l-4 p-2 py-2 pl-2">
             Mais do que dietas e restrições, o cuidado nutricional na gestação
             tem como foco a prevenção e a promoção da saúde da mãe e do bebê,
             respeitando as necessidades de cada fase. <br /> Este acompanhamento
@@ -22,7 +45,7 @@ export const SecondPage = () => {
         <Card className="m-auto max-w-max border-none text-left shadow-lg">
           <ul className="flex flex-col gap-10 px-3">
             <li className="flex items-center gap-5">
-              <GiWeightScale className="h-16 w-16 p-2" />
+              <GiWeightScale className="text-primary h-16 w-16 p-2" />
               <div>
                 <p className="text-lg font-bold">Peso Saudável</p>
                 <p>Ganho de peso adequado para cada fase da gestação</p>
@@ -30,7 +53,7 @@ export const SecondPage = () => {
             </li>
 
             <li className="flex items-center gap-5">
-              <FaHandHoldingHeart className="h-16 w-16 p-2" />
+              <FaHandHoldingHeart className="text-primary h-16 w-16 p-2" />
               <div>
                 <p className="text-lg font-bold">Energia e bem estar</p>
                 <p>
@@ -40,7 +63,7 @@ export const SecondPage = () => {
               </div>
             </li>
             <li className="flex items-center gap-5">
-              <GiStomach className="h-16 w-16 p-2" />
+              <GiStomach className="text-primary h-16 w-16 p-2" />
               <div>
                 <p className="text-lg font-bold">Controle Glicêmico</p>
                 <p>
@@ -51,14 +74,14 @@ export const SecondPage = () => {
             </li>
 
             <li className="flex items-center gap-5">
-              <FaHeartPulse className="h-16 w-16 p-2" />
+              <FaHeartPulse className="text-primary h-16 w-16 p-2" />
               <div>
                 <p className="text-lg font-bold">Pressão Equilibrada</p>
                 <p>Redução de riscos relacionados à hipertensão gestacional</p>
               </div>
             </li>
             <li className="flex items-center gap-5">
-              <MdOutlinePregnantWoman className="h-16 w-16 p-2" />
+              <MdOutlinePregnantWoman className="text-primary h-16 w-16 p-2" />
               <div>
                 <p className="text-lg font-bold">Vínculo Fortalecido</p>
                 <p>Conexão profunda com seu bebê por meio do autocuidado</p>
