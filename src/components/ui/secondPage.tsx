@@ -18,7 +18,7 @@ export const SecondPage = () => {
           </Card>
           <Card className="text-background flex w-max flex-1 flex-col justify-center border-none bg-linear-to-r from-[#796A52] from-50% to-[#796A52]/60 px-2 py-3 text-center font-semibold lg:text-xl">
             <p className="animate-pulse">
-              Nutrição pela faculdade de medicina do ABC
+              Nutrição pela Faculdade de Medicina do ABC
             </p>
           </Card>
           <Card className="text-background flex w-max flex-1 flex-col justify-center border-none bg-linear-to-r from-[#796A52] from-50% to-[#796A52]/60 px-2 py-3 text-center font-semibold lg:text-xl">
@@ -29,7 +29,7 @@ export const SecondPage = () => {
           <Card className="text-background flex w-max flex-1 flex-col justify-center border-none bg-linear-to-r from-[#796A52] from-50% to-[#796A52]/60 px-2 py-3 text-center font-semibold lg:text-xl">
             <p className="animate-pulse">
               <span className="text-2xl lg:text-4xl">+ 10 anos</span> de
-              experiência clínica
+              experiência
             </p>
           </Card>
         </div>

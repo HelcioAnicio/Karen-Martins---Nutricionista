@@ -21,7 +21,6 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Button } from "./button";
-import { CarouselAuto } from "./carouselAuto";
 
 interface ItemCarousel {
   icon?: React.ReactNode;
@@ -86,15 +85,7 @@ export const SixthPage = () => {
   );
   return (
     <section className="relative">
-      <img
-        src="background.webp"
-        alt="Descritivo"
-        loading="lazy"
-        decoding="async"
-        className="absolute top-0 right-0 -z-10 h-full w-full object-cover"
-      />
-
-      <article className="bg-background/75 h-full w-full py-16">
+      <article className="h-full w-full">
         <div className="bg-background/80 m-auto mt-0 flex flex-col items-center justify-center gap-10 p-2 py-10 md:p-10">
           <h2 className="font-merriweather my-0 text-xl font-bold sm:text-2xl lg:text-3xl">
             Condições que acompanho com atenção especializada
@@ -150,7 +141,6 @@ export const SixthPage = () => {
             </div>
           </div>
         </div>
-        <CarouselAuto />
       </article>
     </section>
   );

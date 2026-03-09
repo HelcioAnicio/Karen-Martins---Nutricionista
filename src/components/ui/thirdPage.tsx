@@ -47,10 +47,10 @@ export const ThirdPage = () => {
                 Nutrição que começa na gestação e promove um bebê bem nutrido
                 desde a barriga da mamãe.
               </p>
-              <a className="m-auto md:m-0" href="https://wa.link/6mo3a2">
+              <a className="m-auto w-full md:m-0" href="https://wa.link/6mo3a2">
                 <ButtonCTA
                   ariaLabel="Link para conversar com o profissional"
-                  text={"AGENDAR CONSULTA"}
+                  text={"Quero agendar minha sessão"}
                 />
               </a>
             </div>

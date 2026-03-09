@@ -29,7 +29,7 @@ export const FourthPage = () => {
         <ul className="m-auto flex flex-wrap justify-center gap-10">
           {contents.map((content, index) => (
             <li key={index}>
-              <Card className="hover:bg-foreground hover:text-background h-56 min-h-max rounded-tl-[75px] rounded-br-[75px] border-none text-center shadow-lg transition-all duration-300">
+              <Card className="hover:bg-primary hover:text-background h-56 min-h-max rounded-tl-[75px] rounded-br-[75px] border-none text-center shadow-lg transition-all duration-300">
                 <CardHeader>
                   <CardTitle className="font-merriweather text-xl font-semibold">
                     {content.title}
@@ -42,7 +42,11 @@ export const FourthPage = () => {
             </li>
           ))}
         </ul>
-        <a aria-label="Link para whatsapp" href="https://wa.link/6mo3a2">
+        <a
+          aria-label="Link para whatsapp"
+          href="https://wa.link/6mo3a2"
+          className="w-full sm:w-3/5"
+        >
           <ButtonCTA
             ariaLabel="Link para conversar com o profissional"
             text={"QUERO SABER MAIS"}

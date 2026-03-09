@@ -60,7 +60,10 @@ export const FeedBack = () => {
   };
 
   return (
-    <section id="feedback" className="bg-secondary py-20">
+    <section
+      id="feedback"
+      className="from-background via-secondary to-background w-full bg-linear-to-b via-70% py-20"
+    >
       <article className="m-auto flex w-full max-w-5xl flex-col items-center gap-10 p-2">
         <h2 className="font-merriweather text-xl font-bold md:text-2xl lg:text-3xl">
           O que dizem as mulheres que confiam no meu trabalho?
@@ -79,7 +82,7 @@ export const FeedBack = () => {
             {arrayFeedback.map((item, index) => (
               <li
                 key={index}
-                className={`group hover:bg-foreground hover:text-background w-max rounded-lg p-4 py-3 transition-all duration-300 ${isSelected === index && "group bg-foreground text-background"}`}
+                className={`group hover:bg-primary hover:text-background w-max rounded-lg p-4 py-3 transition-all duration-300 ${isSelected === index && "group bg-primary text-background"}`}
               >
                 <input
                   type="radio"

@@ -71,7 +71,7 @@ export function CarouselAuto() {
   return (
     <div
       id="diferenciais"
-      className="bg-background/80 relative mt-40 flex w-full flex-col items-center overflow-hidden pt-14 pb-10 lg:pt-20"
+      className="bg-background/40 relative flex w-full flex-col items-center overflow-hidden pt-14 pb-10 lg:pt-20"
     >
       <h2 className="text-foreground mb-16 px-4 text-center font-serif text-2xl font-bold md:text-3xl">
         Diferenciais do acompanhamento individual

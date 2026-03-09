@@ -10,6 +10,7 @@ import { FeedBack } from "./components/ui/feedback";
 import { Footer } from "./components/ui/footer";
 import { FaWhatsapp } from "react-icons/fa6";
 import { onLCP } from "web-vitals";
+import { CarouselAuto } from "./components/ui/carouselAuto";
 
 function App() {
   new PerformanceObserver((entryList) => {
@@ -28,13 +29,27 @@ function App() {
         <FirstPage />
         <SecondPage />
         <ThirdPage />
+        <FeedBack />
+
         <FourthPage />
         <FifthPage />
         <SixthPage />
+        <section className="relative">
+          <img
+            src="background.webp"
+            alt="Descritivo"
+            loading="lazy"
+            decoding="async"
+            className="absolute top-0 right-0 -z-10 h-full w-full object-cover"
+          />
+
+          <article className="bg-background/30 h-full w-full py-16">
+            <CarouselAuto />
+          </article>
+        </section>
         <FAQ />
-        <FeedBack />
         <a aria-label="Link para whatsapp" href="https://wa.link/6mo3a2">
-          <FaWhatsapp className="bg-background/50 fixed right-2 bottom-2 z-50 size-16 animate-bounce rounded-3xl p-1 text-green-500 sm:size-24 lg:right-1/12" />
+          <FaWhatsapp className="bg-background/50 fixed right-2 bottom-2 z-50 size-16 animate-bounce rounded-3xl p-1 text-green-500 sm:size-24 lg:right-[2%] 2xl:right-[8%]" />
         </a>
       </main>
       <Footer />
