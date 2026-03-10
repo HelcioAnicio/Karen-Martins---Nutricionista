@@ -1,31 +1,18 @@
 import * as React from "react"; // Adicione o import do React
-import Autoplay from "embla-carousel-autoplay"; // Importe o plugin
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { MdBloodtype } from "react-icons/md";
 import { GiWeightScale } from "react-icons/gi";
 import { GiKnifeFork } from "react-icons/gi";
 import { MdPregnantWoman } from "react-icons/md";
 import { FaHandsHoldingChild } from "react-icons/fa6";
 import { GiHeartBeats } from "react-icons/gi";
-import {
-  Popover,
-  PopoverContent,
-  PopoverHeader,
-  PopoverTitle,
-  PopoverTrigger,
-} from "@/components/ui/popover";
 import { Button } from "./button";
+import { Card } from "./card";
 
 interface ItemCarousel {
   icon?: React.ReactNode;
   text: string;
   title: string;
+  img?: string;
 }
 
 export const SixthPage = () => {
@@ -37,6 +24,7 @@ export const SixthPage = () => {
       text: "Diabetes gestacional",
       title:
         "Plano alimentar para controle glicêmico, prevenindo complicações e evitando o uso de insulina sempre que possível",
+      img: "public/candy.png",
     },
     {
       icon: (
@@ -45,6 +33,7 @@ export const SixthPage = () => {
       text: "Excesso de peso",
       title:
         "Acompanhamento para ganho de peso adequado, sem restrições extremas, respeitando suas necessidades energéticas e do bebê",
+      img: "public/pregnant.png",
     },
     {
       icon: (
@@ -53,6 +42,7 @@ export const SixthPage = () => {
       text: "Alimentação vegetariana",
       title:
         "Planejamento nutricional para gestantes vegetarianas e veganas, garantindo todos os nutrientes essenciais para mãe e bebê",
+      img: "public/food.png",
     },
     {
       icon: (
@@ -61,6 +51,7 @@ export const SixthPage = () => {
       text: "Gestação múltipla",
       title:
         "Acompanhamento nutricional para suprir maiores demandas e favorecer o crescimento saudável de cada bebê, mantendo o bem-estar materno.",
+      img: "public/baby.png",
     },
     {
       icon: (
@@ -69,6 +60,7 @@ export const SixthPage = () => {
       text: "Restrição de crescimento intrauterino (RCIU)",
       title:
         "Estratégias alimentares para otimizar a oferta de nutrientes ao bebê e apoiar um desenvolvimento intrauterino mais favorável.",
+      img: "public/babys.png",
     },
     {
       icon: (
@@ -77,12 +69,10 @@ export const SixthPage = () => {
       text: "Hipertensão",
       title:
         "Orientações nutricionais para redução e controle da pressão arterial, com menor consumo de sódio e apoio à prevenção da pré eclâmpsia.",
+      img: "public/machine.png",
     },
   ];
 
-  const plugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: true }),
-  );
   return (
     <section className="relative">
       <article className="h-full w-full">
@@ -91,53 +81,23 @@ export const SixthPage = () => {
             Condições que acompanho com atenção especializada
           </h2>
           <div className="m-auto my-0 max-w-5xl">
-            <div>
-              <Carousel
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
-                plugins={[plugin.current]}
-                onMouseEnter={plugin.current.stop}
-                onMouseLeave={plugin.current.reset}
-                className="w-full max-w-54 sm:max-w-lg md:max-w-xl"
-              >
-                <CarouselContent>
-                  {arrayCarousel.map((item, index) => (
-                    <CarouselItem
-                      key={index}
-                      className="flex basis-full justify-center md:basis-1/2 lg:basis-1/3"
-                    >
-                      <Popover>
-                        <PopoverTrigger asChild>
-                          <Button
-                            variant="outline"
-                            aria-label={`Abrir o contéudo sobre ${item.text}`}
-                            className="flex aspect-square h-32 w-52 cursor-pointer flex-col items-center justify-center border-none bg-inherit p-3 shadow-none hover:bg-inherit"
-                          >
-                            {" "}
-                            <p>{item.icon}</p>
-                            <p className="w-full font-semibold whitespace-pre-wrap">
-                              {item.text}
-                            </p>
-                          </Button>
-                        </PopoverTrigger>
-                        <PopoverContent className="bg-popover">
-                          <PopoverHeader>
-                            <PopoverTitle className="text-center">
-                              <p className="font-light md:text-lg">
-                                {item.title}
-                              </p>
-                            </PopoverTitle>
-                          </PopoverHeader>
-                        </PopoverContent>
-                      </Popover>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="h-full w-5 border-none bg-inherit shadow-none hover:bg-inherit" />
-                <CarouselNext className="h-full w-5 border-none bg-inherit shadow-none hover:bg-inherit" />
-              </Carousel>
+            <div className="flex flex-wrap justify-center gap-10">
+              {arrayCarousel.map((item, index) => (
+                <Card
+                  key={index}
+                  style={{ backgroundImage: `url(${item.img})` }}
+                  className={`bg- w-xs border-none bg-contain bg-center bg-no-repeat shadow-none`}
+                >
+                  <Button
+                    variant="outline"
+                    aria-label={`Abrir o contéudo sobre ${item.text}`}
+                    className="flex h-32 cursor-pointer flex-col items-center justify-center border-none bg-inherit p-3 shadow-none hover:bg-inherit"
+                  >
+                    <p>{item.icon}</p>
+                    <p className="font-semibold">{item.text}</p>
+                  </Button>
+                </Card>
+              ))}
             </div>
           </div>
         </div>

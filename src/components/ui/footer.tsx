@@ -5,9 +5,9 @@ import { FaInstagram } from "react-icons/fa";
 
 export const Footer = () => {
   return (
-    <footer className="m-auto w-full max-w-5xl p-2 py-20 max-[600px]:text-center md:px-5">
+    <footer className="m-auto flex w-full max-w-5xl flex-col items-center justify-center p-2 py-20 max-[600px]:text-center md:px-5">
       <div className="flex flex-col gap-20">
-        <div className="flex max-w-2xl flex-col gap-5">
+        <div className="m-auto flex max-w-2xl flex-col gap-5">
           <h2 className="font-merriweather max-w-xs text-xl font-bold max-[600px]:m-auto md:max-w-lg md:text-2xl lg:text-3xl">
             Cuidar da sua nutrição, é cuidar do futuro do seu bebê
           </h2>

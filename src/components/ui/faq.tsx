@@ -32,7 +32,7 @@ export const FAQ = () => {
 
   return (
     <section id="faq" className="m-auto flex w-full max-w-5xl pt-5">
-      <article className="flex w-max flex-col gap-10 px-4 md:py-5">
+      <article className="m-auto flex w-max flex-col items-center gap-10 px-4 md:py-5">
         <h2 className="font-merriweather text-lg font-bold md:text-2xl lg:text-3xl">
           Perguntas frequentes
         </h2>
@@ -49,7 +49,7 @@ export const FAQ = () => {
               className="w-full max-w-3xl cursor-pointer border-none"
             >
               <AccordionTrigger className="bg-primary text-background relative rounded-b-none pl-10 md:text-lg lg:text-xl">
-                <div className="font-merriweather bg-primary absolute -top-3 -left-2 w-9 scale-125 rounded-full p-1 text-center text-xl font-bold md:-top-4 md:-left-4">
+                <div className="font-merriweather text-secondary bg-primary absolute -top-3 -left-2 w-9 scale-125 rounded-full p-1 text-center text-xl font-bold md:-top-4 md:-left-4">
                   {i + 1}
                 </div>
                 {faq.title}
