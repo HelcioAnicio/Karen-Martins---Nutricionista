@@ -6,7 +6,7 @@ import { FaHandHoldingHeart } from "react-icons/fa6";
 
 export const SecondPage = () => {
   return (
-    <section className="m-auto flex w-full justify-center bg-[url(public/designBackgroundSecond.webp)] bg-cover bg-center bg-no-repeat sm:items-center lg:bg-top-right">
+    <section className="m-auto flex w-full justify-center bg-[url(/designBackgroundSecond.webp)] bg-cover bg-center bg-no-repeat sm:items-center lg:bg-top-right">
       <div className="bg-background/70 flex h-full min-h-full w-full items-center justify-center py-5">
         <article className="flex w-full max-w-5xl flex-col gap-5 p-1 px-4 sm:gap-16 sm:px-10">
           <div className="flex flex-wrap justify-between gap-5">

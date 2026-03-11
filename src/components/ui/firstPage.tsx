@@ -4,7 +4,7 @@ export const FirstPage = () => {
   return (
     <section
       id="home"
-      className="mx-auto flex min-h-[calc(100vh-56px)] w-full items-center justify-center bg-[url(public/designBackgroundFirst.webp)] bg-cover bg-center bg-no-repeat lg:min-h-[calc(100dvh-64px)] lg:items-center lg:bg-bottom-right"
+      className="mx-auto flex min-h-[calc(100vh-56px)] w-full items-center justify-center bg-[url(/designBackgroundFirst.webp)] bg-cover bg-center bg-no-repeat lg:min-h-[calc(100dvh-64px)] lg:items-center lg:bg-bottom-right"
     >
       <div className="bg-background/70 flex h-full min-h-[calc(100vh-56px)] w-full items-center justify-center lg:min-h-[calc(100dvh-64px)]">
         <article className="flex h-max min-h-full w-full max-w-5xl p-1 px-4 md:p-10 lg:items-center xl:p-0">

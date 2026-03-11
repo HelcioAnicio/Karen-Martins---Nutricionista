@@ -25,7 +25,7 @@ function App() {
       <Header />
 
       <main className="font-openSans relative flex w-full flex-col gap-10 max-[600px]:text-center">
-        {/* <div className="absolute top-0 left-0 -z-10 h-screen min-h-screen w-full bg-[url(public/backgroundInitial.jpg)] bg-cover bg-center bg-no-repeat object-fill"></div> */}
+        {/* <div className="absolute top-0 left-0 -z-10 h-screen min-h-screen w-full bg-[url(/backgroundInitial.jpg)] bg-cover bg-center bg-no-repeat object-fill"></div> */}
         <FirstPage />
         <SecondPage />
         <ThirdPage />
