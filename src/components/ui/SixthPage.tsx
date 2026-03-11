@@ -23,7 +23,7 @@ export const SixthPage = () => {
       text: "Diabetes gestacional",
       title:
         "Plano alimentar para controle glicêmico, prevenindo complicações e evitando o uso de insulina sempre que possível",
-      img: "/candy.png",
+      img: "/candy.webp",
     },
     {
       icon: (
@@ -32,7 +32,7 @@ export const SixthPage = () => {
       text: "Excesso de peso",
       title:
         "Acompanhamento para ganho de peso adequado, sem restrições extremas, respeitando suas necessidades energéticas e do bebê",
-      img: "/pregnant.png",
+      img: "/pregnant.webp",
     },
     {
       icon: (
@@ -41,7 +41,7 @@ export const SixthPage = () => {
       text: "Alimentação vegetariana",
       title:
         "Planejamento nutricional para gestantes vegetarianas e veganas, garantindo todos os nutrientes essenciais para mãe e bebê",
-      img: "/food.png",
+      img: "/food.webp",
     },
     {
       icon: (
@@ -50,7 +50,7 @@ export const SixthPage = () => {
       text: "Gestação múltipla",
       title:
         "Acompanhamento nutricional para suprir maiores demandas e favorecer o crescimento saudável de cada bebê, mantendo o bem-estar materno.",
-      img: "/baby.png",
+      img: "/baby.webp",
     },
     {
       icon: (
@@ -59,7 +59,7 @@ export const SixthPage = () => {
       text: "Restrição de crescimento intrauterino (RCIU)",
       title:
         "Estratégias alimentares para otimizar a oferta de nutrientes ao bebê e apoiar um desenvolvimento intrauterino mais favorável.",
-      img: "/babys.png",
+      img: "/babys.webp",
     },
     {
       icon: (
@@ -68,7 +68,7 @@ export const SixthPage = () => {
       text: "Hipertensão",
       title:
         "Orientações nutricionais para redução e controle da pressão arterial, com menor consumo de sódio e apoio à prevenção da pré eclâmpsia.",
-      img: "/machine.png",
+      img: "/machine.webp",
     },
   ];
 

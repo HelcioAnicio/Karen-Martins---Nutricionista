@@ -4,12 +4,12 @@ export const FirstPage = () => {
   return (
     <section
       id="home"
-      className="mx-auto flex min-h-[calc(100vh-56px)] w-full items-center justify-center bg-[url(public/designBackgroundFirst.png)] bg-cover bg-center bg-no-repeat lg:min-h-[calc(100dvh-64px)] lg:items-center lg:bg-bottom-right"
+      className="mx-auto flex min-h-[calc(100vh-56px)] w-full items-center justify-center bg-[url(public/designBackgroundFirst.webp)] bg-cover bg-center bg-no-repeat lg:min-h-[calc(100dvh-64px)] lg:items-center lg:bg-bottom-right"
     >
       <div className="bg-background/70 flex h-full min-h-[calc(100vh-56px)] w-full items-center justify-center lg:min-h-[calc(100dvh-64px)]">
         <article className="flex h-max min-h-full w-full max-w-5xl p-1 px-4 md:p-10 lg:items-center xl:p-0">
           <div className="flex h-max flex-col gap-2 min-[600px]:gap-4 lg:gap-10">
-            <h1 className="font-merriweather text-center text-2xl font-bold min-[400px]:text-3xl sm:text-5xl md:leading-14 lg:leading-16 2xl:text-6xl">
+            <h1 className="font-merriweather text-center text-2xl font-bold min-[400px]:text-3xl sm:text-5xl md:leading-14 lg:leading-20 2xl:text-6xl">
               Seu bebê pode ser afetado pela sua alimentação e você nem sabe
               disso
             </h1>
