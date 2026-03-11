@@ -9,20 +9,23 @@ export const FAQ = () => {
   const FAQS = [
     {
       title: "As consultas são 100% online?",
-      text: "Sim. Atendo gestantes de todo o Brasil com a mesma atenção e acolhimento de um encontro presencial. As consultas são realizadas por videochamada, em horários flexíveis, respeitando sua rotina e conforto.",
+      text: " 100% online, por videochamada. Você é atendida com toda atenção de qualquer lugar do Brasil e do mundo. Visto que atendo pacientes na Europa, EUA, Canadá...",
     },
     {
-      title:
-        "E se eu tiver uma condição clínica específica, como diabetes gestacional ou hipertensão?",
-      text: "Esses são justamente os casos em que meu trabalho é mais direcionado. Tenho experiência hospitalar de mais de 10 anos no cuidado de gestantes de alto risco. Cada plano é elaborado com base em protocolos clínicos atualizados e adaptado à sua realidade individual.",
+      title: "Quanto custa o acompanhamento?",
+      text: "O investimento varia conforme o nível de suporte. Na sessão de diagnóstico apresento as opções com valores claros para você decidir com tranquilidade.",
     },
     {
       title: "O atendimento é coberto por convênios médicos?",
       text: "As consultas são particulares, mas forneço toda a documentação necessária para reembolso junto ao seu plano de saúde, caso ele ofereça essa opção. Inclui nota fiscal, recibo detalhado e relatório técnico completo.",
     },
     {
-      title: "Quanto tempo dura o acompanhamento?",
-      text: "Depende do plano escolhido. Os atendimentos podem ser pontuais (para dúvidas ou orientações específicas) ou abranger toda a gestação, além de planos específicos para o pós‑parto e introdução alimentar. Construímos juntas o melhor caminho.",
+      title: "Posso começar em qualquer semana de gestação?",
+      text: "Sim. Atendo desde o pré-natal até o pós-parto. Quanto mais cedo começar, melhor — mas nunca é tarde.",
+    },
+    {
+      title: "E se eu tiver enjoos e não conseguir seguir o plano?",
+      text: "O plano é feito para a sua realidade, inclusive para os dias difíceis. Ajustamos sempre que necessário",
     },
     {
       title: "Como funciona o suporte e o acesso ao plano alimentar?",

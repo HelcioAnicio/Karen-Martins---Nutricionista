@@ -5,7 +5,6 @@ import { GiKnifeFork } from "react-icons/gi";
 import { MdPregnantWoman } from "react-icons/md";
 import { FaHandsHoldingChild } from "react-icons/fa6";
 import { GiHeartBeats } from "react-icons/gi";
-import { Button } from "./button";
 import { Card } from "./card";
 
 interface ItemCarousel {
@@ -24,7 +23,7 @@ export const SixthPage = () => {
       text: "Diabetes gestacional",
       title:
         "Plano alimentar para controle glicêmico, prevenindo complicações e evitando o uso de insulina sempre que possível",
-      img: "public/candy.png",
+      img: "/candy.png",
     },
     {
       icon: (
@@ -33,7 +32,7 @@ export const SixthPage = () => {
       text: "Excesso de peso",
       title:
         "Acompanhamento para ganho de peso adequado, sem restrições extremas, respeitando suas necessidades energéticas e do bebê",
-      img: "public/pregnant.png",
+      img: "/pregnant.png",
     },
     {
       icon: (
@@ -42,7 +41,7 @@ export const SixthPage = () => {
       text: "Alimentação vegetariana",
       title:
         "Planejamento nutricional para gestantes vegetarianas e veganas, garantindo todos os nutrientes essenciais para mãe e bebê",
-      img: "public/food.png",
+      img: "/food.png",
     },
     {
       icon: (
@@ -51,7 +50,7 @@ export const SixthPage = () => {
       text: "Gestação múltipla",
       title:
         "Acompanhamento nutricional para suprir maiores demandas e favorecer o crescimento saudável de cada bebê, mantendo o bem-estar materno.",
-      img: "public/baby.png",
+      img: "/baby.png",
     },
     {
       icon: (
@@ -60,7 +59,7 @@ export const SixthPage = () => {
       text: "Restrição de crescimento intrauterino (RCIU)",
       title:
         "Estratégias alimentares para otimizar a oferta de nutrientes ao bebê e apoiar um desenvolvimento intrauterino mais favorável.",
-      img: "public/babys.png",
+      img: "/babys.png",
     },
     {
       icon: (
@@ -69,7 +68,7 @@ export const SixthPage = () => {
       text: "Hipertensão",
       title:
         "Orientações nutricionais para redução e controle da pressão arterial, com menor consumo de sódio e apoio à prevenção da pré eclâmpsia.",
-      img: "public/machine.png",
+      img: "/machine.png",
     },
   ];
 
@@ -88,14 +87,13 @@ export const SixthPage = () => {
                   style={{ backgroundImage: `url(${item.img})` }}
                   className={`bg- w-xs border-none bg-contain bg-center bg-no-repeat shadow-none`}
                 >
-                  <Button
-                    variant="outline"
+                  <div
                     aria-label={`Abrir o contéudo sobre ${item.text}`}
-                    className="flex h-32 cursor-pointer flex-col items-center justify-center border-none bg-inherit p-3 shadow-none hover:bg-inherit"
+                    className="m-auto flex h-32 w-48 cursor-pointer flex-col items-center justify-center border-none bg-inherit p-3 text-center shadow-none hover:font-bold"
                   >
-                    <p>{item.icon}</p>
-                    <p className="font-semibold">{item.text}</p>
-                  </Button>
+                    <p className="text-background">{item.icon}</p>
+                    <p className="text-background font-semibold">{item.text}</p>
+                  </div>
                 </Card>
               ))}
             </div>
