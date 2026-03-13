@@ -135,9 +135,7 @@ export const FeedBack = () => {
           language: "pt-BR",
         });
 
-        const response = await fetch(
-          `https://maps.googleapis.com/maps/api/place/details/json?${params}`,
-        );
+        const response = await fetch(`/api/google-reviews?${params}`);
         const data = (await response.json()) as GooglePlaceDetailsResponse;
 
         if (data.status !== "OK") {
