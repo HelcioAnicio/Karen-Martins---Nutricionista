@@ -33,7 +33,7 @@ const defaultFeedbacks: FeedbackData[] = [
 ];
 
 export const FeedBack = () => {
-  const GOOGLE_API_KEY = import.meta.env.VITE_GOOGLE_PLACES_API_KEY;
+  const GOOGLE_API_KEY = import.meta.env.VITE_GOOGLE_PLACES_API;
   const GOOGLE_PLACE_ID = import.meta.env.VITE_GOOGLE_PLACES_PLACE_ID;
 
   type GooglePlaceReview = {
