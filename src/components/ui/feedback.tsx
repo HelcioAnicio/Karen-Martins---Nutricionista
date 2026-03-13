@@ -1,62 +1,181 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 
 interface FeedbackData {
   name: string;
   from: string;
-  // stars?: React.ReactNode,
   feedback: string;
+  rating?: number;
 }
 
-export const FeedBack = () => {
-  const arrayFeedback: FeedbackData[] = [
-    {
-      name: "Evelyn Petrucceli",
-      from: "Avaliação Google",
-      // stars?:,
-      feedback:
-        "Ótimo atendimento! A Dra. Karen Martins me atendeu super bem, e tirou todas as minhas dúvidas.",
-    },
-    {
-      name: "Alice Ferreira",
-      from: "Avaliação Google",
-      // stars?:,
-      feedback:
-        "Desde o primeiro atendimento, acolhimento com muito carinho, agilidade, atenção e profissionalismo. Parabéns e muito obrigada!",
-    },
-    {
-      name: "Valquiria Aguiar",
-      from: "Avaliação Google",
-      // stars?:,
-      feedback:
-        "Uma profissional extremamente atenciosa e dedicada. Transmite segurança e esclarece as dúvidas",
-    },
-  ];
+const defaultFeedbacks: FeedbackData[] = [
+  {
+    name: "Evelyn Petrucceli",
+    from: "Avaliação Google",
+    feedback:
+      "Ótimo atendimento! A Dra. Karen Martins me atendeu super bem, e tirou todas as minhas dúvidas.",
+    rating: 5,
+  },
+  {
+    name: "Alice Ferreira",
+    from: "Avaliação Google",
+    feedback:
+      "Desde o primeiro atendimento, acolhimento com muito carinho, agilidade, atenção e profissionalismo. Parabéns e muito obrigada!",
+    rating: 5,
+  },
+  {
+    name: "Valquiria Aguiar",
+    from: "Avaliação Google",
+    feedback:
+      "Uma profissional extremamente atenciosa e dedicada. Transmite segurança e esclarece as dúvidas",
+    rating: 5,
+  },
+];
 
-  const [feedbackSelected, setFeedbackSelected] = useState(
-    arrayFeedback[0].feedback,
+export const FeedBack = () => {
+  const GOOGLE_API_KEY = import.meta.env.VITE_GOOGLE_PLACES_API_KEY;
+  const GOOGLE_PLACE_ID = import.meta.env.VITE_GOOGLE_PLACES_PLACE_ID;
+
+  type GooglePlaceReview = {
+    author_name?: string;
+    rating?: number;
+    text?: string;
+  };
+
+  type GooglePlaceDetailsResponse = {
+    status: string;
+    error_message?: string;
+    result?: {
+      reviews?: GooglePlaceReview[];
+    };
+  };
+
+  const getCacheKey = () => `google-place-reviews-${GOOGLE_PLACE_ID}`;
+  const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 1 dia
+
+  const loadCachedReviews = (): FeedbackData[] | null => {
+    if (!GOOGLE_PLACE_ID) return null;
+
+    try {
+      const raw = localStorage.getItem(getCacheKey());
+      if (!raw) return null;
+
+      const parsed = JSON.parse(raw) as {
+        timestamp: number;
+        reviews: FeedbackData[];
+      };
+
+      if (Date.now() - parsed.timestamp > CACHE_TTL_MS) {
+        localStorage.removeItem(getCacheKey());
+        return null;
+      }
+
+      return Array.isArray(parsed.reviews) ? parsed.reviews : null;
+    } catch {
+      return null;
+    }
+  };
+
+  const saveCachedReviews = (reviews: FeedbackData[]) => {
+    if (!GOOGLE_PLACE_ID) return;
+    try {
+      localStorage.setItem(
+        getCacheKey(),
+        JSON.stringify({ timestamp: Date.now(), reviews }),
+      );
+    } catch {
+      // ignore storage errors
+    }
+  };
+
+  const cachedReviews = loadCachedReviews();
+
+  const [feedbacks, setFeedbacks] = useState<FeedbackData[]>(
+    cachedReviews && cachedReviews.length ? cachedReviews : defaultFeedbacks,
   );
   const [isSelected, setIsSelected] = useState<number>(0);
 
   useEffect(() => {
+    if (cachedReviews && cachedReviews.length) return;
+
+    const fetchGoogleReviews = async () => {
+      if (!GOOGLE_API_KEY || !GOOGLE_PLACE_ID) return;
+
+      try {
+        const params = new URLSearchParams({
+          place_id: GOOGLE_PLACE_ID,
+          fields: "name,rating,reviews",
+          key: GOOGLE_API_KEY,
+          language: "pt-BR",
+        });
+
+        const response = await fetch(
+          `https://maps.googleapis.com/maps/api/place/details/json?${params}`,
+        );
+        const data = (await response.json()) as GooglePlaceDetailsResponse;
+
+        if (data.status !== "OK") {
+          console.warn(
+            "Google Places API returned",
+            data.status,
+            data.error_message,
+          );
+          return;
+        }
+
+        if (!Array.isArray(data.result?.reviews)) return;
+
+        const mapped: FeedbackData[] = data.result.reviews
+          .slice(0, 5)
+          .map((review) => ({
+            name: review.author_name ?? "Anônimo",
+            from: "Avaliação Google",
+            feedback: review.text ?? "",
+            rating: review.rating ?? 5,
+          }));
+
+        if (!mapped.length) return;
+
+        setFeedbacks(mapped);
+        setIsSelected(0);
+        saveCachedReviews(mapped);
+      } catch (error) {
+        // Fail silently and keep the default testimonials
+        console.warn("Falha ao buscar avaliações do Google", error);
+      }
+    };
+
+    fetchGoogleReviews();
+  }, [GOOGLE_API_KEY, GOOGLE_PLACE_ID, cachedReviews]);
+
+  useEffect(() => {
     const timer = setInterval(() => {
-      setIsSelected((prev) =>
-        prev === arrayFeedback.length - 1 ? 0 : prev + 1,
-      );
+      setIsSelected((prev) => (prev === feedbacks.length - 1 ? 0 : prev + 1));
     }, 5000);
 
     return () => clearInterval(timer);
-  }, [arrayFeedback.length, isSelected]);
+  }, [feedbacks.length]);
 
-  const currentFeedback = arrayFeedback[isSelected].feedback;
+  const currentFeedback = feedbacks[isSelected]?.feedback ?? "";
+
+  const renderStars = (rating = 5) => (
+    <p className="flex gap-2">
+      {Array.from({ length: 5 }).map((_, idx) => (
+        <FaStar
+          key={idx}
+          className={`text-yellow-400 transition-opacity duration-200 ${
+            idx < Math.round(rating) ? "" : "opacity-30"
+          }`}
+        />
+      ))}
+    </p>
+  );
 
   const handleInput = (
-    event: React.ChangeEvent<HTMLInputElement>,
+    _event: React.ChangeEvent<HTMLInputElement>,
     index: number,
   ) => {
     setIsSelected(index);
-    setFeedbackSelected(event.target.value);
   };
 
   return (
@@ -79,7 +198,7 @@ export const FeedBack = () => {
           </div>
 
           <ul className="flex flex-col items-center gap-10 pr-0.5">
-            {arrayFeedback.map((item, index) => (
+            {feedbacks.map((item, index) => (
               <li
                 key={index}
                 className={`group hover:bg-primary hover:text-background w-max rounded-lg p-4 py-3 transition-all duration-300 ${isSelected === index && "group bg-primary text-background"}`}
@@ -90,7 +209,7 @@ export const FeedBack = () => {
                   id={`feedback-${index}`}
                   className="group hidden"
                   value={item.feedback}
-                  checked={feedbackSelected === item.feedback}
+                  checked={isSelected === index}
                   onChange={(event) => handleInput(event, index)}
                 />
                 <label
@@ -102,13 +221,7 @@ export const FeedBack = () => {
                   >
                     <p className="text-lg font-bold">{item.name}</p>
                     <p className="font-extralight">{item.from}</p>
-                    <p className="flex gap-2">
-                      <FaStar className="text-yellow-400" />
-                      <FaStar className="text-yellow-400" />
-                      <FaStar className="text-yellow-400" />
-                      <FaStar className="text-yellow-400" />
-                      <FaStar className="text-yellow-400" />
-                    </p>
+                    {renderStars(item.rating)}
                   </div>
                 </label>
               </li>

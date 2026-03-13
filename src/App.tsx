@@ -20,6 +20,12 @@ function App() {
   }).observe({ type: "largest-contentful-paint", buffered: true });
 
   onLCP(console.log);
+
+  // Exemplo de chamada no servidor (Server Action ou API Route)
+  // const GOOGLE_MAPS_API_KEY = "AIzaSyBFWWYwTqp-NEo1r7l5mEvIbfZtDi9Y6O8";
+  // const PLACE_ID = "7872526946686050572";
+  // const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews,rating,user_ratings_total&key=${GOOGLE_MAPS_API_KEY}&language=pt-BR`;
+
   return (
     <>
       <Header />
