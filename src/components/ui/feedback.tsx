@@ -50,15 +50,15 @@ export const FeedBack = () => {
     };
   };
 
-  const getCacheKey = () => `google-place-reviews-${GOOGLE_PLACE_ID}`;
-  const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 1 dia
+  const [feedbacks, setFeedbacks] = useState<FeedbackData[]>(() => {
+    const getCacheKey = () => `google-place-reviews-${GOOGLE_PLACE_ID}`;
+    const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 1 dia
 
-  const loadCachedReviews = (): FeedbackData[] | null => {
-    if (!GOOGLE_PLACE_ID) return null;
+    if (!GOOGLE_PLACE_ID) return defaultFeedbacks;
 
     try {
       const raw = localStorage.getItem(getCacheKey());
-      if (!raw) return null;
+      if (!raw) return defaultFeedbacks;
 
       const parsed = JSON.parse(raw) as {
         timestamp: number;
@@ -67,39 +67,65 @@ export const FeedBack = () => {
 
       if (Date.now() - parsed.timestamp > CACHE_TTL_MS) {
         localStorage.removeItem(getCacheKey());
-        return null;
+        return defaultFeedbacks;
       }
 
-      return Array.isArray(parsed.reviews) ? parsed.reviews : null;
+      return Array.isArray(parsed.reviews) && parsed.reviews.length
+        ? parsed.reviews
+        : defaultFeedbacks;
     } catch {
-      return null;
+      return defaultFeedbacks;
     }
-  };
-
-  const saveCachedReviews = (reviews: FeedbackData[]) => {
-    if (!GOOGLE_PLACE_ID) return;
-    try {
-      localStorage.setItem(
-        getCacheKey(),
-        JSON.stringify({ timestamp: Date.now(), reviews }),
-      );
-    } catch {
-      // ignore storage errors
-    }
-  };
-
-  const cachedReviews = loadCachedReviews();
-
-  const [feedbacks, setFeedbacks] = useState<FeedbackData[]>(
-    cachedReviews && cachedReviews.length ? cachedReviews : defaultFeedbacks,
-  );
+  });
   const [isSelected, setIsSelected] = useState<number>(0);
 
   useEffect(() => {
-    if (cachedReviews && cachedReviews.length) return;
+    const getCacheKey = () => `google-place-reviews-${GOOGLE_PLACE_ID}`;
+    const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 1 dia
+
+    const loadCachedReviews = (): FeedbackData[] | null => {
+      if (!GOOGLE_PLACE_ID) return null;
+
+      try {
+        const raw = localStorage.getItem(getCacheKey());
+        if (!raw) return null;
+
+        const parsed = JSON.parse(raw) as {
+          timestamp: number;
+          reviews: FeedbackData[];
+        };
+
+        if (Date.now() - parsed.timestamp > CACHE_TTL_MS) {
+          localStorage.removeItem(getCacheKey());
+          return null;
+        }
+
+        return Array.isArray(parsed.reviews) ? parsed.reviews : null;
+      } catch {
+        return null;
+      }
+    };
+
+    const saveCachedReviews = (reviews: FeedbackData[]) => {
+      if (!GOOGLE_PLACE_ID) return;
+      try {
+        localStorage.setItem(
+          getCacheKey(),
+          JSON.stringify({ timestamp: Date.now(), reviews }),
+        );
+      } catch {
+        // ignore storage errors
+      }
+    };
+
+    const cached = loadCachedReviews();
+    if (cached && cached.length) return;
 
     const fetchGoogleReviews = async () => {
-      if (!GOOGLE_API_KEY || !GOOGLE_PLACE_ID) return;
+      if (!GOOGLE_API_KEY || !GOOGLE_PLACE_ID) {
+        console.warn("Google API Key or Place ID not configured");
+        return;
+      }
 
       try {
         const params = new URLSearchParams({
@@ -123,7 +149,10 @@ export const FeedBack = () => {
           return;
         }
 
-        if (!Array.isArray(data.result?.reviews)) return;
+        if (!Array.isArray(data.result?.reviews)) {
+          console.warn("No reviews found in Google Places response");
+          return;
+        }
 
         const mapped: FeedbackData[] = data.result.reviews
           .slice(0, 5)
@@ -134,19 +163,21 @@ export const FeedBack = () => {
             rating: review.rating ?? 5,
           }));
 
-        if (!mapped.length) return;
+        if (!mapped.length) {
+          console.warn("No valid reviews to display");
+          return;
+        }
 
         setFeedbacks(mapped);
         setIsSelected(0);
         saveCachedReviews(mapped);
       } catch (error) {
-        // Fail silently and keep the default testimonials
         console.warn("Falha ao buscar avaliações do Google", error);
       }
     };
 
     fetchGoogleReviews();
-  }, [GOOGLE_API_KEY, GOOGLE_PLACE_ID, cachedReviews]);
+  }, [GOOGLE_API_KEY, GOOGLE_PLACE_ID]);
 
   useEffect(() => {
     const timer = setInterval(() => {
