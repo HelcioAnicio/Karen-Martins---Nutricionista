@@ -1,13 +1,13 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  const apiKey = process.env.GOOGLE_PLACES_API_KEY;
-  const placeId = process.env.GOOGLE_PLACES_PLACE_ID;
+  const apiKey = req.query.key as string;
+  const placeId = req.query.place_id as string;
 
   if (!apiKey || !placeId) {
     return res
       .status(500)
-      .json({ error: "Google API key or Place ID not configured" });
+      .json({ error: "Google API key or Place ID not provided" });
   }
 
   const params = new URLSearchParams({
@@ -24,11 +24,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const data = await response.json();
     return res.status(response.status).json(data);
   } catch (error) {
-    return res
-      .status(500)
-      .json({
-        error: "Failed to fetch Google reviews",
-        details: String(error),
-      });
+    return res.status(500).json({
+      error: "Failed to fetch Google reviews",
+      details: String(error),
+    });
   }
 }
