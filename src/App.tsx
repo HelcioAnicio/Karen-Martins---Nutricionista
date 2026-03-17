@@ -33,11 +33,6 @@ function App() {
 
   onLCP(console.log);
 
-  // Exemplo de chamada no servidor (Server Action ou API Route)
-  // const GOOGLE_MAPS_API_KEY = "AIzaSyBFWWYwTqp-NEo1r7l5mEvIbfZtDi9Y6O8";
-  // const PLACE_ID = "7872526946686050572";
-  // const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews,rating,user_ratings_total&key=${GOOGLE_MAPS_API_KEY}&language=pt-BR`;
-
   return (
     <>
       <Header />
@@ -67,21 +62,18 @@ function App() {
         </section>
 
         <section className="bg-primary text-background py-16">
-          <div className="m-auto max-w-4xl px-4 text-center">
+          <div className="m-auto flex max-w-4xl flex-col px-4 last:items-center">
             <h2 className="font-merriweather mb-4 text-2xl font-bold">
               Um guia simples para ajudar você a se alimentar melhor na
               gestação.
             </h2>
-            <p className="mb-6">
-              Neste guia você vai aprender:
-              <br />
-              ✔ O que realmente importa na alimentação durante a gestação
-              <br />
-              ✔ Como montar refeições equilibradas de forma simples
-              <br />
-              ✔ Os principais erros que aumentam riscos na gravidez
-              <br />✔ Como a nutrição pode ajudar a prevenir complicações
-            </p>
+            <div className="m-auto mb-6 w-full sm:w-3/5">
+              <p>Neste guia você vai aprender:</p>
+              <p>✔ O que realmente importa na alimentação durante a gestação</p>
+              <p>✔ Como montar refeições equilibradas de forma simples</p>
+              <p>✔ Os principais erros que aumentam riscos na gravidez</p>
+              <p>✔ Como a nutrição pode ajudar a prevenir complicações</p>
+            </div>
             <button
               onClick={() => setIsModalOpen(true)}
               className="bg-background text-primary rounded-lg px-6 py-3 font-bold transition hover:bg-gray-200"

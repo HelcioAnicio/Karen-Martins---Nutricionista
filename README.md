@@ -19,9 +19,9 @@ If you are developing a production application, we recommend updating the config
 
 ```js
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(["dist"]),
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ["**/*.{ts,tsx}"],
     extends: [
       // Other configs...
 
@@ -36,40 +36,75 @@ export default defineConfig([
     ],
     languageOptions: {
       parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
         tsconfigRootDir: import.meta.dirname,
       },
       // other options...
     },
   },
-])
+]);
 ```
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
 ```js
 // eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+import reactX from "eslint-plugin-react-x";
+import reactDom from "eslint-plugin-react-dom";
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(["dist"]),
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ["**/*.{ts,tsx}"],
     extends: [
       // Other configs...
       // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
+      reactX.configs["recommended-typescript"],
       // Enable lint rules for React DOM
       reactDom.configs.recommended,
     ],
     languageOptions: {
       parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
         tsconfigRootDir: import.meta.dirname,
       },
       // other options...
     },
   },
-])
+]);
 ```
+
+## HubSpot (captura de leads)
+
+O formulário do modal (`src/components/ui/downloadModal.tsx`) pode enviar os dados diretamente ao HubSpot usando a **Forms API**, sem precisar de backend.
+
+### Como configurar (recomendado: Forms API)
+
+1. Crie um formulário no HubSpot (Forms).
+2. Copie o **portalId** e o **formId** (GUID do formulário).
+3. Defina estas variáveis no seu `.env` local (ou no painel de deploy):
+
+```env
+VITE_HUBSPOT_PORTAL_ID=seu_portal_id_aqui
+VITE_HUBSPOT_FORM_ID=seu_form_id_aqui
+```
+
+### Como funciona (Forms API)
+
+- O formulário em `src/components/ui/downloadModal.tsx` envia os dados para:
+  `https://api.hsforms.com/submissions/v3/integration/submit/{portalId}/{formId}`
+- Em caso de envio bem-sucedido, o PDF é liberado para download.
+
+### Alternativa: servidor/backend (opcional)
+
+Se preferir manter o backend, há uma rota opcional em `api/cadastro.ts` que envia para o HubSpot usando um **Private App Token** ou **API Key legada**.
+
+Para usar esse caminho, defina (no `.env`):
+
+```env
+HUBSPOT_PRIVATE_APP_TOKEN=seu_token_aqui
+# ou
+HUBSPOT_API_KEY=... (menos recomendado)
+```
+
+> Nota: se você já tiver configurado `VITE_HUBSPOT_PORTAL_ID` + `VITE_HUBSPOT_FORM_ID`, o projeto **usa o Forms API diretamente** e não chama `api/cadastro`.
