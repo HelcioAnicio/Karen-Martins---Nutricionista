@@ -23,10 +23,6 @@ export const DownloadModal: React.FC<DownloadModalProps> = ({
   const [isSuccess, setIsSuccess] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
 
-  // const hubSpotPersonalKey =
-  //   "CiRuYTEtOGQzYy0yMTk4LTRjMjgtYTg0OS0yZTdkZjZiODQ3N2MQ8Ku1GBjYotkqKhkABeaRgr9_fUMrjCzEnvPcbLH3c_QPEBQJSgNuYTE";
-  // const APIKey = "cdad5996-06e3-4c29-af60-3c7ec16771cd";
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,
