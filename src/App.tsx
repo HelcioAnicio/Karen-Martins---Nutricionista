@@ -75,7 +75,7 @@ function App() {
             </div>
             <button
               onClick={() => setIsModalOpen(true)}
-              className="bg-background text-primary rounded-lg px-6 py-3 font-bold transition hover:bg-gray-200"
+              className="bg-background text-primary cursor-pointer rounded-lg px-6 py-3 font-bold transition hover:bg-gray-200"
             >
               Baixe agora
             </button>

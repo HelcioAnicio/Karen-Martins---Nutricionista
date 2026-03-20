@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 
 interface FeedbackData {
@@ -77,7 +77,7 @@ export const FeedBack = () => {
       return defaultFeedbacks;
     }
   });
-  const [isSelected, setIsSelected] = useState<number>(0);
+  console.log("feedbacks: ", feedbacks);
 
   useEffect(() => {
     const getCacheKey = () => `google-place-reviews-${GOOGLE_PLACE_ID}`;
@@ -167,7 +167,6 @@ export const FeedBack = () => {
         }
 
         setFeedbacks(mapped);
-        setIsSelected(0);
         saveCachedReviews(mapped);
       } catch (error) {
         console.warn("Falha ao buscar avaliações do Google", error);
@@ -176,16 +175,6 @@ export const FeedBack = () => {
 
     fetchGoogleReviews();
   }, [GOOGLE_API_KEY, GOOGLE_PLACE_ID]);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIsSelected((prev) => (prev === feedbacks.length - 1 ? 0 : prev + 1));
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [feedbacks.length]);
-
-  const currentFeedback = feedbacks[isSelected]?.feedback ?? "";
 
   const renderStars = (rating = 5) => (
     <p className="flex gap-2">
@@ -200,69 +189,57 @@ export const FeedBack = () => {
     </p>
   );
 
-  const handleInput = (
-    _event: React.ChangeEvent<HTMLInputElement>,
-    index: number,
-  ) => {
-    setIsSelected(index);
-  };
-
   return (
     <section
       id="feedback"
       className="from-background via-secondary to-background w-full bg-linear-to-b via-70% py-20"
     >
-      <article className="m-auto flex w-full max-w-5xl flex-col items-center gap-10 p-2">
+      <article className="m-auto flex w-full flex-col items-center gap-10 p-2">
         <h2 className="font-merriweather text-xl font-bold md:text-2xl lg:text-3xl">
           O que dizem as mulheres que confiam no meu trabalho?
         </h2>
         <div className="flex flex-col justify-between gap-10 max-[600px]:m-auto md:flex-row md:gap-10">
-          <div className="flex h-44 w-full max-w-sm border-b p-2 sm:pb-10 md:hidden">
-            <p
-              key={isSelected}
-              className="font-merriweather animate-in fade-in w-full max-w-sm text-xl font-bold wrap-anywhere italic duration-700"
-            >
-              {`"${currentFeedback}"`}
-            </p>{" "}
-          </div>
-
-          <ul className="flex flex-col items-center gap-10 pr-0.5">
-            {feedbacks.map((item, index) => (
-              <li
-                key={index}
-                className={`group hover:bg-primary hover:text-background w-max rounded-lg p-4 py-3 transition-all duration-300 ${isSelected === index && "group bg-primary text-background"}`}
-              >
-                <input
-                  type="radio"
-                  name="feedback"
-                  id={`feedback-${index}`}
-                  className="group hidden"
-                  value={item.feedback}
-                  checked={isSelected === index}
-                  onChange={(event) => handleInput(event, index)}
-                />
-                <label
-                  htmlFor={`feedback-${index}`}
-                  className="w-full cursor-pointer gap-3"
+          <div className="w-full overflow-hidden">
+            <ul className="animate-scrool flex h-72 items-center justify-between space-x-40">
+              {feedbacks.map((item, index) => (
+                <li
+                  key={index}
+                  className={`flex h-full w-max max-w-96 min-w-60 flex-col gap-10 rounded-lg bg-white p-4 px-7`}
                 >
-                  <div
-                    className={`group-hover:border-t-background flex w-full max-w-80 min-w-60 flex-col items-center border-t py-2 transition-all duration-300 ${isSelected === index ? "border-t-background" : "border-t-foreground"}`}
-                  >
-                    <p className="text-lg font-bold">{item.name}</p>
-                    <p className="font-extralight">{item.from}</p>
+                  <div className="flex flex-col gap-5">
+                    <div className="flex gap-2">
+                      <p className="bg-primary text-primary-foreground flex h-10 w-10 items-center justify-center rounded-full text-2xl">
+                        {item.name.charAt(0).toUpperCase()}
+                      </p>
+                      <p className="text-lg font-bold lg:text-2xl">
+                        {item.name}
+                      </p>
+                    </div>
                     {renderStars(item.rating)}
                   </div>
-                </label>
-              </li>
-            ))}
-          </ul>
-          <div className="hidden w-full border-l p-2 sm:pl-10 md:flex">
-            <p
-              key={isSelected}
-              className="font-merriweather animate-in fade-in w-full max-w-sm text-xl font-bold wrap-anywhere italic duration-700"
-            >
-              {`"${currentFeedback}"`}
-            </p>{" "}
+                  <p className="text-lg font-bold">{item.feedback}</p>
+                </li>
+              ))}
+              {feedbacks.map((item, index) => (
+                <li
+                  key={index}
+                  className={`flex h-full w-max max-w-96 min-w-60 flex-col gap-10 rounded-lg bg-white p-4 px-7`}
+                >
+                  <div className="flex flex-col gap-5">
+                    <div className="flex gap-2">
+                      <p className="bg-primary text-primary-foreground flex h-10 w-10 items-center justify-center rounded-full text-2xl">
+                        {item.name.charAt(0).toUpperCase()}
+                      </p>
+                      <p className="text-lg font-bold lg:text-2xl">
+                        {item.name}
+                      </p>
+                    </div>
+                    {renderStars(item.rating)}
+                  </div>
+                  <p className="text-lg font-bold">{item.feedback}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </article>

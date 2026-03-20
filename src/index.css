@@ -9,6 +9,19 @@ body {
 }
 
 @theme {
+  --animate-scrool: scrollFeedback 10s linear infinite;
+
+  @keyframes scrollFeedback {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@theme {
   --font-merriweather: "Merriweather", serif;
   --font-openSans: "Open Sans", sans-serif;
 }
