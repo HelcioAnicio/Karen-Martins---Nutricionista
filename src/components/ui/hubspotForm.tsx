@@ -12,7 +12,7 @@ function loadHubspotScript(): Promise<void> {
     if (window.hbspt) return resolve();
 
     const script = document.createElement("script");
-    script.src = "//js.hsforms.net/forms/v2.js";
+    script.src = "//js.hsforms.net/forms/embed/v2.js";
     script.async = true;
     script.onload = () => resolve();
     script.onerror = () => reject(new Error("Falha ao carregar HubSpot"));
@@ -29,7 +29,7 @@ export function HubspotForm() {
         if (!window.hbspt || !containerRef.current) return;
         window.hbspt.forms.create({
           portalId: "51205616",
-          formId: "e3167ed0-1386-455b-9eff-76a0d0524a28",
+          formId: "01d7d945-6811-4c8f-8d49-afdb8d30c0e1",
           region: "na1",
           target: "#hubspot-form",
         });
