@@ -8,8 +8,8 @@ import {
 export const FAQ = () => {
   const FAQS = [
     {
-      title: "As consultas são 100% online?",
-      text: " 100% online, por videochamada. Você é atendida com toda atenção de qualquer lugar do Brasil e do mundo. Visto que atendo pacientes na Europa, EUA, Canadá...",
+      title: "O atendimento é online ou presencial?",
+      text: "100% online, por videochamada. Você é atendida com toda atenção de qualquer lugar do Brasil e do mundo como Europa, EUA e Canadá.",
     },
     {
       title: "Quanto custa o acompanhamento?",
