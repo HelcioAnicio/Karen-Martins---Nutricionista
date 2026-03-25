@@ -70,7 +70,7 @@ export const SecondPage = () => {
                 <div>
                   <p className="text-lg font-bold">Controle Glicêmico</p>
                   <p>
-                    Manutenção da glicemia em níveis seguros, previnindo
+                    Manutenção da glicemia em níveis seguros, prevenindo
                     complicações
                   </p>
                 </div>
