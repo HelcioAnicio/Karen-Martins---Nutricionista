@@ -1,33 +1,37 @@
 import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
+import { FeedbackItem } from "./feedbackItem";
 
 interface FeedbackData {
   name: string;
   from: string;
   feedback: string;
-  rating?: number;
+  rating: number;
+  link?: string;
 }
 
 const defaultFeedbacks: FeedbackData[] = [
   {
-    name: "Evelyn Petrucceli",
+    name: "Flávia Mendes",
     from: "Avaliação Google",
     feedback:
-      "Ótimo atendimento! A Dra. Karen Martins me atendeu super bem, e tirou todas as minhas dúvidas.",
+      "Tive atendimento on-line super satisfatório na gravidez e estou tendo no puerpério . A Ka é super atenciosa, muito humana. Não importa o dia ou horário, ela sempre responde dando suporte fazendo valer cada centavo do investimento no plano. Super indico! Obrigada, Ka. Pela excelência no atendimento.",
     rating: 5,
+    link: "https://maps.app.goo.gl/g8hEsAusqBVnvHcUA",
   },
   {
-    name: "Alice Ferreira",
+    name: "Josiele Marques",
     from: "Avaliação Google",
     feedback:
-      "Desde o primeiro atendimento, acolhimento com muito carinho, agilidade, atenção e profissionalismo. Parabéns e muito obrigada!",
+      "O acompanhamento da Karen foi fundamental pra que eu tivesse uma gestação saudável e sem intercorrências do início ao fim. Minha glicose não alterou seguindo a dieta (sem sofrimento, comedo de tudo) e não precisei de nenhuma medicação. Meu ganho de peso foi de apenas 7,5kg. Só tenho a agradecer a excelente profissional que estava sempre disponível! 🙏🏼🖤🥰",
     rating: 5,
+    link: "https://maps.app.goo.gl/ziM2Mutp4Q8ZdACP7",
   },
   {
     name: "Valquiria Aguiar",
     from: "Avaliação Google",
     feedback:
-      "Uma profissional extremamente atenciosa e dedicada. Transmite segurança e esclarece as dúvidas",
+      "Profissional excelente, extremamente atenciosa e dedicada. Transmite segurança e esclarece todas as dúvidas.",
     rating: 5,
   },
 ];
@@ -194,53 +198,29 @@ export const FeedBack = () => {
       id="feedback"
       className="from-background via-secondary to-background w-full bg-linear-to-b via-70% py-20"
     >
-      <article className="m-auto flex w-full flex-col items-center gap-10 p-2">
-        <h2 className="font-merriweather text-xl font-bold md:text-2xl lg:text-3xl">
+      <article className="m-auto flex w-full flex-col items-start gap-10 p-2">
+        <h2 className="font-merriweather self-center text-xl font-bold md:text-2xl lg:text-3xl">
           O que dizem as mulheres que confiam no meu trabalho?
         </h2>
-        <div className="flex flex-col justify-between gap-10 max-[600px]:m-auto md:flex-row md:gap-10">
-          <div className="w-full overflow-hidden">
-            <ul className="animate-scrool flex h-72 items-center justify-between space-x-40">
-              {feedbacks.map((item, index) => (
-                <li
-                  key={index}
-                  className={`flex h-full w-max max-w-96 min-w-60 flex-col gap-10 rounded-lg bg-white p-4 px-7`}
-                >
-                  <div className="flex flex-col gap-5">
-                    <div className="flex gap-2">
-                      <p className="bg-primary text-primary-foreground flex h-10 w-10 items-center justify-center rounded-full text-2xl">
-                        {item.name.charAt(0).toUpperCase()}
-                      </p>
-                      <p className="text-lg font-bold lg:text-2xl">
-                        {item.name}
-                      </p>
-                    </div>
-                    {renderStars(item.rating)}
-                  </div>
-                  <p className="text-lg font-bold">{item.feedback}</p>
-                </li>
-              ))}
-              {feedbacks.map((item, index) => (
-                <li
-                  key={index}
-                  className={`flex h-full w-max max-w-96 min-w-60 flex-col gap-10 rounded-lg bg-white p-4 px-7`}
-                >
-                  <div className="flex flex-col gap-5">
-                    <div className="flex gap-2">
-                      <p className="bg-primary text-primary-foreground flex h-10 w-10 items-center justify-center rounded-full text-2xl">
-                        {item.name.charAt(0).toUpperCase()}
-                      </p>
-                      <p className="text-lg font-bold lg:text-2xl">
-                        {item.name}
-                      </p>
-                    </div>
-                    {renderStars(item.rating)}
-                  </div>
-                  <p className="text-lg font-bold">{item.feedback}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="flex justify-start gap-10 max-[600px]:m-auto">
+          <ul className="animate-scrool hover:paused flex min-h-124 items-start justify-start scroll-smooth">
+            {feedbacks.map((item, index) => (
+              <FeedbackItem
+                key={`real-${index}`}
+                item={item}
+                renderStars={renderStars}
+              />
+            ))}
+
+            {feedbacks.map((item, index) => (
+              <FeedbackItem
+                key={`real-${index}`}
+                item={item}
+                renderStars={renderStars}
+                aria-hidden="true"
+              />
+            ))}
+          </ul>
         </div>
       </article>
     </section>

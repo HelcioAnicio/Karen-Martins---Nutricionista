@@ -8,18 +8,18 @@ import { SixthPage } from "./components/ui/SixthPage";
 import { FAQ } from "./components/ui/faq";
 import { FeedBack } from "./components/ui/feedback";
 import { Footer } from "./components/ui/footer";
-import { DownloadModal } from "./components/ui/downloadModal";
+// import { DownloadModal } from "./components/ui/downloadModal";
 import { FaWhatsapp } from "react-icons/fa6";
 import { onLCP } from "web-vitals";
 import { CarouselAuto } from "./components/ui/carouselAuto";
 import { useState, useEffect } from "react";
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsModalOpen(true);
+      // setIsModalOpen(true);
     }, 5000);
 
     return () => clearTimeout(timer);
@@ -37,7 +37,7 @@ function App() {
     <>
       <Header />
 
-      <main className="font-openSans relative flex w-full flex-col gap-10 max-[600px]:text-center">
+      <main className="font-openSans relative flex w-full flex-col gap-10 overflow-hidden max-[600px]:text-center">
         <FirstPage />
         <SecondPage />
         <ThirdPage />
@@ -87,10 +87,10 @@ function App() {
           <FaWhatsapp className="bg-background/50 fixed right-2 bottom-2 z-50 size-16 animate-bounce rounded-3xl p-1 text-green-500 sm:size-24 lg:right-[2%] 2xl:right-[8%]" />
         </a>
       </main>
-      <DownloadModal
+      {/* <DownloadModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(!isModalOpen)}
-      />
+      /> */}
       <Footer />
     </>
   );

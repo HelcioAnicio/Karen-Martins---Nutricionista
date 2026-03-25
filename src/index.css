@@ -9,7 +9,7 @@ body {
 }
 
 @theme {
-  --animate-scrool: scrollFeedback 10s linear infinite;
+  --animate-scrool: scrollFeedback 25s linear infinite;
 
   @keyframes scrollFeedback {
     from {
