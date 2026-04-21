@@ -51,13 +51,13 @@ export const FAQ = () => {
               value={`item-${i + 1}`}
               className="w-full max-w-3xl cursor-pointer border-none"
             >
-              <AccordionTrigger className="bg-primary text-background relative rounded-b-none pl-10 md:text-lg lg:text-xl">
+              <AccordionTrigger className="bg-primary text-background relative rounded-b-none pl-10 sm:min-w-2xl md:min-w-3xl md:text-lg lg:text-xl">
                 <div className="font-merriweather text-secondary bg-primary absolute -top-3 -left-2 w-9 scale-125 rounded-full p-1 text-center text-xl font-bold md:-top-4 md:-left-4">
                   {i + 1}
                 </div>
                 {faq.title}
               </AccordionTrigger>
-              <AccordionContent className="bg-secondary-foreground/80 text-background rounded-t-none rounded-b-lg p-2 text-sm font-light md:p-10 md:text-lg">
+              <AccordionContent className="bg-secondary-foreground/80 text-background w-full rounded-t-none rounded-b-lg p-2 text-sm font-light md:p-10 md:text-lg">
                 {faq.text}
               </AccordionContent>
             </AccordionItem>
