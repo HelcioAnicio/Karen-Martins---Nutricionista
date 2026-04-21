@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsModalOpen(true);
-    }, 5000);
+    });
 
     return () => clearTimeout(timer);
   }, []);
