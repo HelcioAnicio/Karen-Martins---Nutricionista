@@ -21,7 +21,7 @@ export const FourthPage = () => {
     },
   ];
   return (
-    <section id="howWorks" className="m-auto w-full max-w-5xl">
+    <section id="howWorks" className="m-auto w-full max-w-5xl pt-20">
       <article className="flex w-full flex-col items-center gap-10 p-2 md:px-10 md:py-5">
         <h2 className="self-start text-xl font-bold md:text-2xl lg:text-3xl">
           Como é o atendimento personalizado?

@@ -33,8 +33,7 @@ export const FirstPage = () => {
               <div className="flex w-full flex-col items-center gap-5 max-[640px]:m-auto sm:gap-10 lg:flex-row lg:items-center">
                 <img
                   className="w-full max-w-60 flex-4 rounded-lg shadow-lg min-[390px]:max-w-xl lg:max-w-4xl"
-                  height={400}
-                  width={600}
+                  sizes="(max-width: 700px) 400px, 570px"
                   fetchPriority="high"
                   loading="eager"
                   decoding="sync"

@@ -49,9 +49,10 @@ function App() {
         <section className="relative">
           <img
             src="background.webp"
-            alt="Descritivo"
-            loading="lazy"
-            decoding="async"
+            alt="Background with waves"
+            loading="eager"
+            decoding="sync"
+            sizes="(max-width: 700px) 400px, 570px"
             className="absolute top-0 right-0 -z-10 h-full w-full object-cover"
           />
 

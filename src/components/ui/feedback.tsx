@@ -196,14 +196,14 @@ export const FeedBack = () => {
   return (
     <section
       id="feedback"
-      className="from-background via-secondary to-background w-full bg-linear-to-b via-70% py-20"
+      className="from-background via-secondary to-background w-full bg-linear-to-b via-70% pt-20"
     >
-      <article className="m-auto flex w-full flex-col items-start gap-10 p-2">
+      <article className="m-auto flex w-full flex-col items-start justify-center gap-10 p-2">
         <h2 className="font-merriweather self-center text-xl font-bold md:text-2xl lg:text-3xl">
           O que dizem as mulheres que confiam no meu trabalho?
         </h2>
-        <div className="flex justify-start gap-10 max-[600px]:m-auto">
-          <ul className="animate-scrool hover:paused flex min-h-124 items-start justify-start scroll-smooth">
+        <div className="flex w-max gap-10 overflow-x-hidden max-[600px]:mx-auto">
+          <ul className="animate-scrool hover:paused flex min-h-124 w-full items-start justify-start scroll-smooth">
             {feedbacks.map((item, index) => (
               <FeedbackItem
                 key={`real-${index}`}

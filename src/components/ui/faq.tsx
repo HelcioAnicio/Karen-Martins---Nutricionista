@@ -34,7 +34,7 @@ export const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="m-auto flex w-full max-w-5xl pt-5">
+    <section id="faq" className="m-auto flex w-full max-w-5xl pt-20">
       <article className="m-auto flex w-max flex-col items-center gap-10 px-4 md:py-5">
         <h2 className="font-merriweather text-lg font-bold md:text-2xl lg:text-3xl">
           Perguntas frequentes
