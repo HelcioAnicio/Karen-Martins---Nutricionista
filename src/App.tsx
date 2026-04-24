@@ -8,22 +8,22 @@ import { SixthPage } from "./components/ui/SixthPage";
 import { FAQ } from "./components/ui/faq";
 import { FeedBack } from "./components/ui/feedback";
 import { Footer } from "./components/ui/footer";
-import { DownloadModal } from "./components/ui/downloadModal";
+// import { DownloadModal } from "./components/ui/downloadModal";
 import { FaWhatsapp } from "react-icons/fa6";
 import { onLCP } from "web-vitals";
 import { CarouselAuto } from "./components/ui/carouselAuto";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsModalOpen(true);
-    });
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setIsModalOpen(true);
+  //   });
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   new PerformanceObserver((entryList) => {
     for (const entry of entryList.getEntries()) {
@@ -60,7 +60,7 @@ function App() {
           </article>
         </section>
 
-        <section className="bg-primary text-background py-16">
+        {/* <section className="bg-primary text-background py-16">
           <div className="m-auto flex max-w-4xl flex-col px-4 last:items-center">
             <h2 className="font-merriweather mb-4 text-2xl font-bold">
               Um guia simples para ajudar você a se alimentar melhor na
@@ -80,17 +80,17 @@ function App() {
               Baixe agora
             </button>
           </div>
-        </section>
+        </section> */}
 
         <FAQ />
         <a aria-label="Link para whatsapp" href="https://wa.link/6mo3a2">
           <FaWhatsapp className="bg-background/50 fixed right-2 bottom-2 z-50 size-16 animate-bounce rounded-3xl p-1 text-green-500 sm:size-24 lg:right-[2%] 2xl:right-[8%]" />
         </a>
       </main>
-      <DownloadModal
+      {/* <DownloadModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(!isModalOpen)}
-      />
+      /> */}
       <Footer />
     </>
   );
