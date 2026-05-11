@@ -1,3 +1,4 @@
+import { lazy, Suspense, useEffect, useState } from "react";
 import { FirstPage } from "./components/ui/firstPage";
 import { Header } from "./components/ui/header";
 import { SecondPage } from "./components/ui/secondPage";
@@ -8,37 +9,46 @@ import { SixthPage } from "./components/ui/SixthPage";
 import { FAQ } from "./components/ui/faq";
 import { FeedBack } from "./components/ui/feedback";
 import { Footer } from "./components/ui/footer";
-// import { DownloadModal } from "./components/ui/downloadModal";
 import { FaWhatsapp } from "react-icons/fa6";
 import { onLCP } from "web-vitals";
 import { CarouselAuto } from "./components/ui/carouselAuto";
-// import { useState, useEffect } from "react";
+
+const DownloadModal = lazy(() =>
+  import("./components/ui/downloadModal").then((mod) => ({
+    default: mod.DownloadModal,
+  })),
+);
 
 function App() {
-  // const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setIsModalOpen(true);
-  //   });
+  useEffect(() => {
+    const autoOpenTimer = window.setTimeout(() => setIsModalOpen(true), 2000);
+    let observer: PerformanceObserver | null = null;
 
-  //   return () => clearTimeout(timer);
-  // }, []);
-
-  new PerformanceObserver((entryList) => {
-    for (const entry of entryList.getEntries()) {
-      console.log("LCP candidate:", entry.startTime, entry);
+    if (typeof PerformanceObserver !== "undefined") {
+      observer = new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          console.log("LCP candidate:", entry.startTime, entry);
+        }
+      });
+      observer.observe({ type: "largest-contentful-paint", buffered: true });
     }
-  }).observe({ type: "largest-contentful-paint", buffered: true });
 
-  onLCP(console.log);
+    onLCP((metric) => console.log("LCP:", metric));
+
+    return () => {
+      window.clearTimeout(autoOpenTimer);
+      observer?.disconnect();
+    };
+  }, []);
 
   return (
     <>
       <Header />
 
       <main className="font-openSans relative flex w-full flex-col gap-10 overflow-hidden max-[600px]:text-center">
-        <FirstPage />
+        <FirstPage onOpenModal={() => setIsModalOpen(true)} />
         <SecondPage />
         <ThirdPage />
         <FeedBack />
@@ -50,8 +60,8 @@ function App() {
           <img
             src="background.webp"
             alt="Background with waves"
-            loading="eager"
-            decoding="sync"
+            loading="lazy"
+            decoding="async"
             sizes="(max-width: 700px) 400px, 570px"
             className="absolute top-0 right-0 -z-10 h-full w-full object-cover"
           />
@@ -60,8 +70,7 @@ function App() {
             <CarouselAuto />
           </article>
         </section>
-
-        {/* <section className="bg-primary text-background py-16">
+        <section className="bg-primary text-background py-16">
           <div className="m-auto flex max-w-4xl flex-col px-4 last:items-center">
             <h2 className="font-merriweather mb-4 text-2xl font-bold">
               Um guia simples para ajudar você a se alimentar melhor na
@@ -81,17 +90,23 @@ function App() {
               Baixe agora
             </button>
           </div>
-        </section> */}
+        </section>
 
         <FAQ />
         <a aria-label="Link para whatsapp" href="https://wa.link/6mo3a2">
           <FaWhatsapp className="bg-background/50 fixed right-2 bottom-2 z-50 size-16 animate-bounce rounded-3xl p-1 text-green-500 sm:size-24 lg:right-[2%] 2xl:right-[8%]" />
         </a>
       </main>
-      {/* <DownloadModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(!isModalOpen)}
-      /> */}
+
+      <Suspense fallback={null}>
+        {isModalOpen ? (
+          <DownloadModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+          />
+        ) : null}
+      </Suspense>
+
       <Footer />
     </>
   );

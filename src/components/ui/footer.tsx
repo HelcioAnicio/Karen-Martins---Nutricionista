@@ -47,6 +47,15 @@ export const Footer = () => {
               </a>
             </div>
           </div>
+          <p className="mx-auto">
+            Desenvolvido por{" "}
+            <a
+              className="cursor-pointer underline underline-offset-2"
+              href="https://codandoideias-helcioanicios-projects.vercel.app/"
+            >
+              Codando Ideias
+            </a>
+          </p>
         </div>
       </div>
     </footer>

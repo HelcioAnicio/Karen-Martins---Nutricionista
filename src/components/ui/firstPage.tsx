@@ -1,6 +1,10 @@
 import { ButtonCTA } from "./buttonCTA";
 
-export const FirstPage = () => {
+interface FirstPageProps {
+  onOpenModal?: () => void;
+}
+
+export const FirstPage = ({ onOpenModal }: FirstPageProps) => {
   return (
     <section
       id="home"
@@ -16,19 +20,28 @@ export const FirstPage = () => {
               <div className="flex w-full flex-col justify-evenly gap-2 min-[390px]:gap-6 sm:gap-10 lg:w-3/5 lg:flex-row lg:flex-wrap lg:items-end lg:justify-start lg:gap-10">
                 <div className="font-merriweather bg-background m-auto w-max self-start rounded-md p-2 text-start text-sm min-[400px]:text-base md:text-lg lg:text-xl">
                   <p>✅ Controle do peso na gestação</p>
-                  <p>✅ Suplementação personalizada </p>{" "}
-                  <p>✅ Controle de Diabetes Gestacional e Pressão </p>
+                  <p>✅ Suplementação personalizada</p>
+                  <p>✅ Controle de Diabetes Gestacional e Pressão</p>
                   <p>✅ Consulta Nutricional online</p>
                 </div>
-                <a
-                  className="hidden w-full lg:flex"
-                  href="https://wa.link/6mo3a2"
-                >
-                  <ButtonCTA
-                    ariaLabel="Link para conversar com o profissional"
-                    text={"Quero agendar minha sessão"}
-                  />
-                </a>
+                <div className="flex w-full flex-col gap-3 sm:flex-row lg:w-auto lg:flex-col">
+                  <a
+                    className="hidden w-full lg:flex"
+                    href="https://wa.link/6mo3a2"
+                  >
+                    <ButtonCTA
+                      ariaLabel="Link para conversar com o profissional"
+                      text={"Quero agendar minha sessão"}
+                    />
+                  </a>
+                  <button
+                    type="button"
+                    onClick={() => onOpenModal?.()}
+                    className="bg-primary hover:bg-primary/90 rounded-xl px-6 py-3 text-sm font-bold tracking-[0.08em] text-white uppercase transition sm:w-full lg:w-auto"
+                  >
+                    Baixar o guia
+                  </button>
+                </div>
               </div>
               <div className="flex w-full flex-col items-center gap-5 max-[640px]:m-auto sm:gap-10 lg:flex-row lg:items-center">
                 <img
