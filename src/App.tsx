@@ -1,8 +1,12 @@
-import { lazy, Suspense, useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { FirstPage } from "./components/ui/firstPage";
 import { Header } from "./components/ui/header";
-import { Footer } from "./components/ui/footer";
 
+const Footer = lazy(() =>
+  import("./components/ui/footer").then((mod) => ({
+    default: mod.Footer,
+  })),
+);
 const SecondPage = lazy(() =>
   import("./components/ui/secondPage").then((mod) => ({
     default: mod.SecondPage,
@@ -52,41 +56,29 @@ const DownloadModal = lazy(() =>
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [loadBelowFold, setLoadBelowFold] = useState(false);
+  const belowFoldRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const autoOpenTimer = window.setTimeout(() => setIsModalOpen(true), 2000);
+    if (!belowFoldRef.current) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setLoadBelowFold(true);
+      return;
+    }
 
-    type IdleCallbackHandle = number;
-    type IdleCallbackOptions = { timeout: number };
-    type IdleCallback = (
-      callback: () => void,
-      options?: IdleCallbackOptions,
-    ) => IdleCallbackHandle;
-    type CancelIdleCallback = (handle: IdleCallbackHandle) => void;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setLoadBelowFold(true);
+          observer.disconnect();
+        }
+      },
+      {
+        rootMargin: "400px",
+      },
+    );
 
-    const requestIdleCallback = (
-      window as unknown as {
-        requestIdleCallback?: IdleCallback;
-      }
-    ).requestIdleCallback;
-    const cancelIdleCallback = (
-      window as unknown as {
-        cancelIdleCallback?: CancelIdleCallback;
-      }
-    ).cancelIdleCallback;
-
-    const idleId =
-      requestIdleCallback?.(() => setLoadBelowFold(true), { timeout: 1000 }) ??
-      window.setTimeout(() => setLoadBelowFold(true), 1000);
-
-    return () => {
-      window.clearTimeout(autoOpenTimer);
-      if (cancelIdleCallback) {
-        cancelIdleCallback(idleId as IdleCallbackHandle);
-      } else {
-        window.clearTimeout(idleId as number);
-      }
-    };
+    observer.observe(belowFoldRef.current);
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -95,6 +87,7 @@ function App() {
 
       <main className="font-openSans relative flex w-full flex-col gap-10 overflow-hidden max-[600px]:text-center">
         <FirstPage onOpenModal={() => setIsModalOpen(true)} />
+        <div ref={belowFoldRef} className="h-px w-full" />
 
         <Suspense fallback={null}>
           {loadBelowFold ? (
@@ -153,7 +146,7 @@ function App() {
         <a
           aria-label="Link para whatsapp"
           href="https://wa.link/6mo3a2"
-          className="bg-background/50 fixed right-2 bottom-2 z-50 rounded-3xl p-2 shadow-xl transition hover:scale-105 sm:right-[2%] sm:bottom-4"
+          className="bg-background/50 fixed right-2 bottom-2 z-50 overflow-hidden rounded-3xl p-2 shadow-xl transition hover:scale-105 sm:right-[2%] sm:bottom-4"
         >
           <svg
             aria-hidden="true"
@@ -173,9 +166,9 @@ function App() {
             onClose={() => setIsModalOpen(false)}
           />
         ) : null}
-      </Suspense>
 
-      <Footer />
+        <Footer />
+      </Suspense>
     </>
   );
 }
