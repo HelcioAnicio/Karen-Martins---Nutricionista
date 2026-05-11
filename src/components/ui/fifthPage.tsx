@@ -23,9 +23,10 @@ export const FifthPage = () => {
           className="m-auto w-sm rounded-lg shadow-lg md:w-64"
           width={208}
           height={312}
-          src=" /complement.webp"
+          src="/complement.webp"
           loading="lazy"
-          alt="Imagem da Karen Martins - Está em pé, encostada na paredde e sorrindo de forma amigável, com as mãos no bolso"
+          decoding="async"
+          alt="Imagem da Karen Martins - Está em pé, encostada na parede e sorrindo de forma amigável, com as mãos no bolso"
         />
       </article>
     </section>

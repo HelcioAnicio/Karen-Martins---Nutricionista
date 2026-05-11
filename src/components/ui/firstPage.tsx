@@ -8,8 +8,19 @@ export const FirstPage = ({ onOpenModal }: FirstPageProps) => {
   return (
     <section
       id="home"
-      className="mx-auto flex min-h-[calc(100vh-56px)] w-full items-center justify-center bg-[url(/designBackgroundFirst.webp)] bg-cover bg-center bg-no-repeat lg:min-h-[calc(100dvh-64px)] lg:items-center lg:bg-bottom-right"
+      className="relative mx-auto flex min-h-[calc(100vh-56px)] w-full items-center justify-center overflow-hidden lg:min-h-[calc(100dvh-64px)] lg:items-center lg:bg-bottom-right"
     >
+      <img
+        src="/designBackgroundFirst.webp"
+        alt="Background decorativo com ondas suaves"
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover"
+        width={1920}
+        height={1080}
+        loading="eager"
+        decoding="async"
+        fetchPriority="high"
+      />
       <div className="bg-background/70 flex h-full min-h-[calc(100vh-56px)] w-full items-center justify-center lg:min-h-[calc(100dvh-64px)]">
         <article className="flex h-max min-h-full w-full max-w-5xl p-1 px-4 md:p-10 lg:items-center xl:p-0">
           <div className="flex h-max flex-col gap-2 min-[600px]:gap-4 lg:gap-10">

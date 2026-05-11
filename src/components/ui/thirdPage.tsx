@@ -13,10 +13,11 @@ export const ThirdPage = () => {
           <div className="flex flex-col gap-5 sm:flex-row sm:items-center lg:flex-row">
             <img
               className="m-auto w-52 rounded-lg shadow-lg min-[550px]:w-60 sm:w-72"
-              src=" /aboutMe.webp"
+              src="/aboutMe.webp"
               width={208}
               height={312}
               loading="lazy"
+              decoding="async"
               alt="Imagem da Karen Martins - Está sentada encostada em um sofá, olhando para a câmera, com um olhar amigavel e acolhedor."
             />
 
