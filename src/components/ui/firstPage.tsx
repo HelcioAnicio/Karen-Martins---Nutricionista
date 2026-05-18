@@ -1,10 +1,11 @@
+import { memo } from "react";
 import { ButtonCTA } from "./buttonCTA";
 
 interface FirstPageProps {
   onOpenModal?: () => void;
 }
 
-export const FirstPage = ({ onOpenModal }: FirstPageProps) => {
+export const FirstPage = memo(({ onOpenModal }: FirstPageProps) => {
   return (
     <section
       id="home"
@@ -14,7 +15,7 @@ export const FirstPage = ({ onOpenModal }: FirstPageProps) => {
         src="/designBackgroundFirst.webp"
         alt="Background decorativo com ondas suaves"
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover"
+        className="pointer-events-none absolute top-0 right-0 -z-10 h-full w-full object-cover"
         width={1920}
         height={1080}
         loading="eager"
@@ -42,12 +43,12 @@ export const FirstPage = ({ onOpenModal }: FirstPageProps) => {
                   >
                     <ButtonCTA
                       ariaLabel="Link para conversar com o profissional"
-                      text={"Quero agendar minha sessão"}
+                      text="Quero agendar minha sessão"
                     />
                   </a>
                   <button
                     type="button"
-                    onClick={() => onOpenModal?.()}
+                    onClick={onOpenModal}
                     className="bg-primary hover:bg-primary/90 rounded-xl px-6 py-3 text-sm font-bold tracking-[0.08em] text-white uppercase transition sm:w-full lg:w-auto"
                   >
                     Baixar o guia
@@ -70,7 +71,7 @@ export const FirstPage = ({ onOpenModal }: FirstPageProps) => {
                 >
                   <ButtonCTA
                     ariaLabel="Link para conversar com o profissional"
-                    text={"Quero agendar minha sessão"}
+                    text="Quero agendar minha sessão"
                   />
                 </a>
               </div>
@@ -80,4 +81,6 @@ export const FirstPage = ({ onOpenModal }: FirstPageProps) => {
       </div>
     </section>
   );
-};
+});
+
+FirstPage.displayName = "FirstPage";
