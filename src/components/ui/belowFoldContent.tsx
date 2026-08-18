@@ -1,26 +1,14 @@
 import { lazy, Suspense } from "react";
+import { SecondPage } from "./secondPage";
+import { ThirdPage } from "./thirdPage";
+import { FourthPage } from "./fourthPage";
+import { FifthPage } from "./fifthPage";
+import { SixthPage } from "./SixthPage";
+import { FAQ } from "./faq";
+import { FeedBack } from "./feedback";
 
 const Footer = lazy(() =>
   import("./footer").then((mod) => ({ default: mod.Footer })),
-);
-const SecondPage = lazy(() =>
-  import("./secondPage").then((mod) => ({ default: mod.SecondPage })),
-);
-const ThirdPage = lazy(() =>
-  import("./thirdPage").then((mod) => ({ default: mod.ThirdPage })),
-);
-const FourthPage = lazy(() =>
-  import("./fourthPage").then((mod) => ({ default: mod.FourthPage })),
-);
-const FifthPage = lazy(() =>
-  import("./fifthPage").then((mod) => ({ default: mod.FifthPage })),
-);
-const SixthPage = lazy(() =>
-  import("./SixthPage").then((mod) => ({ default: mod.SixthPage })),
-);
-const FAQ = lazy(() => import("./faq").then((mod) => ({ default: mod.FAQ })));
-const FeedBack = lazy(() =>
-  import("./feedback").then((mod) => ({ default: mod.FeedBack })),
 );
 const CarouselAuto = lazy(() =>
   import("./carouselAuto").then((mod) => ({ default: mod.CarouselAuto })),

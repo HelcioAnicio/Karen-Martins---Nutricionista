@@ -16,6 +16,7 @@ export const FirstPage = memo(() => {
         height={1080}
         loading="eager"
         decoding="async"
+        fetchPriority="high"
       />
       <div className="bg-background/70 flex h-full min-h-[calc(100vh-56px)] w-full items-center justify-center lg:min-h-[calc(100dvh-64px)]">
         <article className="flex h-max min-h-full w-full max-w-5xl p-1 px-4 md:p-10 lg:items-center xl:p-0">
@@ -47,7 +48,6 @@ export const FirstPage = memo(() => {
                   sizes="(max-width: 700px) 400px, 570px"
                   width={600}
                   height={434}
-                  fetchPriority="high"
                   loading="eager"
                   decoding="async"
                   alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável"
