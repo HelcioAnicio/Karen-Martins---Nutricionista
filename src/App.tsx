@@ -1,4 +1,5 @@
 import { lazy, Suspense, useCallback, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { FirstPage } from "./components/ui/firstPage";
 import { Header } from "./components/ui/header";
 import { FaWhatsapp } from "react-icons/fa";
@@ -41,6 +42,8 @@ function App() {
           <DownloadModal isOpen={isModalOpen} onClose={handleCloseModal} />
         </Suspense>
       )}
+
+      <Analytics />
     </>
   );
 }
