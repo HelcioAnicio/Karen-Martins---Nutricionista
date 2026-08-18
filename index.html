@@ -3,24 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-NFXQ9DCJ");
+      // GTM + HubSpot tracking are not needed for first paint or for the
+      // lead form (which posts directly to HubSpot's API). Deferring them
+      // until the visitor interacts (or an idle fallback) keeps them off
+      // the critical path without losing analytics coverage.
+      (function () {
+        function loadThirdPartyScripts() {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            "gtm.start": new Date().getTime(),
+            event: "gtm.js",
+          });
+          var gtm = document.createElement("script");
+          gtm.async = true;
+          gtm.src = "https://www.googletagmanager.com/gtm.js?id=GTM-NFXQ9DCJ";
+          document.body.appendChild(gtm);
+
+          var hs = document.createElement("script");
+          hs.id = "hs-script-loader";
+          hs.async = true;
+          hs.defer = true;
+          hs.src = "//js-na1.hs-scripts.com/51205616.js";
+          document.body.appendChild(hs);
+        }
+
+        var loaded = false;
+        function triggerLoad() {
+          if (loaded) return;
+          loaded = true;
+          loadThirdPartyScripts();
+          events.forEach(function (evt) {
+            window.removeEventListener(evt, triggerLoad, { passive: true });
+          });
+          clearTimeout(fallback);
+        }
+
+        var events = ["scroll", "mousemove", "keydown", "touchstart"];
+        events.forEach(function (evt) {
+          window.addEventListener(evt, triggerLoad, {
+            passive: true,
+            once: true,
+          });
+        });
+        var fallback = setTimeout(triggerLoad, 5000);
+      })();
     </script>
-    <script
-      type="text/javascript"
-      id="hs-script-loader"
-      async
-      defer
-      src="//js-na1.hs-scripts.com/51205616.js"
-    ></script>
 
     <meta
       name="description"
@@ -32,12 +59,7 @@
     />
     <meta name="author" content="Helcio Anicio" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="preload"
-      as="image"
-      href="/designBackgroundFirst.webp"
-      fetchpriority="high"
-    />
+    <link rel="preload" as="image" href="/designBackgroundFirst.webp" />
     <link
       rel="preload"
       as="image"

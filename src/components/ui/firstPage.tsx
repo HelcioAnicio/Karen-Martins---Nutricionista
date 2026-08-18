@@ -1,11 +1,7 @@
 import { memo } from "react";
 import { ButtonCTA } from "./buttonCTA";
 
-interface FirstPageProps {
-  onOpenModal?: () => void;
-}
-
-export const FirstPage = memo(({ onOpenModal }: FirstPageProps) => {
+export const FirstPage = memo(() => {
   return (
     <section
       id="home"
@@ -20,7 +16,6 @@ export const FirstPage = memo(({ onOpenModal }: FirstPageProps) => {
         height={1080}
         loading="eager"
         decoding="async"
-        fetchPriority="high"
       />
       <div className="bg-background/70 flex h-full min-h-[calc(100vh-56px)] w-full items-center justify-center lg:min-h-[calc(100dvh-64px)]">
         <article className="flex h-max min-h-full w-full max-w-5xl p-1 px-4 md:p-10 lg:items-center xl:p-0">
@@ -36,32 +31,25 @@ export const FirstPage = memo(({ onOpenModal }: FirstPageProps) => {
                   <p>✅ Controle de Diabetes Gestacional e Pressão</p>
                   <p>✅ Consulta Nutricional online</p>
                 </div>
-                <div className="flex w-full flex-col gap-3 sm:flex-row lg:w-auto lg:flex-col">
-                  <a
-                    className="hidden w-full lg:flex"
-                    href="https://wa.link/6mo3a2"
-                  >
-                    <ButtonCTA
-                      ariaLabel="Link para conversar com o profissional"
-                      text="Quero agendar minha sessão"
-                    />
-                  </a>
-                  <button
-                    type="button"
-                    onClick={onOpenModal}
-                    className="bg-primary hover:bg-primary/90 rounded-xl px-6 py-3 text-sm font-bold tracking-[0.08em] text-white uppercase transition sm:w-full lg:w-auto"
-                  >
-                    Baixar o guia
-                  </button>
-                </div>
+                <a
+                  className="hidden w-full lg:flex"
+                  href="https://wa.link/6mo3a2"
+                >
+                  <ButtonCTA
+                    ariaLabel="Link para conversar com o profissional"
+                    text="Quero agendar minha sessão"
+                  />
+                </a>
               </div>
               <div className="flex w-full flex-col items-center gap-5 max-[640px]:m-auto sm:gap-10 lg:flex-row lg:items-center">
                 <img
                   className="w-full max-w-60 flex-4 rounded-lg shadow-lg min-[390px]:max-w-xl lg:max-w-4xl"
                   sizes="(max-width: 700px) 400px, 570px"
+                  width={600}
+                  height={434}
                   fetchPriority="high"
                   loading="eager"
-                  decoding="sync"
+                  decoding="async"
                   alt="Imagem da Karen Martins - Está em pé, ao lado de uma mesa e sorrindo de forma amigável"
                   src="/newApresentation.webp"
                 />

@@ -81,7 +81,6 @@ export const FeedBack = () => {
       return defaultFeedbacks;
     }
   });
-  console.log("feedbacks: ", feedbacks);
 
   useEffect(() => {
     const getCacheKey = () => `google-place-reviews-${GOOGLE_PLACE_ID}`;
