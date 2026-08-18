@@ -12,9 +12,6 @@ const DownloadModal = lazy(() =>
   })),
 );
 
-const MODAL_AUTO_OPEN_DELAY_MS = 15000;
-const MODAL_SHOWN_KEY = "guia-modal-shown";
-
 function scheduleIdlePrefetch(callback: () => void, timeout?: number) {
   const ric = window.requestIdleCallback as
     | typeof window.requestIdleCallback
@@ -43,23 +40,11 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (sessionStorage.getItem(MODAL_SHOWN_KEY)) return;
-
     // Prefetch the modal chunk during idle time so it's ready to render
-    // instantly once the timer below fires, instead of fetching on demand.
-    const cancelIdlePrefetch = scheduleIdlePrefetch(() => {
+    // instantly once the visitor clicks a "baixar o guia" CTA.
+    return scheduleIdlePrefetch(() => {
       downloadModalImport();
     });
-
-    const timerId = window.setTimeout(() => {
-      sessionStorage.setItem(MODAL_SHOWN_KEY, "1");
-      setIsModalOpen(true);
-    }, MODAL_AUTO_OPEN_DELAY_MS);
-
-    return () => {
-      cancelIdlePrefetch();
-      clearTimeout(timerId);
-    };
   }, []);
 
   return (

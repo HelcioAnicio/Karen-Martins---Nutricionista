@@ -106,7 +106,27 @@
         style="display: none; visibility: hidden"
       ></iframe
     ></noscript>
-    <div id="root"></div>
+    <div id="root">
+      <!--
+        Static stand-in for the hero's decorative background, the page's
+        LCP element. This app is a client-rendered SPA, so nothing in
+        #root can paint until the JS bundle downloads, parses and runs --
+        under Lighthouse's simulated low-end-device CPU throttle that
+        alone can account for seconds of "render delay" on the LCP metric,
+        even with the image correctly prioritized. Painting it straight
+        from the raw HTML removes that dependency on JS entirely. React's
+        first render (createRoot, not hydrateRoot) replaces this element
+        with the real markup, seamlessly since it's the same file already
+        primed by the preload link above.
+      -->
+      <img
+        src="/designBackgroundFirst.webp"
+        alt=""
+        aria-hidden="true"
+        fetchpriority="high"
+        style="position: fixed; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; pointer-events: none"
+      />
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
