@@ -1,11 +1,7 @@
 import { memo } from "react";
 import { ButtonCTA } from "./buttonCTA";
 
-interface FirstPageProps {
-  onOpenModal?: () => void;
-}
-
-export const FirstPage = memo(({ onOpenModal }: FirstPageProps) => {
+export const FirstPage = memo(() => {
   return (
     <section
       id="home"
@@ -35,24 +31,15 @@ export const FirstPage = memo(({ onOpenModal }: FirstPageProps) => {
                   <p>✅ Controle de Diabetes Gestacional e Pressão</p>
                   <p>✅ Consulta Nutricional online</p>
                 </div>
-                <div className="flex w-full flex-col gap-3 sm:flex-row lg:w-auto lg:flex-col">
-                  <a
-                    className="hidden w-full lg:flex"
-                    href="https://wa.link/6mo3a2"
-                  >
-                    <ButtonCTA
-                      ariaLabel="Link para conversar com o profissional"
-                      text="Quero agendar minha sessão"
-                    />
-                  </a>
-                  <button
-                    type="button"
-                    onClick={onOpenModal}
-                    className="bg-primary hover:bg-primary/90 rounded-xl px-6 py-3 text-sm font-bold tracking-[0.08em] text-white uppercase transition sm:w-full lg:w-auto"
-                  >
-                    Baixar o guia
-                  </button>
-                </div>
+                <a
+                  className="hidden w-full lg:flex"
+                  href="https://wa.link/6mo3a2"
+                >
+                  <ButtonCTA
+                    ariaLabel="Link para conversar com o profissional"
+                    text="Quero agendar minha sessão"
+                  />
+                </a>
               </div>
               <div className="flex w-full flex-col items-center gap-5 max-[640px]:m-auto sm:gap-10 lg:flex-row lg:items-center">
                 <img
